@@ -11,6 +11,7 @@
     <modules>
         <module>intelligencecity_pojo</module>
         <module>intelligencecity_common</module>
+        <module>intelligencecity_dao</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
