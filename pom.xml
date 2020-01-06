@@ -19,7 +19,10 @@
         <module>intelligencecity_monitoring_web</module>
         <module>intelligencecity_user_interface</module>
         <module>intelligencecity_user_service</module>
-        <module>intelligencecity_web</module>
+        <module>intelligencecity_version_interface</module>
+        <module>intelligencecity_user_web</module>
+        <module>intelligencecity_version_service</module>
+        <module>intelligencecity_version_web</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
