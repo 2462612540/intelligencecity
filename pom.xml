@@ -10,6 +10,7 @@
     <version>1.0</version>
     <modules>
         <module>intelligencecity_pojo</module>
+        <module>intelligencecity_common</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->

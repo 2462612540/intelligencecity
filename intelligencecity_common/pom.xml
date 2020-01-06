@@ -8,7 +8,7 @@
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>intelligencecity_pojo</artifactId>
+    <artifactId>intelligencecity_common</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -70,5 +70,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
 </project>
