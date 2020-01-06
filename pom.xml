@@ -23,6 +23,9 @@
         <module>intelligencecity_user_web</module>
         <module>intelligencecity_version_service</module>
         <module>intelligencecity_version_web</module>
+        <module>intelligencecity_order_interface</module>
+        <module>intelligencecity_order_service</module>
+        <module>intelligencecity_order_web</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
