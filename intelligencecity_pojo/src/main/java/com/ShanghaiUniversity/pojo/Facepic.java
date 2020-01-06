@@ -1,8 +1,9 @@
 package com.ShanghaiUniversity.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Facepic {
+public class Facepic implements Serializable {
     private Integer id;
 
     private Integer faceNumber;

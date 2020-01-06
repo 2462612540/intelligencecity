@@ -1,6 +1,8 @@
 package com.ShanghaiUniversity.pojo;
 
-public class Device {
+import java.io.Serializable;
+
+public class Device implements Serializable {
     private Integer id;
 
     private Integer deviceNumber;

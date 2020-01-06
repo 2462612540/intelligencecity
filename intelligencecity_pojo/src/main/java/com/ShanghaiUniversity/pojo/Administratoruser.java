@@ -1,8 +1,9 @@
 package com.ShanghaiUniversity.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Administratoruser {
+public class Administratoruser implements Serializable {
     private Integer id;
 
     private String userName;

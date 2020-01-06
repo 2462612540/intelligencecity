@@ -1,8 +1,9 @@
 package com.ShanghaiUniversity.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Rubbishpic {
+public class Rubbishpic implements Serializable {
     private Integer id;
 
     private Integer rubbishNumber;

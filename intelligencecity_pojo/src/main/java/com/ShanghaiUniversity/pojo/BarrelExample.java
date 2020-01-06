@@ -1,9 +1,10 @@
 package com.ShanghaiUniversity.pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BarrelExample {
+public class BarrelExample implements Serializable {
     protected String orderByClause;
 
     protected boolean distinct;

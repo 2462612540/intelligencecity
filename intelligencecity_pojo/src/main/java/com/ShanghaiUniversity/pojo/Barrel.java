@@ -1,6 +1,8 @@
 package com.ShanghaiUniversity.pojo;
 
-public class Barrel {
+import java.io.Serializable;
+
+public class Barrel implements Serializable {
     private Integer id;
 
     private Integer barrelNumber;
