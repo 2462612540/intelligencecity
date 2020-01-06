@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
@@ -8,7 +7,7 @@
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>intelligencecity_monitoring_web</artifactId>
+    <artifactId>intelligencecity_web</artifactId>
     <packaging>war</packaging>
 
     <properties>
@@ -27,7 +26,7 @@
     </dependencies>
 
     <build>
-        <finalName>intelligencecity_monitoring_web</finalName>
+        <finalName>intelligencecity_web</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
