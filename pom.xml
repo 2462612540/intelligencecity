@@ -17,6 +17,8 @@
         <module>intelligencecity_monitoring_service</module>
         <module>intelligencecity_manager_service</module>
         <module>intelligencecity_monitoring_web</module>
+        <module>intelligencecity_user_interface</module>
+        <module>intelligencecity_user_service</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
