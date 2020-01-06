@@ -13,6 +13,10 @@
         <module>intelligencecity_dao</module>
         <module>intelligencecity_manager_interface</module>
         <module>intelligencecity_manager_web</module>
+        <module>intelligencecity_monitoring_interface</module>
+        <module>intelligencecity_monitoring_service</module>
+        <module>intelligencecity_manager_service</module>
+        <module>intelligencecity_monitoring_web</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
