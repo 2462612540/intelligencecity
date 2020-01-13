@@ -27,6 +27,8 @@
         <module>intelligencecity_order_service</module>
         <module>intelligencecity_order_web</module>
         <module>generatorSqlmapCustom</module>
+        <module>intelligencecity_portal_web</module>
+        <module>intelligencecity_mycat_web</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
