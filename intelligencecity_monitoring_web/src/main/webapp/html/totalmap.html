@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地图界面</title>
+    <link rel="stylesheet" href="../assets/js/bstable/css/bootstrap.min.css">
+    <link href="../assets/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../assets/js/jQueryPage/src/jquery.page.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+</head>
+<body>
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li><i class="nav_1"></i><a href="monitoringindex.html">系统数据总览</a></li>
+            <li><i class="nav_2"></i><a href="equipmentmonitoring.html">现场实时监控</a></li>
+            <li class="nav_active"><i class="nav_3"></i><a href="totalmap.html">实时位置共享</a></li>
+            <li><i class="nav_7"></i><a href="statisticalinformation.html">系统数据统计</a></li>
+        </ul>
+    </div>
+    <div class="header_center left">
+        <h2><strong>智慧城市系统平台监控中心</strong></h2>
+        <p class="color_font">
+            <small>Smart City System Platform Monitoring Center</small>
+        </p>
+    </div>
+    <div class="right nav text_right">
+        <ul>
+            <li><i class="nav_7"></i><a href="informationinquiry.html">系统信息查询</a></li>
+            <li><i class="nav_8"></i><a href="writeinformation.html">系统信息录入</a></li>
+            <li><i class="nav_4"></i><a href="javascript:void(0)">系统派单业务</a></li>
+            <li><i class="nav_4"></i><a href="javascript:void(0)">退出监控中心</a></li>
+        </ul>
+    </div>
+</header>
+<!--内容部分-->
+<div class="map_con left" id="car_control">
+    <!--左侧地图-->
+    <div class="left map_left">
+        <div class="map_box" id="map_box"></div>
+        <div class="map_top">
+            <ul>
+                <li class="active"><i class="glyphicon glyphicon-pencil"></i><a href="javascript:void (0)" class="active">图层选择</a></li>
+                <li><i class="glyphicon glyphicon-zoom-in"></i><a href="javascript:void (0)">缩小</a></li>
+                <li><i class="glyphicon glyphicon-zoom-out"></i><a href="javascript:void (0)">放大</a></li>
+                <li><i class="glyphicon glyphicon-screenshot"></i><a href="javascript:void (0)">对比</a></li>
+                <li><i class="glyphicon glyphicon-search"></i><a href="javascript:void (0)">搜索</a></li>
+                <li><i class="glyphicon glyphicon-wrench"></i><a href="javascript:void (0)">工具</a></li>
+                <li><i class="glyphicon glyphicon-fullscreen"></i><a href="javascript:void (0)">全屏</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--右侧功能栏-->
+    <div class="right map_right ">
+        <div class="map_right_top">
+            <ul>
+                <li class="li_active">统计信息</li>
+                <li>分类搜索</li>
+                <li>设备信息查找</li>
+            </ul>
+        </div>
+        <div class="map_con">
+            <div class="map_con_div" style="display: block">
+                <div class="map_chart">
+                    <p id="char1" class="p_chart"></p>
+                </div>
+                <div class="div_any_child">
+                    <div class="table_p">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>排名</th>
+                                <th>街道</th>
+                                <th>评价分数(100)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>南京路</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>上大路</td>
+                                <td>98</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>广州路</td>
+                                <td>95</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>浦西南路</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>南昌路</td>
+                                <td>85</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>上海路</td>
+                                <td>85</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="map_con_div">
+                <p>
+                    <input type="text" placeholder="输入关键字" class="carNo_input"><input type="button" class="find_but"/>
+                </p>
+                <div class="map_work">
+                    <ul>
+                        <li>
+                            <div class="img_div img_div01"></div>
+                            <div class="img_div_text">便民服务</div>
+                        </li>
+                        <li>
+                            <div class="img_div img_div02"></div>
+                            <div class="img_div_text">便民服务</div>
+                        </li>
+                        <li>
+                            <div class="img_div img_div01"></div>
+                            <div class="img_div_text">便民服务</div>
+                        </li>
+                        <li>
+                            <div class="img_div img_div01"></div>
+                            <div class="img_div_text">便民服务</div>
+                        </li>
+                        <li>
+                            <div class="img_div img_div01"></div>
+                            <div class="img_div_text">便民服务</div>
+                        </li>
+                        <li>
+                            <div class="img_div img_div01"></div>
+                            <div class="img_div_text">便民服务</div>
+                        </li>
+                        <li>
+                            <div class="img_div img_div01"></div>
+                            <div class="img_div_text">便民服务</div>
+                        </li>
+                        <li>
+                            <div class="img_div img_div01"></div>
+                            <div class="img_div_text">便民服务</div>
+                        </li>
+                        <li>
+                            <div class="img_div img_div01"></div>
+                            <div class="img_div_text">便民服务</div>
+                        </li>
+                    </ul>
+                    <div class="map_resList">
+                        <p class="set_list"><i class="list_i"></i> 查询结果：<span class="right"><i
+                                class="glyphicon glyphicon-backward back_i"></i><a href="javascript:void(0)"
+                                                                                   onclick="back()">返回 </a> </span></p>
+                        <ul>
+                            <li><p><strong>爱尚美术馆</strong><span class="right"><a href="javascript:void(0)"
+                                                                                title="视频"><img
+                                    src="../assets/imges/img/nav_5.png"> </a><a href="javascript:void(0)" title="定位"><img
+                                    src="../assets/imges/img/find01.png"> </a> </span></p>
+                                <p>上海市高新区北美一路31号</p></li>
+                            <li><p><strong>爱尚美术馆</strong><span class="right"><a href="javascript:void(0)"
+                                                                                title="视频"><img
+                                    src="../assets/imges/img/nav_5.png"> </a><a href="javascript:void(0)" title="定位"><img
+                                    src="../assets/imges/img/find01.png"> </a> </span></p>
+                                <p>上海市高新区北美一路31号</p></li>
+                            <li><p><strong>爱尚美术馆</strong><span class="right"><a href="javascript:void(0)"
+                                                                                title="视频"><img
+                                    src="../assets/imges/img/nav_5.png"> </a><a href="javascript:void(0)" title="定位"><img
+                                    src="../assets/imges/img/find01.png"> </a> </span></p>
+                                <p>上海市高新区北美一路31号</p></li>
+                            <li><p><strong>爱尚美术馆</strong><span class="right"><a href="javascript:void(0)"
+                                                                                title="视频"><img
+                                    src="../assets/imges/img/nav_5.png"> </a><a href="javascript:void(0)" title="定位"><img
+                                    src="../assets/imges/img/find01.png"> </a> </span></p>
+                                <p>上海市高新区北美一路31号</p></li>
+                            <li><p><strong>爱尚美术馆</strong><span class="right"><a href="javascript:void(0)"
+                                                                                title="视频"><img
+                                    src="../assets/imges/img/nav_5.png"> </a><a href="javascript:void(0)" title="定位"><img
+                                    src="../assets/imges/img/find01.png"> </a> </span></p>
+                                <p>上海市高新区北美一路31号</p></li>
+                        </ul>
+                        <div id="page"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="map_con_div">
+                <div class=" bow_shadow">
+                    <p>
+                        <input type="text" placeholder="输入关键字" class="carNo_input"><input type="button"
+                                                                                          class="find_but"/>
+                    </p>
+
+                    <p class="set_list"><i class="list_i"></i> 专题列表：</p>
+                    <p>
+                    <ul id="treeDemo" class="ztree"></ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+<script src="../assets/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="../assets/js/echarts-all.js"></script>
+<script src="../assets/js/base.js"></script>
+<script src="../assets/js/listTree.js"></script>
+<script src="../assets/js/jQueryPage/src/jquery.page.js"></script>
+<script src="../assets/js/ztree/jquery.ztree.all-3.5.js"></script>
+<script src="../assets/js/taotalmap_control.js"></script>
+</body>
+</html>
