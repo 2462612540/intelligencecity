@@ -1,8 +1,10 @@
 package com.shanghaiuniversity.manager.service;
-import java.util.List;
-import com.shanghaiuniversity.pojo.TbCommonuser;
 
-import entity.PageResult;
+import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.pojo.Commonuser;
+
+import java.util.List;
+
 /**
  * 服务层接口
  * @author Administrator
@@ -14,7 +16,7 @@ public interface CommonuserService {
 	 * 返回全部列表
 	 * @return
 	 */
-	public List<TbCommonuser> findAll();
+	public List<Commonuser> findAll();
 	
 	
 	/**
@@ -27,13 +29,13 @@ public interface CommonuserService {
 	/**
 	 * 增加
 	*/
-	public void add(TbCommonuser commonuser);
+	public void add(Commonuser commonuser);
 	
 	
 	/**
 	 * 修改
 	 */
-	public void update(TbCommonuser commonuser);
+	public void update(Commonuser commonuser);
 	
 
 	/**
@@ -41,7 +43,7 @@ public interface CommonuserService {
 	 * @param id
 	 * @return
 	 */
-	public TbCommonuser findOne(Long id);
+	public Commonuser findOne(Long id);
 	
 	
 	/**
@@ -56,6 +58,6 @@ public interface CommonuserService {
 	 * @param pageSize 每页记录数
 	 * @return
 	 */
-	public PageResult findPage(TbCommonuser commonuser, int pageNum, int pageSize);
+	public PageResult findPage(Commonuser commonuser, int pageNum, int pageSize);
 	
 }
