@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular入门案例</title>
+</head>
+<body ng-app="testApp" ng-controller="testController">
+<table>
+    <tr>
+        <td>编号</td>
+        <td>名称</td>
+    </tr>
+    <tr ng-repeat="entity in list">
+        <td>{{entity.id}}</td>
+        <td>{{entity.name}}</td>
+    </tr>
+</table>
+</body>
+<script src="../assets/js/plugins/angularjs/angular.min.js"></script>
+<script type="text/javascript">
+    //声明一个testApp模块
+    var app = angular.module('testApp',[]);
+    //定义控制器
+    app.controller('testController',function($scope){
+        $scope.list = [{id:1,name:'张珊'}, {id:2,name:'小菜'}];
+    });
+</script>
+</html>
