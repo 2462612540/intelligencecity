@@ -2,11 +2,11 @@
  * select2封装
  * @param {scope} ng-model 选中的ID
  * @param {scope} select2-model 选中的详细内容
- * @param {scope} config 自定义配置
+ * @param {scope} properties 自定义配置
  * @param {String} [query] 内置的配置 (怎么也还得默认一个config)
  * @example
- * <input select2 ng-model="a" select2-model="b" config="config" type="text" placeholder="占位符" />
- * <input select2 ng-model="a" select2-model="b" config="default" query="member" type="text" placeholder="占位符" />
+ * <input select2 ng-model="a" select2-model="b" properties="properties" type="text" placeholder="占位符" />
+ * <input select2 ng-model="a" select2-model="b" properties="default" query="member" type="text" placeholder="占位符" />
  * <select select2 ng-model="b" class="form-control"></select>
  */
 app.directive('select2', function () {

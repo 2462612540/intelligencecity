@@ -22,11 +22,6 @@
             <artifactId>intelligencecity_dao</artifactId>
             <version>1.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.ShangaiUniversity</groupId>
-            <artifactId>intelligencecity_pojo</artifactId>
-            <version>1.0</version>
-        </dependency>
     </dependencies>
 
     <build>

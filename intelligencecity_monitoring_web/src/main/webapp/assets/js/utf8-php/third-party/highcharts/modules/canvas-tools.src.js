@@ -3092,7 +3092,7 @@ if (CanvasRenderingContext2D) {
 		 * gradient. Currently canvg cannot render gradients (turns out black),
 		 * see: http://code.google.com/p/canvg/issues/detail?id=104
 		 *
-		 * @param {Object} color The color or config object
+		 * @param {Object} color The color or properties object
 		 */
 		color: function (color, elem, prop) {
 			if (color && color.linearGradient) {

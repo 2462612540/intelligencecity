@@ -42,14 +42,14 @@ public interface FacepicService {
      * @param id
      * @return
      */
-    public Facepic findOne(Long id);
+    public Facepic findOne(int id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(Long[] ids);
+    public void delete(int[] ids);
 
     /**
      * 分页

@@ -42,14 +42,14 @@ public interface DeviceuserService {
      * @param id
      * @return
      */
-    public Deviceuser findOne(Long id);
+    public Deviceuser findOne(int id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(Long[] ids);
+    public void delete(int[] ids);
 
     /**
      * 分页

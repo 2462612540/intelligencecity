@@ -18,7 +18,7 @@ document.createElement('track');
  *     var myPlayer = vjs('my_video_id');
  *
  * @param  {String|Element} id      Video element or video element ID
- * @param  {Object=} options        Optional options object for config/settings
+ * @param  {Object=} options        Optional options object for properties/settings
  * @param  {Function=} ready        Optional ready callback
  * @return {vjs.Player}             A player instance
  * @namespace

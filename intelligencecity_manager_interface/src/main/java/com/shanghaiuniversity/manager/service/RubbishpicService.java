@@ -42,14 +42,14 @@ public interface RubbishpicService {
      * @param id
      * @return
      */
-    public Rubbishpic findOne(Long id);
+    public Rubbishpic findOne(int id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(Long[] ids);
+    public void delete(int[] ids);
 
     /**
      * 分页

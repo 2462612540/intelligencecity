@@ -3918,7 +3918,7 @@ SVGRenderer.prototype = {
 	 * 0-1 within the shape. To preserve backwards compatibility, linearGradient
 	 * in this definition is an object of x1, y1, x2 and y2.
 	 *
-	 * @param {Object} color The color or config object
+	 * @param {Object} color The color or properties object
 	 */
 	color: function (color, elem, prop) {
 		var renderer = this,
@@ -3981,7 +3981,7 @@ SVGRenderer.prototype = {
 			}
 			key = key.join(',');
 
-			// Check if a gradient object with the same config object is created within this renderer
+			// Check if a gradient object with the same properties object is created within this renderer
 			if (gradients[key]) {
 				id = gradients[key].id;
 
@@ -5200,7 +5200,7 @@ var VMLRendererExtension = { // inherit SVGRenderer
 	 * Take a color and return it if it's a string, make it a gradient if it's a
 	 * gradient configuration object, and apply opacity.
 	 *
-	 * @param {Object} color The color or config object
+	 * @param {Object} color The color or properties object
 	 */
 	color: function (color, elem, prop, wrapper) {
 		var renderer = this,
@@ -6852,7 +6852,7 @@ Axis.prototype = {
 	},
 	
 	/** 
-	 * The default label formatter. The context is a special config object for the label.
+	 * The default label formatter. The context is a special properties object for the label.
 	 */
 	defaultLabelFormatter: function () {
 		var axis = this.axis,
@@ -10638,7 +10638,7 @@ Chart.prototype = {
 	/**
 	 * Add a series dynamically after  time
 	 *
-	 * @param {Object} options The config options
+	 * @param {Object} options The properties options
 	 * @param {Boolean} redraw Whether to redraw the chart after adding. Defaults to true.
 	 * @param {Boolean|Object} animation Whether to apply animation, and optionally animation
 	 *    configuration
@@ -10988,7 +10988,7 @@ Chart.prototype = {
 	},
 
 	/**
-	 * Create the Axis instances based on the config options
+	 * Create the Axis instances based on the properties options
 	 */
 	getAxes: function () {
 		var chart = this,
@@ -12691,7 +12691,7 @@ Point.prototype = {
  * @classDescription The base function which all other series types inherit from. The data in the series is stored
  * in various arrays.
  *
- * - First, series.options.data contains all the original config options for
+ * - First, series.options.data contains all the original properties options for
  * each point whether added by options or methods like series.addPoint.
  * - Next, series.data contains those values converted to points, but in case the series data length
  * exceeds the cropThreshold, or if the data is grouped, series.data doesn't contain all the points. It
@@ -14170,7 +14170,7 @@ Series.prototype = {
 				}
 			}
 
-			// a specific marker config object is defined for the individual point:
+			// a specific marker properties object is defined for the individual point:
 			// create it's own attribute collection
 			if (hasPointSpecificOptions) {
 				normalOptions = normalOptions || {};
@@ -14210,7 +14210,7 @@ Series.prototype = {
 				);
 
 
-			// no marker config object is created: copy a reference to the series-wide
+			// no marker properties object is created: copy a reference to the series-wide
 			// attribute collection
 			} else {
 				pointAttr = seriesPointAttr;

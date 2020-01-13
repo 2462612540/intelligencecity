@@ -50,7 +50,7 @@ var Chart = Highcharts.Chart,
 		contextButtonTitle: 'Chart context menu'
 	});
 
-// Buttons and menus are collected in a separate config option set called 'navigation'.
+// Buttons and menus are collected in a separate properties option set called 'navigation'.
 // This can be extended later to add control buttons like zoom and pan right click menus.
 defaultOptions.navigation = {
 	menuStyle: {

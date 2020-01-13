@@ -42,14 +42,14 @@ public interface BarrelService {
      * @param id
      * @return
      */
-    public Barrel findOne(Long id);
+    public Barrel findOne(int id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(Long[] ids);
+    public void delete(int[] ids);
 
     /**
      * 分页
