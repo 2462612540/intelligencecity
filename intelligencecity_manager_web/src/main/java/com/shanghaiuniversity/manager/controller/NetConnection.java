@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/net")
 public class NetConnection {
-
     /**
      * f返回测试连接网络
      * @return
