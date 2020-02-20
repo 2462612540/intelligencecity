@@ -1,1038 +1,1078 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Dashoon - Responsive Bootstrap 4 Admin Dashboard</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+<head>
+    <meta charset="utf-8"/>
+    <title>Dashoon - Responsive Bootstrap 4 Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
-        <!-- App css -->
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- App css -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+</head>
 
-    </head>
+<body>
 
-    <body>
+<!-- Begin page -->
+<div id="wrapper">
 
-        <!-- Begin page -->
-        <div id="wrapper">
+    <!-- Topbar Start -->
+    <div class="navbar-custom">
+        <ul class="list-unstyled topnav-menu float-right mb-0">
 
-            <!-- Topbar Start -->
-            <div class="navbar-custom">
-                <ul class="list-unstyled topnav-menu float-right mb-0">
+            <li class="dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="false" aria-expanded="false">
+                    <img src="../assets/images/flags/us.jpg" alt="user-image" class="mr-1" height="12"> <span
+                        class="align-middle">English <i class="mdi mdi-chevron-down"></i> </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
 
-                    <li class="dropdown d-none d-lg-block">
-                        <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="../assets/images/flags/us.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">English <i class="mdi mdi-chevron-down"></i> </span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="../assets/images/flags/spain.jpg" alt="user-image" class="mr-1" height="12"> <span
+                            class="align-middle">Spanish</span>
+                    </a>
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <img src="../assets/images/flags/spain.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Spanish</span>
-                            </a>
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="../assets/images/flags/germany.jpg" alt="user-image" class="mr-1" height="12"> <span
+                            class="align-middle">German</span>
+                    </a>
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <img src="../assets/images/flags/germany.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">German</span>
-                            </a>
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="../assets/images/flags/italy.jpg" alt="user-image" class="mr-1" height="12"> <span
+                            class="align-middle">Italian</span>
+                    </a>
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <img src="../assets/images/flags/italy.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Italian</span>
-                            </a>
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="../assets/images/flags/russia.jpg" alt="user-image" class="mr-1" height="12"> <span
+                            class="align-middle">Russian</span>
+                    </a>
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <img src="../assets/images/flags/russia.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Russian</span>
-                            </a>
+                </div>
+            </li>
 
-                        </div>
-                    </li>
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="dripicons-inbox mail-icon"></i>
+                    <span class="badge badge-info noti-icon-badge">20</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-lg">
 
-                    <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <i class="dripicons-inbox mail-icon"></i>
-                            <span class="badge badge-info noti-icon-badge">20</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
-
-                            <!-- item-->
-                            <div class="dropdown-item noti-title">
-                                <h5 class="m-0">
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h5 class="m-0">
                                     <span class="float-right">
                                         <a href="" class="text-dark">
                                             <small>Clear All</small>
                                         </a>
                                     </span>20 New Messages
-                                </h5>
-                            </div>
+                        </h5>
+                    </div>
 
-                            <div class="slimscroll noti-scroll">
+                    <div class="slimscroll noti-scroll">
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                                    <div class="notify-icon"><img src="../assets/images/users/avatar-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
-                                    <p class="notify-details">Sandra Smith<small class="text-muted">Hey ! I'm working on your project</small></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon"><img src="../assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /></div>
-                                    <p class="notify-details">Amily Lee<small class="text-muted">Hi, How are you? What about our next meeting?</small></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon">
-                                        <img src="../assets/images/users/avatar-3.jpg" class="img-fluid rounded-circle" alt="" /> </div>
-                                    <p class="notify-details">David Boos</p>
-                                    <p class="text-muted mb-0 user-msg">
-                                        <small>What about our next meeting</small>
-                                    </p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon"><img src="../assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
-                                    <p class="notify-details">Christopher Palmer<small class="text-muted">Waiting for your Response...</small></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon">
-                                        <img src="../assets/images/users/avatar-5.jpg" class="img-fluid rounded-circle" alt="" /> </div>
-                                    <p class="notify-details">Malika Roy</p>
-                                    <p class="text-muted mb-0 user-msg">
-                                        <small>Wow that's great</small>
-                                    </p>
-                                </a>
-                            </div>
-
-                            <!-- All-->
-                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
-                                View all
-                                <i class="fi-arrow-right"></i>
-                            </a>
-
-                        </div>
-                    </li>
-
-                    <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <i class="dripicons-bell noti-icon"></i>
-                            <span class="badge badge-danger noti-icon-badge">35</span>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                            <div class="notify-icon"><img src="../assets/images/users/avatar-1.jpg"
+                                                          class="img-fluid rounded-circle" alt=""/></div>
+                            <p class="notify-details">Sandra Smith
+                                <small class="text-muted">Hey ! I'm working on your project</small>
+                            </p>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
 
-                            <!-- item-->
-                            <div class="dropdown-item noti-title">
-                                <h5 class="m-0">
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon"><img src="../assets/images/users/avatar-2.jpg"
+                                                          class="img-fluid rounded-circle" alt=""/></div>
+                            <p class="notify-details">Amily Lee
+                                <small class="text-muted">Hi, How are you? What about our next meeting?</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon">
+                                <img src="../assets/images/users/avatar-3.jpg" class="img-fluid rounded-circle" alt=""/>
+                            </div>
+                            <p class="notify-details">David Boos</p>
+                            <p class="text-muted mb-0 user-msg">
+                                <small>What about our next meeting</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon"><img src="../assets/images/users/avatar-4.jpg"
+                                                          class="img-fluid rounded-circle" alt=""/></div>
+                            <p class="notify-details">Christopher Palmer
+                                <small class="text-muted">Waiting for your Response...</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon">
+                                <img src="../assets/images/users/avatar-5.jpg" class="img-fluid rounded-circle" alt=""/>
+                            </div>
+                            <p class="notify-details">Malika Roy</p>
+                            <p class="text-muted mb-0 user-msg">
+                                <small>Wow that's great</small>
+                            </p>
+                        </a>
+                    </div>
+
+                    <!-- All-->
+                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                        View all
+                        <i class="fi-arrow-right"></i>
+                    </a>
+
+                </div>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="dripicons-bell noti-icon"></i>
+                    <span class="badge badge-danger noti-icon-badge">35</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h5 class="m-0">
                                     <span class="float-right">
                                         <a href="" class="text-dark">
                                             <small>Clear All</small>
                                         </a>
                                     </span>Notification
-                                </h5>
+                        </h5>
+                    </div>
+
+                    <div class="slimscroll noti-scroll">
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-info"><i class="mdi mdi-cloud-upload-outline"></i></div>
+                            <p class="notify-details">Your upload has been approved
+                                <small class="text-muted">5 hours ago</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                            <div class="notify-icon bg-success"><i class="mdi mdi-map-marker-check"></i></div>
+                            <p class="notify-details">You added your Location
+                                <small class="text-muted">Just Now</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-primary"><i class="mdi mdi-layers-remove"></i></div>
+                            <p class="notify-details">Your item is shipped
+                                <small class="text-muted">It is a long established fact that a reader will</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-purple"><i class="mdi mdi-check-bold"></i></div>
+                            <p class="notify-details">Your order is placed
+                                <small class="text-muted">Dummy text of the printing and typesetting industry.</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-warning">
+                                <i class="mdi mdi-alert-outline"></i>
                             </div>
+                            <p class="notify-details">Your Subscription Expired
+                                <small class="text-muted">1 days ago</small>
+                            </p>
+                        </a>
 
-                            <div class="slimscroll noti-scroll">
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-info"><i class="mdi mdi-cloud-upload-outline"></i></div>
-                                    <p class="notify-details">Your upload has been approved<small class="text-muted">5 hours ago</small></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                                    <div class="notify-icon bg-success"><i class="mdi mdi-map-marker-check"></i> </div>
-                                    <p class="notify-details">You added your Location<small class="text-muted">Just Now</small></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-primary"><i class="mdi mdi-layers-remove"></i></div>
-                                    <p class="notify-details">Your item is shipped<small class="text-muted">It is a long established fact that a reader will</small></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-purple"><i class="mdi mdi-check-bold"></i></div>
-                                    <p class="notify-details">Your order is placed<small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-warning">
-                                        <i class="mdi mdi-alert-outline"></i>
-                                    </div>
-                                    <p class="notify-details">Your Subscription Expired
-                                        <small class="text-muted">1 days ago</small>
-                                    </p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-danger">
-                                        <i class="mdi mdi-settings"></i>
-                                    </div>
-                                    <p class="notify-details"><b>Devid</b>, You changed your Settings
-                                        <small class="text-muted">5 days ago</small>
-                                    </p>
-                                </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-danger">
+                                <i class="mdi mdi-settings"></i>
                             </div>
+                            <p class="notify-details"><b>Devid</b>, You changed your Settings
+                                <small class="text-muted">5 days ago</small>
+                            </p>
+                        </a>
+                    </div>
 
-                            <!-- All-->
-                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
-                                View all
-                                <i class="fi-arrow-right"></i>
-                            </a>
+                    <!-- All-->
+                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                        View all
+                        <i class="fi-arrow-right"></i>
+                    </a>
 
-                        </div>
-                    </li>
+                </div>
+            </li>
 
-                    <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="../assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
-                            <span class="pro-user-name ml-1">
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
+                   href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <img src="../assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                    <span class="pro-user-name ml-1">
                                 Devid <i class="mdi mdi-chevron-down"></i> 
                             </span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                            <!-- item-->
-                            <div class="dropdown-item noti-title">
-                                <h6 class="m-0">
-                                    Hello, Devid !
-                                </h6>
-                            </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h6 class="m-0">
+                            Hello, Devid !
+                        </h6>
+                    </div>
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="dripicons-user"></i>
-                                <span>My Profile</span>
-                            </a>
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-user"></i>
+                        <span>My Profile</span>
+                    </a>
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="dripicons-card"></i>
-                                <span>My Wallet</span>
-                            </a>
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-card"></i>
+                        <span>My Wallet</span>
+                    </a>
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="dripicons-gear"></i>
-                                <span>Settings</span>
-                            </a>
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-gear"></i>
+                        <span>Settings</span>
+                    </a>
 
-                            <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="dripicons-power"></i>
-                                <span>Logout</span>
-                            </a>
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-power"></i>
+                        <span>Logout</span>
+                    </a>
 
-                        </div>
-                    </li>
+                </div>
+            </li>
 
-                </ul>
+        </ul>
 
-                <ul class="list-unstyled menu-left mb-0">
-                    <li class="float-left">
-                        <a href="index.html" class="logo">
+        <ul class="list-unstyled menu-left mb-0">
+            <li class="float-left">
+                <a href="index.html" class="logo">
                             <span class="logo-lg">
                                 <img src="../assets/images/logo.png" alt="" height="25">
                             </span>
-                            <span class="logo-sm">
+                    <span class="logo-sm">
                                 <img src="../assets/images/logo-sm.png" alt="" height="24">
                             </span>
-                        </a>
-                    </li>
-                    <li class="float-left">
-                        <a class="button-menu-mobile navbar-toggle">
-                            <div class="lines">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="app-search d-none d-md-block">
-                        <form class="form-inline"> 
-                            <input type="text" class="form-control" placeholder="Search…"> 
-                            <button class="btn btn-primary-color" type="submit"><i class="fa fa-search"></i></button> 
-                        </form>
-                    </li>
-                </ul>
-            </div>
-            <!-- end Topbar -->
+                </a>
+            </li>
+            <li class="float-left">
+                <a class="button-menu-mobile navbar-toggle">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </li>
+            <li class="app-search d-none d-md-block">
+                <form class="form-inline">
+                    <input type="text" class="form-control" placeholder="Search…">
+                    <button class="btn btn-primary-color" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <!-- end Topbar -->
 
-            <!-- ========== Left Sidebar Start ========== -->
-            <div class="left-side-menu">
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
 
-                <div class="slimscroll-menu">
+        <div class="slimscroll-menu">
 
-                    <!--- Sidemenu -->
-                    <div id="sidebar-menu">
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
 
-                        <ul class="metismenu" id="side-menu">
+                <ul class="metismenu" id="side-menu">
 
 
-                            <div class="left-user">
-                                <div class="user-box">
-                                    <div class="user-img">
-                                        <img src="../assets/images/users/avatar-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
-                                        <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
-                                    </div>
-                        
-                                    <h5><a href="javascript: void(0);">Devid Stanberry</a> </h5>
-                                    <p class="text-muted mb-0"><small>Main Admin</small></p>
-                                </div>
+                    <div class="left-user">
+                        <div class="user-box">
+                            <div class="user-img">
+                                <img src="../assets/images/users/avatar-1.jpg" alt="user-img" title="Mat Helme"
+                                     class="rounded-circle img-fluid">
+                                <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
                             </div>
 
-                            <li>
-                                <a href="index.html">
-                                    <i class="dripicons-device-desktop"></i>
-                                    <span> Dashboard </span>
-                                </a>
-                            </li>
+                            <h5><a href="javascript: void(0);">Devid Stanberry</a></h5>
+                            <p class="text-muted mb-0">
+                                <small>Main Admin</small>
+                            </p>
+                        </div>
+                    </div>
 
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-view-apps"></i>
-                                    <span> Layouts </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="layouts-dark-header.html">Dark Header</a>
-                                    </li>
-                                    <li>
-                                        <a href="layouts-sidebar-collapsed.html">Sidebar Collapsed</a>
-                                    </li>
-                                    <li>
-                                        <a href="layouts-dark-sidebar.html">Dark Sidebar</a>
-                                    </li>
-                                    <li>
-                                        <a href="layouts-small-sidebar.html">Small Sidebar</a>
-                                    </li>
-                                    <li>
-                                        <a href="layouts-boxed.html">Boxed Layout</a>
-                                    </li>
-                                </ul>
-                            </li>
-                
-                            <li>
-                                <a href="calendar.html">
-                                    <i class="dripicons-calendar"></i> <span> Calendar </span>
-                                </a>
-                            </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="dripicons-device-desktop"></i>
+                            <span> Dashboard </span>
+                        </a>
+                    </li>
 
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-view-apps"></i>
+                            <span> Layouts </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
                             <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-inbox"></i>
-                                    <span> Email </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="email-inbox.html">Inbox</a>
-                                    </li>
-                                    <li>
-                                        <a href="email-read.html">Read Email</a>
-                                    </li>
-                                    <li>
-                                        <a href="email-compose.html">Compose Email</a>
-                                    </li>
-                                </ul>
+                                <a href="layouts-dark-header.html">Dark Header</a>
                             </li>
-
                             <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-briefcase"></i>
-                                    <span> UI Elements </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="ui-typography.html">Typography</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-buttons.html">Buttons</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-notifications.html">Notifications</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-cards.html">Cards</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-modals.html">Modals</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-grid.html">Grid</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-checkbox-radio.html">Checkbox & Radio</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-general.html">General</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-progress.html">Progress</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-tabs.html">Tabs & Accordions</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-sweetalerts.html">Sweet Alerts</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-ribbons.html">Ribbons</a>
-                                    </li> 
-                                    <li>
-                                        <a href="ui-range-slider.html">Range Slider</a>
-                                    </li>
-                                </ul>
+                                <a href="layouts-sidebar-collapsed.html">Sidebar Collapsed</a>
                             </li>
-
                             <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-graph-pie"></i>
-                                    <span> Charts </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="chart-chartjs.html">Chartjs Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="chart-flot.html">Flot Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="chart-chartist.html">Chartist Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="chart-knob.html">Jquery Knob</a>
-                                    </li>
-                                    <li>
-                                        <a href="chart-sparkline.html">Sparkline Charts</a>
-                                    </li>
-                                </ul>
+                                <a href="layouts-dark-sidebar.html">Dark Sidebar</a>
                             </li>
-
                             <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-document"></i>
-                                    <span> Forms </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="form-elements.html">Form Elements</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-advanced.html">Form Advanced</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-validation.html">Form Validation</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-wizard.html">Form Wizard</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-upload.html">Form Upload</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-summernote.html">Summernote</a>
-                                    </li>
-                                </ul>
+                                <a href="layouts-small-sidebar.html">Small Sidebar</a>
                             </li>
-
                             <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-view-list"></i>
-                                    <span> Tables </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="tables-basic.html">Basic Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="tables-datatable.html">Data Tables</a>
-                                </ul>
+                                <a href="layouts-boxed.html">Boxed Layout</a>
                             </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-map"></i>
-                                    <span> Maps </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="maps-google.html">Google Maps</a>
-                                    </li>
-                                    <li>
-                                        <a href="maps-vector.html">Vector Maps</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-star"></i>
-                                    <span> Icons </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="icons-simpleline.html">Simple Line</a>
-                                    </li>
-                                    <li>
-                                        <a href="icons-dripicons.html">Dripicons</a>
-                                    </li> 
-                                    <li>
-                                        <a href="icons-materialdesign.html">Material Design</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-user"></i>
-                                    <span> Authentication </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="../auth-login.html">Log In</a></li>
-                                    <li><a href="../auth-register.html">Register</a></li>
-                                    <li><a href="auth-recoverpassword.html">Recover Password</a></li>
-                                    <li><a href="auth-lock-screen.html">Lock Screen</a></li>
-                                    <li><a href="auth-404.html">Error 404</a></li>
-                                    <li><a href="auth-500.html">Error 500</a></li>  
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-duplicate"></i>
-                                    <span> Extra Pages </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="pages-pricing.html">Pricing</a></li>
-                                    <li><a href="pages-starter.html">Starter</a></li>
-                                    <li><a href="pages-invoice.html">Invoice</a></li>
-                                    <li><a href="pages-timeline.html">Timeline</a></li>
-                                    <li><a href="pages-faq.html">FAQs</a></li>  
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="dripicons-network-3"></i>
-                                    <span> Multi Level </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level nav" aria-expanded="false">
-                                    <li>
-                                        <a href="javascript: void(0);">Menu 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0);" aria-expanded="false">Menu 2
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <ul class="nav-third-level nav" aria-expanded="false">
-                                            <li>
-                                                <a href="javascript: void(0);">Menu 2.1</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript: void(0);">Menu 2.2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
                         </ul>
+                    </li>
 
-                    </div>
-                    <!-- End Sidebar -->
+                    <li>
+                        <a href="calendar.html">
+                            <i class="dripicons-calendar"></i> <span> Calendar </span>
+                        </a>
+                    </li>
 
-                    <div class="clearfix"></div>
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-inbox"></i>
+                            <span> Email </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="email-inbox.html">Inbox</a>
+                            </li>
+                            <li>
+                                <a href="email-read.html">Read Email</a>
+                            </li>
+                            <li>
+                                <a href="email-compose.html">Compose Email</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                </div>
-                <!-- Sidebar -left -->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-briefcase"></i>
+                            <span> UI Elements </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="ui-typography.html">Typography</a>
+                            </li>
+                            <li>
+                                <a href="ui-buttons.html">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="ui-notifications.html">Notifications</a>
+                            </li>
+                            <li>
+                                <a href="ui-cards.html">Cards</a>
+                            </li>
+                            <li>
+                                <a href="ui-modals.html">Modals</a>
+                            </li>
+                            <li>
+                                <a href="ui-grid.html">Grid</a>
+                            </li>
+                            <li>
+                                <a href="ui-checkbox-radio.html">Checkbox & Radio</a>
+                            </li>
+                            <li>
+                                <a href="ui-general.html">General</a>
+                            </li>
+                            <li>
+                                <a href="ui-progress.html">Progress</a>
+                            </li>
+                            <li>
+                                <a href="ui-tabs.html">Tabs & Accordions</a>
+                            </li>
+                            <li>
+                                <a href="ui-sweetalerts.html">Sweet Alerts</a>
+                            </li>
+                            <li>
+                                <a href="ui-ribbons.html">Ribbons</a>
+                            </li>
+                            <li>
+                                <a href="ui-range-slider.html">Range Slider</a>
+                            </li>
+                        </ul>
+                    </li>
 
-            </div>
-            <!-- Left Sidebar End -->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-graph-pie"></i>
+                            <span> Charts </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="chart-chartjs.html">Chartjs Charts</a>
+                            </li>
+                            <li>
+                                <a href="chart-flot.html">Flot Charts</a>
+                            </li>
+                            <li>
+                                <a href="chart-chartist.html">Chartist Charts</a>
+                            </li>
+                            <li>
+                                <a href="chart-knob.html">Jquery Knob</a>
+                            </li>
+                            <li>
+                                <a href="chart-sparkline.html">Sparkline Charts</a>
+                            </li>
+                        </ul>
+                    </li>
 
-            <!-- ============================================================== -->
-            <!-- Start Page Content here -->
-            <!-- ============================================================== -->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-document"></i>
+                            <span> Forms </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="form-elements.html">Form Elements</a>
+                            </li>
+                            <li>
+                                <a href="form-advanced.html">Form Advanced</a>
+                            </li>
+                            <li>
+                                <a href="form-validation.html">Form Validation</a>
+                            </li>
+                            <li>
+                                <a href="form-wizard.html">Form Wizard</a>
+                            </li>
+                            <li>
+                                <a href="form-upload.html">Form Upload</a>
+                            </li>
+                            <li>
+                                <a href="form-summernote.html">Summernote</a>
+                            </li>
+                        </ul>
+                    </li>
 
-            <div class="content-page">
-                <div class="content">
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-view-list"></i>
+                            <span> Tables </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="tables-basic.html">Basic Tables</a>
+                            </li>
+                            <li>
+                                <a href="tables-datatable.html">Data Tables</a>
+                        </ul>
+                    </li>
 
-                    <!-- Start Content-->
-                    <div class="container-fluid">
-                        
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashoon</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">UI Elements</a></li>
-                                            <li class="breadcrumb-item active">Typography</li>
-                                        </ol>
-                                    </div>
-                                    <h4 class="page-title">Typography</h4>
-                                </div>
-                            </div>
-                        </div>     
-                        <!-- end page title --> 
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-map"></i>
+                            <span> Maps </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="maps-google.html">Google Maps</a>
+                            </li>
+                            <li>
+                                <a href="maps-vector.html">Vector Maps</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                        <div class="row">
-                            <div class="col-md-12">
-        
-                                <div class="card-box">
-                                    <h4 class="header-title">Display headings</h4>
-                                    <p class="sub-header">
-                                        Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style.
-                                    </p>
-        
-                                    <h1 class="display-1">Display 1</h1>
-                                    <p class="text-muted">Suspendisse vel quam malesuada, aliquet sem sit
-                                        amet, fringilla elit. Morbi
-                                        tempor tincidunt tempor. Etiam id turpis viverra, vulputate sapien
-                                        nec,
-                                        varius sem. Curabitur ullamcorper fringilla eleifend. In ut eros
-                                        hendrerit
-                                        est consequat posuere et at velit.</p>
-        
-                                    <div class="clearfix"></div>
-        
-                                    <h1 class="display-2">Display 2</h1>
-                                    <p class="text-muted">In nec rhoncus eros. Vestibulum eu mattis nisl.
-                                        Quisque viverra viverra magna
-                                        nec pulvinar. Maecenas pellentesque porta augue, consectetur
-                                        facilisis diam
-                                        porttitor sed. Suspendisse tempor est sodales augue rutrum
-                                        tincidunt.
-                                        Quisque a malesuada purus.</p>
-        
-                                    <div class="clearfix"></div>
-        
-                                    <h1 class="display-3">Display 3</h1>
-                                    <p class="text-muted">Vestibulum auctor tincidunt semper. Phasellus ut
-                                        vulputate lacus. Suspendisse
-                                        ultricies mi eros, sit amet tempor nulla varius sed. Proin nisl
-                                        nisi,
-                                        feugiat quis bibendum vitae, dapibus in tellus.</p>
-        
-                                    <div class="clearfix"></div>
-        
-                                    <h1 class="display-4">Display 4</h1>
-                                    <p class="text-muted mb-0">Nulla et mattis nunc. Curabitur scelerisque
-                                        commodo condimentum. Mauris
-                                        blandit, velit a consectetur egestas, diam arcu fermentum justo,
-                                        eget
-                                        ultrices arcu eros vel erat.</p>
-        
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!-- end card-box-->
-        
-                                <div class="card-box">
-                                    <h4 class="header-title">Headings</h4>
-                                    <p class="sub-header">
-                                        All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through
-                                        <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code>
-                                        classes are also available, for when you want to match the font styling of a heading
-                                        but still want your text to be displayed inline.
-                                    </p>
-        
-                                    <h1>This is a Heading 1</h1>
-                                    <p class="text-muted">Suspendisse vel quam malesuada, aliquet sem sit
-                                        amet, fringilla elit. Morbi
-                                        tempor tincidunt tempor. Etiam id turpis viverra, vulputate sapien
-                                        nec,
-                                        varius sem. Curabitur ullamcorper fringilla eleifend. In ut eros
-                                        hendrerit
-                                        est consequat posuere et at velit.</p>
-        
-                                    <div class="clearfix"></div>
-        
-                                    <h2>This is a Heading 2</h2>
-                                    <p class="text-muted">In nec rhoncus eros. Vestibulum eu mattis nisl.
-                                        Quisque viverra viverra magna
-                                        nec pulvinar. Maecenas pellentesque porta augue, consectetur
-                                        facilisis diam
-                                        porttitor sed. Suspendisse tempor est sodales augue rutrum
-                                        tincidunt.
-                                        Quisque a malesuada purus.</p>
-        
-                                    <div class="clearfix"></div>
-        
-                                    <h3>This is a Heading 3</h3>
-                                    <p class="text-muted">Vestibulum auctor tincidunt semper. Phasellus ut
-                                        vulputate lacus. Suspendisse
-                                        ultricies mi eros, sit amet tempor nulla varius sed. Proin nisl
-                                        nisi,
-                                        feugiat quis bibendum vitae, dapibus in tellus.</p>
-        
-                                    <div class="clearfix"></div>
-        
-                                    <h4>This is a Heading 4</h4>
-                                    <p class="text-muted">Nulla et mattis nunc. Curabitur scelerisque
-                                        commodo condimentum. Mauris
-                                        blandit, velit a consectetur egestas, diam arcu fermentum justo,
-                                        eget
-                                        ultrices arcu eros vel erat.</p>
-        
-                                    <div class="clearfix"></div>
-        
-                                    <h5>This is a Heading 5</h5>
-                                    <p class="text-muted">Quisque nec turpis at urna dictum luctus.
-                                        Suspendisse convallis dignissim
-                                        eros at volutpat. In egestas mattis dui. Aliquam mattis dictum
-                                        aliquet.
-                                        Nulla sapien mauris, eleifend et sem ac, commodo dapibus odio.
-                                        Vivamus
-                                        pretium nec odio cursus elementum. Suspendisse molestie ullamcorper
-                                        ornare.</p>
-        
-                                    <div class="clearfix"></div>
-        
-                                    <h6>This is a Heading 6</h6>
-                                    <p class="text-muted mb-0">Donec ultricies, lacus id tempor condimentum, orci
-                                        leo faucibus sem, a
-                                        molestie libero lectus ac justo. ultricies mi eros, sit amet tempor
-                                        nulla
-                                        varius sed. Proin nisl nisi, feugiat quis bibendum vitae, dapibus in
-                                        tellus.</p>
-                                </div>
-                                <!-- end card-box-->
-        
-                                <div class="card-box">
-        
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <h4 class="header-title">Inline text elements</h4>
-                                            <p class="sub-header">
-                                                Your awesome text goes here.
-                                            </p>
-        
-                                            <p class="lead">
-                                                Your title goes here
-                                            </p>
-        
-                                            <p>You can use the mark tag to <mark>highlight</mark> text.</p>
-                                            <p><del>This line of text is meant to be treated as deleted text.</del></p>
-                                            <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-                                            <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-                                            <p><u>This line of text will render as underlined</u></p>
-                                            <p><small>This line of text is meant to be treated as fine print.</small></p>
-                                            <p><strong>This line rendered as bold text.</strong></p>
-                                            <p class="mb-0"><em>This line rendered as italicized text.</em></p>
-                                        </div> <!-- end col -->
-        
-                                        <div class="col-lg-6 mt-4 mt-lg-0">
-                                            <h4 class="header-title">Contextual Text Colors</h4>
-                                            <p class="sub-header">
-                                                Your awesome text goes here.
-                                            </p>
-        
-                                            <p class="text-muted">
-                                                Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
-                                            </p>
-                                            <p class="text-primary">
-                                                Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                            </p>
-                                            <p class="text-success">
-                                                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                                            </p>
-                                            <p class="text-info">
-                                                Maecenas sed diam eget risus varius blandit sit amet non magna.
-                                            </p>
-                                            <p class="text-warning">
-                                                Etiam porta sem malesuada magna mollis euismod.
-                                            </p>
-                                            <p class="text-danger">
-                                                Donec ullamcorper nulla non metus auctor fringilla.
-                                            </p>
-                                            <p class="text-dark">
-                                                Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                            </p>
-        
-                                        </div> <!-- end col -->
-                                    </div>
-                                    <!-- end row -->
-                                </div>
-                                <!-- end card-box-->
-        
-                                <div class="card-box">
-        
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <h4 class="header-title">Unordered</h4>
-                                            <p class="sub-header">
-                                                A list of items in which the order does not explicitly matter.
-                                            </p>
-        
-                                            <ul>
-                                                <li>
-                                                    Lorem ipsum dolor sit amet
-                                                </li>
-                                                <li>
-                                                    Consectetur adipiscing elit
-                                                </li>
-                                                <li>
-                                                    Integer molestie lorem at massa
-                                                </li>
-                                                <li>
-                                                    Facilisis in pretium nisl aliquet
-                                                </li>
-                                                <li>
-                                                    Nulla volutpat aliquam velit
-                                                    <ul>
-                                                        <li>
-                                                            Phasellus iaculis neque
-                                                        </li>
-                                                        <li>
-                                                            Purus sodales ultricies
-                                                        </li>
-                                                        <li>
-                                                            Vestibulum laoreet porttitor sem
-                                                        </li>
-                                                        <li>
-                                                            Ac tristique libero volutpat at
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    Faucibus porta lacus fringilla vel
-                                                </li>
-                                                <li>
-                                                    Aenean sit amet erat nunc
-                                                </li>
-                                                <li>
-                                                    Eget porttitor lorem
-                                                </li>
-                                            </ul>
-        
-                                        </div> <!-- end col -->
-        
-                                        <div class="col-lg-4 mt-4 mt-lg-0">
-                                            <h4 class="header-title">Ordered</h4>
-                                            <p class="sub-header">
-                                                A list of items in which the order does explicitly matter.
-                                            </p>
-        
-                                            <ol>
-                                                <li>
-                                                    Lorem ipsum dolor sit amet
-                                                </li>
-                                                <li>
-                                                    Consectetur adipiscing elit
-                                                </li>
-                                                <li>
-                                                    Integer molestie lorem at massa
-                                                </li>
-                                                <li>
-                                                    Facilisis in pretium nisl aliquet
-                                                </li>
-                                                <li>
-                                                    Nulla volutpat aliquam velit
-                                                    <ol>
-                                                        <li>
-                                                            Phasellus iaculis neque
-                                                        </li>
-                                                        <li>
-                                                            Purus sodales ultricies
-                                                        </li>
-                                                        <li>
-                                                            Vestibulum laoreet porttitor sem
-                                                        </li>
-                                                        <li>
-                                                            Ac tristique libero volutpat at
-                                                        </li>
-                                                    </ol>
-                                                </li>
-                                                <li>
-                                                    Faucibus porta lacus fringilla vel
-                                                </li>
-                                                <li>
-                                                    Aenean sit amet erat nunc
-                                                </li>
-                                                <li>
-                                                    Eget porttitor lorem
-                                                </li>
-                                            </ol>
-                                        </div> <!-- end col -->
-        
-                                        <div class="col-lg-4 mt-4 mt-lg-0">
-                                            <h4 class="header-title">Unstyled</h4>
-                                            <p class="sub-header">
-                                                <strong>This only applies to immediate children
-                                                    list items</strong>, meaning you will need to add the class for any nested lists as well.
-                                            </p>
-        
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    Lorem ipsum dolor sit amet
-                                                </li>
-                                                <li>
-                                                    Integer molestie lorem at massa
-                                                    <ul>
-                                                        <li>
-                                                            Phasellus iaculis neque
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    Faucibus porta lacus fringilla vel
-                                                </li>
-                                                <li>
-                                                    Eget porttitor lorem
-                                                </li>
-                                            </ul>
-        
-                                            <h5>Inline</h5>
-                                            <p class="text-muted">
-                                                Place all list items on a single line with <code>
-                                                display: inline-block;</code>
-                                                and some light padding.
-                                            </p>
-        
-                                            <ul class="list-inline mb-0">
-                                                <li class="list-inline-item">
-                                                    Lorem ipsum
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    Phasellus iaculis
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    Nulla volutpat
-                                                </li>
-                                            </ul>
-        
-                                        </div> <!-- end col -->
-                                    </div>
-                                    <!-- end row -->
-                                </div>
-                                <!-- end card-box-->
-        
-                                <div class="card-box">
-        
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <h4 class="header-title">Blockquotes</h4>
-                                            <p class="sub-header">
-                                                Your awesome text goes here.
-                                            </p>
-        
-                                            <blockquote class="blockquote">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                            </blockquote>
-        
-                                            <p class="text-muted">
-                                                Use text utilities as needed to change the alignment of your blockquote.
-                                            </p>
-        
-                                            <blockquote class="blockquote text-center border-0">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                            </blockquote>
-        
-                                            <blockquote class="blockquote blockquote-reverse mb-0">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                            </blockquote>
-                                        </div> <!-- end col -->
-        
-                                        <div class="col-lg-6 mt-4 mt-lg-0">
-                                            <h4 class="header-title">Description list alignment</h4>
-                                            <p class="sub-header">
-                                                Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a <code class="highlighter-rouge">.text-truncate</code> class to truncate the text with an ellipsis.
-                                            </p>
-        
-                                            <dl class="row">
-                                                <dt class="col-sm-3">Description lists</dt>
-                                                <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
-        
-                                                <dt class="col-sm-3">Euismod</dt>
-                                                <dd class="col-sm-9">
-                                                    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-                                                    <p>Donec id elit non mi porta gravida at eget metus.</p>
-                                                </dd>
-        
-                                                <dt class="col-sm-3">Malesuada porta</dt>
-                                                <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
-        
-                                                <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-                                                <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-        
-                                                <dt class="col-sm-3">Nesting</dt>
-                                                <dd class="col-sm-9">
-                                                    <dl class="row">
-                                                        <dt class="col-sm-4">Nested definition list</dt>
-                                                        <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
-                                                    </dl>
-                                                </dd>
-                                            </dl>
-        
-                                        </div> <!-- end col-->
-                                    </div>
-                                    <!-- end row -->
-        
-                                </div> <!-- end card-box-->
-                                
-                            </div> <!-- end col-->
-                        </div>
-                        <!-- end row -->
-                        
-                    </div> <!-- container-fluid -->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-star"></i>
+                            <span> Icons </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="icons-simpleline.html">Simple Line</a>
+                            </li>
+                            <li>
+                                <a href="icons-dripicons.html">Dripicons</a>
+                            </li>
+                            <li>
+                                <a href="icons-materialdesign.html">Material Design</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                </div> <!-- content -->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-user"></i>
+                            <span> Authentication </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="../auth-login.html">Log In</a></li>
+                            <li><a href="../auth-register.html">Register</a></li>
+                            <li><a href="auth-recoverpassword.html">Recover Password</a></li>
+                            <li><a href="auth-lock-screen.html">Lock Screen</a></li>
+                            <li><a href="auth-404.html">Error 404</a></li>
+                            <li><a href="auth-500.html">Error 500</a></li>
+                        </ul>
+                    </li>
 
-                <!-- Footer Start -->
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                2019 © Dashboard Theme By <a href="#">Dashoon</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                <!-- end Footer -->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-duplicate"></i>
+                            <span> Extra Pages </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="pages-pricing.html">Pricing</a></li>
+                            <li><a href="pages-starter.html">Starter</a></li>
+                            <li><a href="pages-invoice.html">Invoice</a></li>
+                            <li><a href="pages-timeline.html">Timeline</a></li>
+                            <li><a href="pages-faq.html">FAQs</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-network-3"></i>
+                            <span> Multi Level </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level nav" aria-expanded="false">
+                            <li>
+                                <a href="javascript: void(0);">Menu 1</a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" aria-expanded="false">Menu 2
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-third-level nav" aria-expanded="false">
+                                    <li>
+                                        <a href="javascript: void(0);">Menu 2.1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0);">Menu 2.2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
 
             </div>
+            <!-- End Sidebar -->
 
-            <!-- ============================================================== -->
-            <!-- End Page content -->
-            <!-- ============================================================== -->
-
+            <div class="clearfix"></div>
 
         </div>
-        <!-- END wrapper -->
+        <!-- Sidebar -left -->
 
-        <!-- Vendor js -->
-        <script src="../assets/js/vendor.min.js"></script>
+    </div>
+    <!-- Left Sidebar End -->
 
-        <!-- App js -->
-        <script src="../assets/js/app.min.js"></script>
-        
-    </body>
+    <div class="content-page">
+        <div class="content">
+            <!-- Start Content-->
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dashoon</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">UI Elements</a></li>
+                                    <li class="breadcrumb-item active">Typography</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Typography</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-box">
+                            <h4 class="header-title">Display headings</h4>
+                            <p class="sub-header">
+                                Traditional heading elements are designed to work best in the meat of your page content.
+                                When you need a heading to stand out, consider using a display heading—a larger,
+                                slightly more opinionated heading style.
+                            </p>
+                            <h1 class="display-1">Display 1</h1>
+                            <p class="text-muted">Suspendisse vel quam malesuada, aliquet sem sit
+                                amet, fringilla elit. Morbi
+                                tempor tincidunt tempor. Etiam id turpis viverra, vulputate sapien
+                                nec,
+                                varius sem. Curabitur ullamcorper fringilla eleifend. In ut eros
+                                hendrerit
+                                est consequat posuere et at velit.</p>
+                            <div class="clearfix"></div>
+                            <h1 class="display-2">Display 2</h1>
+                            <p class="text-muted">In nec rhoncus eros. Vestibulum eu mattis nisl.
+                                Quisque viverra viverra magna
+                                nec pulvinar. Maecenas pellentesque porta augue, consectetur
+                                facilisis diam
+                                porttitor sed. Suspendisse tempor est sodales augue rutrum
+                                tincidunt.
+                                Quisque a malesuada purus.</p>
+
+                            <div class="clearfix"></div>
+
+                            <h1 class="display-3">Display 3</h1>
+                            <p class="text-muted">Vestibulum auctor tincidunt semper. Phasellus ut
+                                vulputate lacus. Suspendisse
+                                ultricies mi eros, sit amet tempor nulla varius sed. Proin nisl
+                                nisi,
+                                feugiat quis bibendum vitae, dapibus in tellus.</p>
+
+                            <div class="clearfix"></div>
+
+                            <h1 class="display-4">Display 4</h1>
+                            <p class="text-muted mb-0">Nulla et mattis nunc. Curabitur scelerisque
+                                commodo condimentum. Mauris
+                                blandit, velit a consectetur egestas, diam arcu fermentum justo,
+                                eget
+                                ultrices arcu eros vel erat.</p>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- end card-box-->
+
+                        <div class="card-box">
+                            <h4 class="header-title">Headings</h4>
+                            <p class="sub-header">
+                                All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through
+                                <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code>
+                                classes are also available, for when you want to match the font styling of a heading
+                                but still want your text to be displayed inline.
+                            </p>
+
+                            <h1>This is a Heading 1</h1>
+                            <p class="text-muted">Suspendisse vel quam malesuada, aliquet sem sit
+                                amet, fringilla elit. Morbi
+                                tempor tincidunt tempor. Etiam id turpis viverra, vulputate sapien
+                                nec,
+                                varius sem. Curabitur ullamcorper fringilla eleifend. In ut eros
+                                hendrerit
+                                est consequat posuere et at velit.</p>
+
+                            <div class="clearfix"></div>
+
+                            <h2>This is a Heading 2</h2>
+                            <p class="text-muted">In nec rhoncus eros. Vestibulum eu mattis nisl.
+                                Quisque viverra viverra magna
+                                nec pulvinar. Maecenas pellentesque porta augue, consectetur
+                                facilisis diam
+                                porttitor sed. Suspendisse tempor est sodales augue rutrum
+                                tincidunt.
+                                Quisque a malesuada purus.</p>
+
+                            <div class="clearfix"></div>
+
+                            <h3>This is a Heading 3</h3>
+                            <p class="text-muted">Vestibulum auctor tincidunt semper. Phasellus ut
+                                vulputate lacus. Suspendisse
+                                ultricies mi eros, sit amet tempor nulla varius sed. Proin nisl
+                                nisi,
+                                feugiat quis bibendum vitae, dapibus in tellus.</p>
+
+                            <div class="clearfix"></div>
+
+                            <h4>This is a Heading 4</h4>
+                            <p class="text-muted">Nulla et mattis nunc. Curabitur scelerisque
+                                commodo condimentum. Mauris
+                                blandit, velit a consectetur egestas, diam arcu fermentum justo,
+                                eget
+                                ultrices arcu eros vel erat.</p>
+
+                            <div class="clearfix"></div>
+
+                            <h5>This is a Heading 5</h5>
+                            <p class="text-muted">Quisque nec turpis at urna dictum luctus.
+                                Suspendisse convallis dignissim
+                                eros at volutpat. In egestas mattis dui. Aliquam mattis dictum
+                                aliquet.
+                                Nulla sapien mauris, eleifend et sem ac, commodo dapibus odio.
+                                Vivamus
+                                pretium nec odio cursus elementum. Suspendisse molestie ullamcorper
+                                ornare.</p>
+
+                            <div class="clearfix"></div>
+
+                            <h6>This is a Heading 6</h6>
+                            <p class="text-muted mb-0">Donec ultricies, lacus id tempor condimentum, orci
+                                leo faucibus sem, a
+                                molestie libero lectus ac justo. ultricies mi eros, sit amet tempor
+                                nulla
+                                varius sed. Proin nisl nisi, feugiat quis bibendum vitae, dapibus in
+                                tellus.</p>
+                        </div>
+                        <!-- end card-box-->
+
+                        <div class="card-box">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h4 class="header-title">Inline text elements</h4>
+                                    <p class="sub-header">
+                                        Your awesome text goes here.
+                                    </p>
+                                    <p class="lead">
+                                        Your title goes here
+                                    </p>
+                                    <p>You can use the mark tag to
+                                        <mark>highlight</mark>
+                                        text.
+                                    </p>
+                                    <p>
+                                        <del>This line of text is meant to be treated as deleted text.</del>
+                                    </p>
+                                    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                                    <p>
+                                        <ins>This line of text is meant to be treated as an addition to the document.
+                                        </ins>
+                                    </p>
+                                    <p><u>This line of text will render as underlined</u></p>
+                                    <p>
+                                        <small>This line of text is meant to be treated as fine print.</small>
+                                    </p>
+                                    <p><strong>This line rendered as bold text.</strong></p>
+                                    <p class="mb-0"><em>This line rendered as italicized text.</em></p>
+                                </div> <!-- end col -->
+
+                                <div class="col-lg-6 mt-4 mt-lg-0">
+                                    <h4 class="header-title">Contextual Text Colors</h4>
+                                    <p class="sub-header">
+                                        Your awesome text goes here.
+                                    </p>
+                                    <p class="text-muted">
+                                        Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+                                    </p>
+                                    <p class="text-primary">
+                                        Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                    </p>
+                                    <p class="text-success">
+                                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                                    </p>
+                                    <p class="text-info">
+                                        Maecenas sed diam eget risus varius blandit sit amet non magna.
+                                    </p>
+                                    <p class="text-warning">
+                                        Etiam porta sem malesuada magna mollis euismod.
+                                    </p>
+                                    <p class="text-danger">
+                                        Donec ullamcorper nulla non metus auctor fringilla.
+                                    </p>
+                                    <p class="text-dark">
+                                        Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                    </p>
+
+                                </div> <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end card-box-->
+
+                        <div class="card-box">
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <h4 class="header-title">Unordered</h4>
+                                    <p class="sub-header">
+                                        A list of items in which the order does not explicitly matter.
+                                    </p>
+
+                                    <ul>
+                                        <li>
+                                            Lorem ipsum dolor sit amet
+                                        </li>
+                                        <li>
+                                            Consectetur adipiscing elit
+                                        </li>
+                                        <li>
+                                            Integer molestie lorem at massa
+                                        </li>
+                                        <li>
+                                            Facilisis in pretium nisl aliquet
+                                        </li>
+                                        <li>
+                                            Nulla volutpat aliquam velit
+                                            <ul>
+                                                <li>
+                                                    Phasellus iaculis neque
+                                                </li>
+                                                <li>
+                                                    Purus sodales ultricies
+                                                </li>
+                                                <li>
+                                                    Vestibulum laoreet porttitor sem
+                                                </li>
+                                                <li>
+                                                    Ac tristique libero volutpat at
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Faucibus porta lacus fringilla vel
+                                        </li>
+                                        <li>
+                                            Aenean sit amet erat nunc
+                                        </li>
+                                        <li>
+                                            Eget porttitor lorem
+                                        </li>
+                                    </ul>
+
+                                </div> <!-- end col -->
+
+                                <div class="col-lg-4 mt-4 mt-lg-0">
+                                    <h4 class="header-title">Ordered</h4>
+                                    <p class="sub-header">
+                                        A list of items in which the order does explicitly matter.
+                                    </p>
+
+                                    <ol>
+                                        <li>
+                                            Lorem ipsum dolor sit amet
+                                        </li>
+                                        <li>
+                                            Consectetur adipiscing elit
+                                        </li>
+                                        <li>
+                                            Integer molestie lorem at massa
+                                        </li>
+                                        <li>
+                                            Facilisis in pretium nisl aliquet
+                                        </li>
+                                        <li>
+                                            Nulla volutpat aliquam velit
+                                            <ol>
+                                                <li>
+                                                    Phasellus iaculis neque
+                                                </li>
+                                                <li>
+                                                    Purus sodales ultricies
+                                                </li>
+                                                <li>
+                                                    Vestibulum laoreet porttitor sem
+                                                </li>
+                                                <li>
+                                                    Ac tristique libero volutpat at
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            Faucibus porta lacus fringilla vel
+                                        </li>
+                                        <li>
+                                            Aenean sit amet erat nunc
+                                        </li>
+                                        <li>
+                                            Eget porttitor lorem
+                                        </li>
+                                    </ol>
+                                </div> <!-- end col -->
+
+                                <div class="col-lg-4 mt-4 mt-lg-0">
+                                    <h4 class="header-title">Unstyled</h4>
+                                    <p class="sub-header">
+                                        <strong>This only applies to immediate children
+                                            list items</strong>, meaning you will need to add the class for any nested
+                                        lists as well.
+                                    </p>
+
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            Lorem ipsum dolor sit amet
+                                        </li>
+                                        <li>
+                                            Integer molestie lorem at massa
+                                            <ul>
+                                                <li>
+                                                    Phasellus iaculis neque
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Faucibus porta lacus fringilla vel
+                                        </li>
+                                        <li>
+                                            Eget porttitor lorem
+                                        </li>
+                                    </ul>
+
+                                    <h5>Inline</h5>
+                                    <p class="text-muted">
+                                        Place all list items on a single line with <code>
+                                        display: inline-block;</code>
+                                        and some light padding.
+                                    </p>
+
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+                                            Lorem ipsum
+                                        </li>
+                                        <li class="list-inline-item">
+                                            Phasellus iaculis
+                                        </li>
+                                        <li class="list-inline-item">
+                                            Nulla volutpat
+                                        </li>
+                                    </ul>
+
+                                </div> <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end card-box-->
+
+                        <div class="card-box">
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h4 class="header-title">Blockquotes</h4>
+                                    <p class="sub-header">
+                                        Your awesome text goes here.
+                                    </p>
+
+                                    <blockquote class="blockquote">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat
+                                            a ante.</p>
+                                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
+                                            Title</cite></footer>
+                                    </blockquote>
+
+                                    <p class="text-muted">
+                                        Use text utilities as needed to change the alignment of your blockquote.
+                                    </p>
+
+                                    <blockquote class="blockquote text-center border-0">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat
+                                            a ante.</p>
+                                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
+                                            Title</cite></footer>
+                                    </blockquote>
+
+                                    <blockquote class="blockquote blockquote-reverse mb-0">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat
+                                            a ante.</p>
+                                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
+                                            Title</cite></footer>
+                                    </blockquote>
+                                </div> <!-- end col -->
+
+                                <div class="col-lg-6 mt-4 mt-lg-0">
+                                    <h4 class="header-title">Description list alignment</h4>
+                                    <p class="sub-header">
+                                        Align terms and descriptions horizontally by using our grid system’s predefined
+                                        classes (or semantic mixins). For longer terms, you can optionally add a <code
+                                            class="highlighter-rouge">.text-truncate</code> class to truncate the text
+                                        with an ellipsis.
+                                    </p>
+
+                                    <dl class="row">
+                                        <dt class="col-sm-3">Description lists</dt>
+                                        <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+                                        <dt class="col-sm-3">Euismod</dt>
+                                        <dd class="col-sm-9">
+                                            <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec
+                                                elit.</p>
+                                            <p>Donec id elit non mi porta gravida at eget metus.</p>
+                                        </dd>
+
+                                        <dt class="col-sm-3">Malesuada porta</dt>
+                                        <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+                                        <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+                                        <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                                            condimentum nibh, ut fermentum massa justo sit amet risus.
+                                        </dd>
+
+                                        <dt class="col-sm-3">Nesting</dt>
+                                        <dd class="col-sm-9">
+                                            <dl class="row">
+                                                <dt class="col-sm-4">Nested definition list</dt>
+                                                <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc
+                                                    augue blandit nunc.
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                </div> <!-- end col-->
+                            </div>
+                            <!-- end row -->
+
+                        </div> <!-- end card-box-->
+
+                    </div> <!-- end col-->
+                </div>
+                <!-- end row -->
+            </div> <!-- container-fluid -->
+        </div> <!-- content -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        2019 © Dashboard Theme By <a href="#">Dashoon</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+
+<!-- Vendor js -->
+<script src="../assets/js/vendor.min.js"></script>
+
+<!-- App js -->
+<script src="../assets/js/app.min.js"></script>
+
+</body>
 </html>
