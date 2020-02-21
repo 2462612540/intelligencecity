@@ -9,8 +9,16 @@ jdbc.driver=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql://localhost:3306/intelligencecity?characterEncoding=utf-8
 jdbc.username=root
 jdbc.password=root
+
+生产的数据库的基本的配置
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://IP:3306/intelligencecity?characterEncoding=utf-8
+jdbc.username=root
+jdbc.password=root
 *************************************************************************************************
-系统中的的zookeeper的注册端口是2181
+系统中的的zookeeper的注册端口是2181 
+本地测试的zookeeper的ip 是192.168.25.130
+生产的zookeeper的ip     是47.98.187.29
 *************************************************************************************************
 duubbo的提供服务的消费和产生的端口是
     intelligencecity_manager_service/intelligencecity_manager_web：20881
@@ -26,3 +34,4 @@ duubbo的提供服务的消费和产生的端口是
 JDK 8 中可以使用 Spring Framework 5.x
 JDK 7 中可以使用 Spring Framework 4.x
 *************************************************************************************************
+在请求的出现的错误的时候应该找到的web层的web.xml的相关配置
