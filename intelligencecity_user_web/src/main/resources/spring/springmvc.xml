@@ -20,8 +20,8 @@
     </mvc:annotation-driven>
 
     <!-- 引用dubbo 服务 -->
-    <dubbo:application name="intelligencecity_manager_web"/>
+    <dubbo:application name="intelligencecity_user_web"/>
     <dubbo:registry address="zookeeper://47.98.187.29:2181" timeout="30000"/>
-    <dubbo:annotation package="com.shanghaiuniversity.manager.controller"/>
+    <dubbo:annotation package="com.shanghaiuniversity.user.controller"/>
 
 </beans>

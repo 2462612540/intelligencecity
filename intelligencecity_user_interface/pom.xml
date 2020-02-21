@@ -16,12 +16,21 @@
     </properties>
 
     <dependencies>
+        <!--引入测试包-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+
+        <!--引入dao依赖-->
+        <dependency>
+            <groupId>com.ShangaiUniversity</groupId>
+            <artifactId>intelligencecity_dao</artifactId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

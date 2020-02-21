@@ -4,9 +4,9 @@
 *************************************************************************************************
                                     系统配置端口和环境
 *************************************************************************************************
-数据库的基本的配置
+本地测试数据库的基本的配置
 jdbc.driver=com.mysql.jdbc.Driver
-jdbc.url=jdbc:mysql://49.235.38.227:3306/intelligencecity?characterEncoding=utf-8
+jdbc.url=jdbc:mysql://localhost:3306/intelligencecity?characterEncoding=utf-8
 jdbc.username=root
 jdbc.password=root
 *************************************************************************************************
@@ -14,6 +14,7 @@ jdbc.password=root
 *************************************************************************************************
 duubbo的提供服务的消费和产生的端口是
     intelligencecity_manager_service/intelligencecity_manager_web：20881
+    intelligencecity_user_service/intelligencecity_usr_web       : 20882
 *************************************************************************************************
 在服务的提供方中都采用的8081-808*开始
 在本系统中的manager_service中的端口是8101 
