@@ -1,7 +1,8 @@
  //控制层 
-app.controller('commonuserController' ,function($scope,$controller   ,commonuserService){	
-	
-	$controller('baseController',{$scope:$scope});//继承
+app.controller('commonuserController' ,function($scope,$controller   ,commonuserService){
+
+	//继承
+	$controller('baseController',{$scope:$scope});
 	
     //读取列表数据绑定到表单中  
 	$scope.findAll=function(){
