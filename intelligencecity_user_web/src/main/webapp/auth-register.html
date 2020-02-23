@@ -19,12 +19,12 @@
 
     <!--引入AngularJS的三层的协议-->
     <script type="text/javascript" src="assets/js/base.js"></script>
-    <script type="text/javascript" src="assets/js/service/userService.js"></script>
+    <script type="text/javascript" src="assets/js/service/commonuserService.js"></script>
     <script type="text/javascript" src="assets/js/controller/baseController.js"></script>
-    <script type="text/javascript" src="assets/js/controller/userController.js"></script>
+    <script type="text/javascript" src="assets/js/controller/commonuserController.js"></script>
 </head>
 
-<body class="authentication-bg authentication-bg-pattern d-flex align-items-center" ng-app="smartcity" ng-controller="userController">
+<body class="authentication-bg authentication-bg-pattern d-flex align-items-center" ng-app="intelligencecity" ng-controller="commonuserController">
 
 <div class="account-pages w-100 mt-5 mb-5">
     <div class="container">
@@ -33,25 +33,24 @@
                 <div class="card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
-                            <a href="html/index.html">
                                 <span><img src="assets/images/logo.png" alt="" height="28"></span>
-                            </a>
                         </div>
 
                         <form action="#" class="pt-2">
+
                             <div class="form-group mb-3">
                                 <label >用户名</label>
-                                <input class="form-control" type="text"  ng-model="" placeholder="输入用户名">
+                                <input class="form-control" type="text"  ng-model="entity.userName" placeholder="输入用户名">
                             </div>
 
                             <div class="form-group mb-3">
                                 <label >密码</label>
-                                <input class="form-control" type="password"  ng-model=""  placeholder="输入密码">
+                                <input class="form-control" type="password"  ng-model="entity.userPassword"  placeholder="输入密码">
                             </div>
 
                             <div class="form-group mb-3">
                                 <label >手机号</label>
-                                <input class="form-control" type="text"  ng-model="" placeholder="输入手机号" >
+                                <input class="form-control" type="text"  ng-model="entity.userPhone" placeholder="输入手机号" >
                             </div>
 
                             <div class="custom-control custom-checkbox mb-3">

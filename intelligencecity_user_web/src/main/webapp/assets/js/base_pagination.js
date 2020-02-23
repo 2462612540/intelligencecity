@@ -1,1 +1,1 @@
-var app=angular.module('smartcity',['pagination']);
+var app=angular.module('intelligencecity',['pagination']);
