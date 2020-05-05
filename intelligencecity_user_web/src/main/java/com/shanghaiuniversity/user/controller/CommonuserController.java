@@ -5,6 +5,7 @@ import com.ShanghaiUniversity.entity.Result;
 import com.ShanghaiUniversity.pojo.Commonuser;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.shanghaiuniversity.user.service.CommonuserService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -51,6 +52,10 @@ public class CommonuserController {
      */
     @RequestMapping("/add")
     public Result add(@RequestBody Commonuser commonuser) {
+        //BCryptPasswordEncoder密码加密
+        BCryptPasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
+        String password = passwordEncoder.encode(commonuser.getUserPassword());//加密
+        commonuser.setUserPassword(password);
         try {
             commonuserService.add(commonuser);
             return new Result(true, "增加成功");

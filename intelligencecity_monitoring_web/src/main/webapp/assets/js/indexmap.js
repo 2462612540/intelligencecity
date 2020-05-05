@@ -4,7 +4,7 @@ $(function () {
 //地图界面高度设置
 //加载地图
 function initMap() {
-// 百度地图API功能
+    // 百度地图API功能
     var map = new BMap.Map("map_div");    // 创建Map实例
     map.centerAndZoom(new BMap.Point(121.430724, 31.253988), 15);  // 初始化地图,设置中心点坐标和地图级别
     //添加地图类型控件
@@ -29,7 +29,7 @@ function initMap() {
     var ne = bounds.getNorthEast();
     var lngSpan = Math.abs(sw.lng - ne.lng);
     var latSpan = Math.abs(ne.lat - sw.lat);
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 10; i++) {
         var point = new BMap.Point(sw.lng + lngSpan * (Math.random() * 0.7), ne.lat - latSpan * (Math.random() * 0.7));
         addMarker(point);
     }
@@ -41,8 +41,7 @@ function initMap() {
     };
     map.setMapStyle(mapStyle);
 
-
-//加载城市控件
+    //加载城市控件
     var size = new BMap.Size(10, 50);
     map.addControl(new BMap.CityListControl({
         anchor: BMAP_ANCHOR_TOP_LEFT,
