@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.ShanghaiUniversity.mapper.FacepicMapper" >
-  <resultMap id="BaseResultMap" type="com.ShanghaiUniversity.pojo.Facepic" >
+<mapper namespace="com.ShanghaiUniversity.mapper.CoordinateMapper" >
+  <resultMap id="BaseResultMap" type="com.ShanghaiUniversity.pojo.Coordinate" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="face_number" property="faceNumber" jdbcType="INTEGER" />
-    <result column="face_path" property="facePath" jdbcType="VARCHAR" />
-    <result column="face_time" property="faceTime" jdbcType="TIMESTAMP" />
-    <result column="face_location" property="faceLocation" jdbcType="VARCHAR" />
+    <result column="longitude" property="longitude" jdbcType="DOUBLE" />
+    <result column="latitude" property="latitude" jdbcType="DOUBLE" />
+    <result column="picture" property="picture" jdbcType="VARCHAR" />
+    <result column="other" property="other" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -67,15 +67,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, face_number, face_path, face_time, face_location
+    id, longitude, latitude, picture, other
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ShanghaiUniversity.pojo.FacepicExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ShanghaiUniversity.pojo.CoordinateExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from facepic
+    from coordinate
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -86,85 +86,85 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from facepic
+    from coordinate
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from facepic
+    delete from coordinate
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.ShanghaiUniversity.pojo.FacepicExample" >
-    delete from facepic
+  <delete id="deleteByExample" parameterType="com.ShanghaiUniversity.pojo.CoordinateExample" >
+    delete from coordinate
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.ShanghaiUniversity.pojo.Facepic" >
-    insert into facepic (id, face_number, face_path, 
-      face_time, face_location)
-    values (#{id,jdbcType=INTEGER}, #{faceNumber,jdbcType=INTEGER}, #{facePath,jdbcType=VARCHAR}, 
-      #{faceTime,jdbcType=TIMESTAMP}, #{faceLocation,jdbcType=VARCHAR})
+  <insert id="insert" parameterType="com.ShanghaiUniversity.pojo.Coordinate" >
+    insert into coordinate (id, longitude, latitude, 
+      picture, other)
+    values (#{id,jdbcType=INTEGER}, #{longitude,jdbcType=DOUBLE}, #{latitude,jdbcType=DOUBLE}, 
+      #{picture,jdbcType=VARCHAR}, #{other,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.ShanghaiUniversity.pojo.Facepic" >
-    insert into facepic
+  <insert id="insertSelective" parameterType="com.ShanghaiUniversity.pojo.Coordinate" >
+    insert into coordinate
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
       </if>
-      <if test="faceNumber != null" >
-        face_number,
+      <if test="longitude != null" >
+        longitude,
       </if>
-      <if test="facePath != null" >
-        face_path,
+      <if test="latitude != null" >
+        latitude,
       </if>
-      <if test="faceTime != null" >
-        face_time,
+      <if test="picture != null" >
+        picture,
       </if>
-      <if test="faceLocation != null" >
-        face_location,
+      <if test="other != null" >
+        other,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="faceNumber != null" >
-        #{faceNumber,jdbcType=INTEGER},
+      <if test="longitude != null" >
+        #{longitude,jdbcType=DOUBLE},
       </if>
-      <if test="facePath != null" >
-        #{facePath,jdbcType=VARCHAR},
+      <if test="latitude != null" >
+        #{latitude,jdbcType=DOUBLE},
       </if>
-      <if test="faceTime != null" >
-        #{faceTime,jdbcType=TIMESTAMP},
+      <if test="picture != null" >
+        #{picture,jdbcType=VARCHAR},
       </if>
-      <if test="faceLocation != null" >
-        #{faceLocation,jdbcType=VARCHAR},
+      <if test="other != null" >
+        #{other,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.ShanghaiUniversity.pojo.FacepicExample" resultType="java.lang.Integer" >
-    select count(*) from facepic
+  <select id="countByExample" parameterType="com.ShanghaiUniversity.pojo.CoordinateExample" resultType="java.lang.Integer" >
+    select count(*) from coordinate
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update facepic
+    update coordinate
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.faceNumber != null" >
-        face_number = #{record.faceNumber,jdbcType=INTEGER},
+      <if test="record.longitude != null" >
+        longitude = #{record.longitude,jdbcType=DOUBLE},
       </if>
-      <if test="record.facePath != null" >
-        face_path = #{record.facePath,jdbcType=VARCHAR},
+      <if test="record.latitude != null" >
+        latitude = #{record.latitude,jdbcType=DOUBLE},
       </if>
-      <if test="record.faceTime != null" >
-        face_time = #{record.faceTime,jdbcType=TIMESTAMP},
+      <if test="record.picture != null" >
+        picture = #{record.picture,jdbcType=VARCHAR},
       </if>
-      <if test="record.faceLocation != null" >
-        face_location = #{record.faceLocation,jdbcType=VARCHAR},
+      <if test="record.other != null" >
+        other = #{record.other,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -172,40 +172,40 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update facepic
+    update coordinate
     set id = #{record.id,jdbcType=INTEGER},
-      face_number = #{record.faceNumber,jdbcType=INTEGER},
-      face_path = #{record.facePath,jdbcType=VARCHAR},
-      face_time = #{record.faceTime,jdbcType=TIMESTAMP},
-      face_location = #{record.faceLocation,jdbcType=VARCHAR}
+      longitude = #{record.longitude,jdbcType=DOUBLE},
+      latitude = #{record.latitude,jdbcType=DOUBLE},
+      picture = #{record.picture,jdbcType=VARCHAR},
+      other = #{record.other,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.ShanghaiUniversity.pojo.Facepic" >
-    update facepic
+  <update id="updateByPrimaryKeySelective" parameterType="com.ShanghaiUniversity.pojo.Coordinate" >
+    update coordinate
     <set >
-      <if test="faceNumber != null" >
-        face_number = #{faceNumber,jdbcType=INTEGER},
+      <if test="longitude != null" >
+        longitude = #{longitude,jdbcType=DOUBLE},
       </if>
-      <if test="facePath != null" >
-        face_path = #{facePath,jdbcType=VARCHAR},
+      <if test="latitude != null" >
+        latitude = #{latitude,jdbcType=DOUBLE},
       </if>
-      <if test="faceTime != null" >
-        face_time = #{faceTime,jdbcType=TIMESTAMP},
+      <if test="picture != null" >
+        picture = #{picture,jdbcType=VARCHAR},
       </if>
-      <if test="faceLocation != null" >
-        face_location = #{faceLocation,jdbcType=VARCHAR},
+      <if test="other != null" >
+        other = #{other,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.ShanghaiUniversity.pojo.Facepic" >
-    update facepic
-    set face_number = #{faceNumber,jdbcType=INTEGER},
-      face_path = #{facePath,jdbcType=VARCHAR},
-      face_time = #{faceTime,jdbcType=TIMESTAMP},
-      face_location = #{faceLocation,jdbcType=VARCHAR}
+  <update id="updateByPrimaryKey" parameterType="com.ShanghaiUniversity.pojo.Coordinate" >
+    update coordinate
+    set longitude = #{longitude,jdbcType=DOUBLE},
+      latitude = #{latitude,jdbcType=DOUBLE},
+      picture = #{picture,jdbcType=VARCHAR},
+      other = #{other,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -1,17 +1,16 @@
 package com.ShanghaiUniversity.pojo;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class FacepicExample {
+public class CoordinateExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public FacepicExample() {
+    public CoordinateExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -165,263 +164,263 @@ public class FacepicExample {
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberIsNull() {
-            addCriterion("face_number is null");
+        public Criteria andLongitudeIsNull() {
+            addCriterion("longitude is null");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberIsNotNull() {
-            addCriterion("face_number is not null");
+        public Criteria andLongitudeIsNotNull() {
+            addCriterion("longitude is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberEqualTo(Integer value) {
-            addCriterion("face_number =", value, "faceNumber");
+        public Criteria andLongitudeEqualTo(Double value) {
+            addCriterion("longitude =", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberNotEqualTo(Integer value) {
-            addCriterion("face_number <>", value, "faceNumber");
+        public Criteria andLongitudeNotEqualTo(Double value) {
+            addCriterion("longitude <>", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberGreaterThan(Integer value) {
-            addCriterion("face_number >", value, "faceNumber");
+        public Criteria andLongitudeGreaterThan(Double value) {
+            addCriterion("longitude >", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberGreaterThanOrEqualTo(Integer value) {
-            addCriterion("face_number >=", value, "faceNumber");
+        public Criteria andLongitudeGreaterThanOrEqualTo(Double value) {
+            addCriterion("longitude >=", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberLessThan(Integer value) {
-            addCriterion("face_number <", value, "faceNumber");
+        public Criteria andLongitudeLessThan(Double value) {
+            addCriterion("longitude <", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberLessThanOrEqualTo(Integer value) {
-            addCriterion("face_number <=", value, "faceNumber");
+        public Criteria andLongitudeLessThanOrEqualTo(Double value) {
+            addCriterion("longitude <=", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberIn(List<Integer> values) {
-            addCriterion("face_number in", values, "faceNumber");
+        public Criteria andLongitudeIn(List<Double> values) {
+            addCriterion("longitude in", values, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberNotIn(List<Integer> values) {
-            addCriterion("face_number not in", values, "faceNumber");
+        public Criteria andLongitudeNotIn(List<Double> values) {
+            addCriterion("longitude not in", values, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberBetween(Integer value1, Integer value2) {
-            addCriterion("face_number between", value1, value2, "faceNumber");
+        public Criteria andLongitudeBetween(Double value1, Double value2) {
+            addCriterion("longitude between", value1, value2, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFaceNumberNotBetween(Integer value1, Integer value2) {
-            addCriterion("face_number not between", value1, value2, "faceNumber");
+        public Criteria andLongitudeNotBetween(Double value1, Double value2) {
+            addCriterion("longitude not between", value1, value2, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathIsNull() {
-            addCriterion("face_path is null");
+        public Criteria andLatitudeIsNull() {
+            addCriterion("latitude is null");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathIsNotNull() {
-            addCriterion("face_path is not null");
+        public Criteria andLatitudeIsNotNull() {
+            addCriterion("latitude is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathEqualTo(String value) {
-            addCriterion("face_path =", value, "facePath");
+        public Criteria andLatitudeEqualTo(Double value) {
+            addCriterion("latitude =", value, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathNotEqualTo(String value) {
-            addCriterion("face_path <>", value, "facePath");
+        public Criteria andLatitudeNotEqualTo(Double value) {
+            addCriterion("latitude <>", value, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathGreaterThan(String value) {
-            addCriterion("face_path >", value, "facePath");
+        public Criteria andLatitudeGreaterThan(Double value) {
+            addCriterion("latitude >", value, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathGreaterThanOrEqualTo(String value) {
-            addCriterion("face_path >=", value, "facePath");
+        public Criteria andLatitudeGreaterThanOrEqualTo(Double value) {
+            addCriterion("latitude >=", value, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathLessThan(String value) {
-            addCriterion("face_path <", value, "facePath");
+        public Criteria andLatitudeLessThan(Double value) {
+            addCriterion("latitude <", value, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathLessThanOrEqualTo(String value) {
-            addCriterion("face_path <=", value, "facePath");
+        public Criteria andLatitudeLessThanOrEqualTo(Double value) {
+            addCriterion("latitude <=", value, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathLike(String value) {
-            addCriterion("face_path like", value, "facePath");
+        public Criteria andLatitudeIn(List<Double> values) {
+            addCriterion("latitude in", values, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathNotLike(String value) {
-            addCriterion("face_path not like", value, "facePath");
+        public Criteria andLatitudeNotIn(List<Double> values) {
+            addCriterion("latitude not in", values, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathIn(List<String> values) {
-            addCriterion("face_path in", values, "facePath");
+        public Criteria andLatitudeBetween(Double value1, Double value2) {
+            addCriterion("latitude between", value1, value2, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathNotIn(List<String> values) {
-            addCriterion("face_path not in", values, "facePath");
+        public Criteria andLatitudeNotBetween(Double value1, Double value2) {
+            addCriterion("latitude not between", value1, value2, "latitude");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathBetween(String value1, String value2) {
-            addCriterion("face_path between", value1, value2, "facePath");
+        public Criteria andPictureIsNull() {
+            addCriterion("picture is null");
             return (Criteria) this;
         }
 
-        public Criteria andFacePathNotBetween(String value1, String value2) {
-            addCriterion("face_path not between", value1, value2, "facePath");
+        public Criteria andPictureIsNotNull() {
+            addCriterion("picture is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeIsNull() {
-            addCriterion("face_time is null");
+        public Criteria andPictureEqualTo(String value) {
+            addCriterion("picture =", value, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeIsNotNull() {
-            addCriterion("face_time is not null");
+        public Criteria andPictureNotEqualTo(String value) {
+            addCriterion("picture <>", value, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeEqualTo(Date value) {
-            addCriterion("face_time =", value, "faceTime");
+        public Criteria andPictureGreaterThan(String value) {
+            addCriterion("picture >", value, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeNotEqualTo(Date value) {
-            addCriterion("face_time <>", value, "faceTime");
+        public Criteria andPictureGreaterThanOrEqualTo(String value) {
+            addCriterion("picture >=", value, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeGreaterThan(Date value) {
-            addCriterion("face_time >", value, "faceTime");
+        public Criteria andPictureLessThan(String value) {
+            addCriterion("picture <", value, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("face_time >=", value, "faceTime");
+        public Criteria andPictureLessThanOrEqualTo(String value) {
+            addCriterion("picture <=", value, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeLessThan(Date value) {
-            addCriterion("face_time <", value, "faceTime");
+        public Criteria andPictureLike(String value) {
+            addCriterion("picture like", value, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeLessThanOrEqualTo(Date value) {
-            addCriterion("face_time <=", value, "faceTime");
+        public Criteria andPictureNotLike(String value) {
+            addCriterion("picture not like", value, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeIn(List<Date> values) {
-            addCriterion("face_time in", values, "faceTime");
+        public Criteria andPictureIn(List<String> values) {
+            addCriterion("picture in", values, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeNotIn(List<Date> values) {
-            addCriterion("face_time not in", values, "faceTime");
+        public Criteria andPictureNotIn(List<String> values) {
+            addCriterion("picture not in", values, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeBetween(Date value1, Date value2) {
-            addCriterion("face_time between", value1, value2, "faceTime");
+        public Criteria andPictureBetween(String value1, String value2) {
+            addCriterion("picture between", value1, value2, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceTimeNotBetween(Date value1, Date value2) {
-            addCriterion("face_time not between", value1, value2, "faceTime");
+        public Criteria andPictureNotBetween(String value1, String value2) {
+            addCriterion("picture not between", value1, value2, "picture");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationIsNull() {
-            addCriterion("face_location is null");
+        public Criteria andOtherIsNull() {
+            addCriterion("other is null");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationIsNotNull() {
-            addCriterion("face_location is not null");
+        public Criteria andOtherIsNotNull() {
+            addCriterion("other is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationEqualTo(String value) {
-            addCriterion("face_location =", value, "faceLocation");
+        public Criteria andOtherEqualTo(String value) {
+            addCriterion("other =", value, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationNotEqualTo(String value) {
-            addCriterion("face_location <>", value, "faceLocation");
+        public Criteria andOtherNotEqualTo(String value) {
+            addCriterion("other <>", value, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationGreaterThan(String value) {
-            addCriterion("face_location >", value, "faceLocation");
+        public Criteria andOtherGreaterThan(String value) {
+            addCriterion("other >", value, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationGreaterThanOrEqualTo(String value) {
-            addCriterion("face_location >=", value, "faceLocation");
+        public Criteria andOtherGreaterThanOrEqualTo(String value) {
+            addCriterion("other >=", value, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationLessThan(String value) {
-            addCriterion("face_location <", value, "faceLocation");
+        public Criteria andOtherLessThan(String value) {
+            addCriterion("other <", value, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationLessThanOrEqualTo(String value) {
-            addCriterion("face_location <=", value, "faceLocation");
+        public Criteria andOtherLessThanOrEqualTo(String value) {
+            addCriterion("other <=", value, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationLike(String value) {
-            addCriterion("face_location like", value, "faceLocation");
+        public Criteria andOtherLike(String value) {
+            addCriterion("other like", value, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationNotLike(String value) {
-            addCriterion("face_location not like", value, "faceLocation");
+        public Criteria andOtherNotLike(String value) {
+            addCriterion("other not like", value, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationIn(List<String> values) {
-            addCriterion("face_location in", values, "faceLocation");
+        public Criteria andOtherIn(List<String> values) {
+            addCriterion("other in", values, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationNotIn(List<String> values) {
-            addCriterion("face_location not in", values, "faceLocation");
+        public Criteria andOtherNotIn(List<String> values) {
+            addCriterion("other not in", values, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationBetween(String value1, String value2) {
-            addCriterion("face_location between", value1, value2, "faceLocation");
+        public Criteria andOtherBetween(String value1, String value2) {
+            addCriterion("other between", value1, value2, "other");
             return (Criteria) this;
         }
 
-        public Criteria andFaceLocationNotBetween(String value1, String value2) {
-            addCriterion("face_location not between", value1, value2, "faceLocation");
+        public Criteria andOtherNotBetween(String value1, String value2) {
+            addCriterion("other not between", value1, value2, "other");
             return (Criteria) this;
         }
     }

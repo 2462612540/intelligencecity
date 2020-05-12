@@ -1,3 +1,4 @@
+import org.junit.Test;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
@@ -14,7 +15,7 @@ public class GeneratorSqlmap {
         List<String> warnings = new ArrayList<String>();
         boolean overwrite = true;
         //指定 逆向工程配置文件
-        File configFile = new File("E:\\JAVA\\intelligencecity_parent\\generatorSqlmapCustom\\src\\generatorConfig.xml");
+        File configFile = new File("E:\\JAVA\\intelligencecity_parent\\generatorSqlmapCustomer\\src\\main\\resources\\generatorConfig.xml");
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);
@@ -24,7 +25,8 @@ public class GeneratorSqlmap {
 
     }
 
-    public static void main(String[] args) throws Exception {
+    @Test
+    public void test() throws Exception {
         try {
             GeneratorSqlmap generatorSqlmap = new GeneratorSqlmap();
             generatorSqlmap.generator();
