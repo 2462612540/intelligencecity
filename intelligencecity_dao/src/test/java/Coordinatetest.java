@@ -1,3 +1,5 @@
+import com.ShanghaiUniversity.mapper.CoordinateMapper;
+import com.ShanghaiUniversity.pojo.Coordinate;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -26,8 +28,8 @@ public class Coordinatetest {
     public void test() {
         CoordinateMapper bean = applicationContext.getBean(CoordinateMapper.class);
         List<Coordinate> coordinates = bean.selectByExample(null);
-        for (Coordinate coordinate:coordinates){
-            System.out.println(coordinate.getLatitude()+"###########"+coordinate.getLongitude());
+        for (Coordinate coordinate : coordinates) {
+            System.out.println(coordinate.getLatitude() + "###########" + coordinate.getLongitude());
         }
     }
 }

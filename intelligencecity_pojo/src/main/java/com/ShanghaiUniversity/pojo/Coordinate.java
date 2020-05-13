@@ -1,6 +1,8 @@
 package com.ShanghaiUniversity.pojo;
 
-public class Coordinate {
+import java.io.Serializable;
+
+public class Coordinate implements Serializable {
     private Integer id;
 
     private Double longitude;

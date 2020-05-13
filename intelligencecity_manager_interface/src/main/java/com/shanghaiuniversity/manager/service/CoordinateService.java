@@ -1,6 +1,7 @@
 package com.shanghaiuniversity.manager.service;
 
 import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.pojo.Coordinate;
 
 import java.util.List;
 
