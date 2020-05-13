@@ -1,8 +1,6 @@
 package com.ShanghaiUniversity.pojo;
 
-import java.io.Serializable;
-
-public class Coordinate implements Serializable {
+public class Coordinate {
     private Integer id;
 
     private Double longitude;
@@ -12,17 +10,6 @@ public class Coordinate implements Serializable {
     private String picture;
 
     private String other;
-
-    @Override
-    public String toString() {
-        return "Coordinate{" +
-                "id=" + id +
-                ", longitude=" + longitude +
-                ", latitude=" + latitude +
-                ", picture='" + picture + '\'' +
-                ", other='" + other + '\'' +
-                '}';
-    }
 
     public Integer getId() {
         return id;

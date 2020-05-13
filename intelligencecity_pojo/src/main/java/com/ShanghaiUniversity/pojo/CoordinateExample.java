@@ -1,24 +1,14 @@
 package com.ShanghaiUniversity.pojo;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CoordinateExample implements Serializable {
+public class CoordinateExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
-
-    @Override
-    public String toString() {
-        return "CoordinateExample{" +
-                "orderByClause='" + orderByClause + '\'' +
-                ", distinct=" + distinct +
-                ", oredCriteria=" + oredCriteria +
-                '}';
-    }
 
     public CoordinateExample() {
         oredCriteria = new ArrayList<Criteria>();
