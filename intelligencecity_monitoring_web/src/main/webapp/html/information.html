@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息表格的填写</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/tail.css">
+</head>
+<body class="body1">
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li><i class="nav_1"></i><a href="index.html">系统数据总览</a></li>
+            <li><i class="nav_2"></i><a href="video.html">现场实时监控</a></li>
+            <li><i class="nav_3"></i><a href="location.html">实时位置共享</a></li>
+            <li><i class="nav_7"></i><a href="statistical.html">系统数据统计</a></li>
+        </ul>
+    </div>
+    <div class="header_center left">
+        <h2><strong>智慧城市系统平台监控中心</strong></h2>
+        <p class="color_font">
+            <small>Smart City System Platform Monitoring Center</small>
+        </p>
+    </div>
+    <div class="right nav text_right">
+        <ul>
+            <li><i class="nav_7"></i><a href="query.html">系统信息查询</a></li>
+            <li class="nav_active"><i class="nav_8"></i><a href="information.html">系统信息录入</a></li>
+            <li><i class="nav_4"></i><a href="javascript:void(0)">派单业务管理</a></li>
+            <li><i class="nav_4"></i><a href="javascript:void(0)">退出监控中心</a></li>
+        </ul>
+    </div>
+</header>
+<section class="sm_section left">
+    <form>
+        <fieldset class="message_fieldset">
+            <legend>基本信息</legend>
+            <div class="message_con"><label>新闻标题：</label><input type="text" class="message_input"><span
+                    class="must">*</span>
+                <p>新闻标题可以输入任一字符，但长度不能小于1大有大于200！</p>
+            </div>
+            <div class="message_con"><label>新闻类型：</label><select class="message_select">
+                <option>全部类型</option>
+            </select><span class="must">*</span>
+                <p>新闻标题可以输入任一字符，但长度不能小于1大有大于200！</p>
+            </div>
+            <div class="message_con"><label>是否需要审核：</label><input type="radio" name="ref" checked><span
+                    class="font_color">是</span><input type="radio" name="ref"><span class="font_color">否</span>
+            </div>
+            <div class="message_con inputfile_div"><label>附件上传：</label><input type="file"
+                                                                              class="message_input input_file"><span
+                    class="must">*</span>
+                <div><input type="text">
+                    <button>选择文件</button>
+                </div>
+                <p>新闻标题可以输入任一字符，但长度不能小于1大有大于200！</p>
+            </div>
+        </fieldset>
+        <fieldset class="message_fieldset">
+            <legend>详情信息</legend>
+            <div class="message_con"><label>新闻格式：</label><input type="checkbox" name="ref" checked><span
+                    class="font_color">格式一</span><input type="checkbox" name="ref"><span
+                    class="font_color">格式二</span><input type="checkbox" name="ref"><span class="font_color">格式三</span>
+            </div>
+            <div class="message_con"><label>新闻详情：</label>
+                <textarea id="editor"></textarea>
+
+            </div>
+        </fieldset>
+        <div class="message_footer">
+            <button class="bule">保存</button>
+            <button class="orgen">取消</button>
+        </div>
+    </form>
+</section>
+<script src="../assets/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="../assets/js/utf8-php/ueditor.config.js"></script>
+<script src="../assets/js/utf8-php/ueditor.all.min.js"></script>
+<script src="../assets/js/base.js"></script>
+<script>
+    var ue = UE.getEditor('editor');
+
+    function isFocus(e) {
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+
+    function setblur(e) {
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+
+    function insertHtml() {
+        var value = prompt('????html????', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+
+    function getContent() {
+        var arr = [];
+        arr.push("");
+        arr.push("");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("");
+        arr.push("");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("");
+        UE.getEditor('editor').setContent('??????ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("");
+        arr.push("");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+
+    function hasContent() {
+        var arr = [];
+        arr.push("");
+        arr.push("");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+
+    function getLocalData() {
+        alert(UE.getEditor('editor').execCommand("getlocaldata"));
+    }
+
+    function clearLocalData() {
+        UE.getEditor('editor').execCommand("clearlocaldata");
+        alert("")
+    }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智慧城市环卫后台首页</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+</head>
+<body>
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li class="nav_active"><i class="nav_1"></i><a href="index.html">系统数据总览</a></li>
+            <li><i class="nav_2"></i><a href="video.html">现场实时监控</a></li>
+            <li><i class="nav_3"></i><a href="location.html">实时位置共享</a></li>
+            <li><i class="nav_7"></i><a href="statistical.html">系统数据统计</a></li>
+        </ul>
+    </div>
+    <div class="header_center left">
+        <h2><strong>智慧城市系统平台监控中心</strong></h2>
+        <p class="color_font">
+            <small>Smart City System Platform Monitoring Center</small>
+        </p>
+    </div>
+    <div class="right nav text_right">
+        <ul>
+            <li><i class="nav_7"></i><a href="query.html">系统信息查询</a></li>
+            <li><i class="nav_8"></i><a href="information.html">系统信息录入</a></li>
+            <li><i class="nav_4"></i><a href="javascript:void(0)">派单业务管理</a></li>
+            <li><i class="nav_4"></i><a href="javascript:void(0)">退出监控中心</a></li>
+        </ul>
+    </div>
+</header>
+<!--内容部分-->
+<div class="con left">
+    <!--数据总概-->
+    <div class="con_div">
+        <div class="con_div_text left">
+            <div class="con_div_text01 left">
+                <img src="../assets/imges/info_1.png" class="left text01_img"/>
+                <div class="left text01_div">
+                    <p>总的垃圾设备数量（台）</p>
+                    <p>12356</p>
+                </div>
+            </div>
+            <div class="con_div_text01 right">
+                <img src="../assets/imges/info_2.png" class="left text01_img"/>
+                <div class="left text01_div">
+                    <p>正常工作设备（台）</p>
+                    <p>12356</p>
+                </div>
+            </div>
+        </div>
+        <div class="con_div_text left">
+            <div class="con_div_text01 left">
+                <img src="../assets/imges/info_4.png" class="left text01_img"/>
+                <div class="left text01_div">
+                    <p>湿垃圾总重量(T)</p>
+                    <p class="sky">500</p>
+                </div>
+            </div>
+            <div class="con_div_text01 right">
+                <img src="../assets/imges/info_5.png" class="left text01_img"/>
+                <div class="left text01_div">
+                    <p>垃圾纯净度比(%)</p>
+                    <p class="sky">90%--95%</p>
+                </div>
+            </div>
+        </div>
+        <div class="con_div_text left">
+
+            <div class="con_div_text01 left">
+                <img src="../assets/imges/info_6.png" class="left text01_img"/>
+                <div class="left text01_div">
+                    <p>待处理的设备(台)</p>
+                    <p class="org">535</p>
+                </div>
+            </div>
+            <div class="con_div_text01 right">
+                <img src="../assets/imges/info_7.png" class="left text01_img"/>
+                <div class="left text01_div">
+                    <p>已待处理的设备(台)</p>
+                    <p class="org">5220</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--统计分析图-->
+    <div class="div_any">
+        <div class="left div_any01">
+            <div class="div_any_child">
+                <div class="div_any_title"><img src="../assets/imges/title_1.png">设备分布统计</div>
+                <p id="char1" class="p_chart"></p>
+            </div>
+            <div class="div_any_child">
+                <div class="div_any_title"><img src="../assets/imges/title_2.png">垃圾类型统计</div>
+                <p id="char2" class="p_chart"></p>
+            </div>
+        </div>
+        <div class="div_any02 left ">
+            <div class="div_any_child div_height">
+                <div class="div_any_title any_title_width"><img src="../assets/imges/title_3.png">设备实时位置</div>
+                <div id="map_div"></div>
+            </div>
+        </div>
+        <div class="right div_any01">
+            <div class="div_any_child">
+                <div class="div_any_title"><img src="../assets/imges/title_4.png">垃圾纯净度统计</div>
+                <p id="char3" class="p_chart"></p>
+            </div>
+            <div class="div_any_child">
+                <div class="div_any_title"><img src="../assets/imges/title_5.png">设备满溢统计</div>
+                <p id="char4" class="p_chart"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="../assets/js/echarts-all.js"></script>
+<script src="../assets/js/base.js"></script>
+<script src="../assets/js/index.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+<script src="../assets/js/indexmap.js"></script>
+</body>
+</html>

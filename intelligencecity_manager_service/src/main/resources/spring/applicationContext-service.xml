@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--调用dubbo 作为服务的提供者-->
+    <dubbo:protocol name="dubbo" port="20881"></dubbo:protocol>
+    <dubbo:application name="intelligencecity_manager_service"/>
+    <dubbo:registry address="zookeeper://47.98.187.29:2181" timeout="30000"/>
+    <dubbo:annotation package="com.shanghaiuniversity.manager.service.impl"/>
+
+</beans>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ShanghaiUniversity.mapper.FacepicMapper" >
+  <resultMap id="BaseResultMap" type="com.ShanghaiUniversity.pojo.Facepic" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="face_number" property="faceNumber" jdbcType="INTEGER" />
+    <result column="face_path" property="facePath" jdbcType="VARCHAR" />
+    <result column="face_time" property="faceTime" jdbcType="TIMESTAMP" />
+    <result column="face_location" property="faceLocation" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, face_number, face_path, face_time, face_location
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ShanghaiUniversity.pojo.FacepicExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from facepic
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from facepic
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from facepic
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ShanghaiUniversity.pojo.FacepicExample" >
+    delete from facepic
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ShanghaiUniversity.pojo.Facepic" >
+    insert into facepic (id, face_number, face_path, 
+      face_time, face_location)
+    values (#{id,jdbcType=INTEGER}, #{faceNumber,jdbcType=INTEGER}, #{facePath,jdbcType=VARCHAR}, 
+      #{faceTime,jdbcType=TIMESTAMP}, #{faceLocation,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ShanghaiUniversity.pojo.Facepic" >
+    insert into facepic
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="faceNumber != null" >
+        face_number,
+      </if>
+      <if test="facePath != null" >
+        face_path,
+      </if>
+      <if test="faceTime != null" >
+        face_time,
+      </if>
+      <if test="faceLocation != null" >
+        face_location,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="faceNumber != null" >
+        #{faceNumber,jdbcType=INTEGER},
+      </if>
+      <if test="facePath != null" >
+        #{facePath,jdbcType=VARCHAR},
+      </if>
+      <if test="faceTime != null" >
+        #{faceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="faceLocation != null" >
+        #{faceLocation,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ShanghaiUniversity.pojo.FacepicExample" resultType="java.lang.Integer" >
+    select count(*) from facepic
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update facepic
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.faceNumber != null" >
+        face_number = #{record.faceNumber,jdbcType=INTEGER},
+      </if>
+      <if test="record.facePath != null" >
+        face_path = #{record.facePath,jdbcType=VARCHAR},
+      </if>
+      <if test="record.faceTime != null" >
+        face_time = #{record.faceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.faceLocation != null" >
+        face_location = #{record.faceLocation,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update facepic
+    set id = #{record.id,jdbcType=INTEGER},
+      face_number = #{record.faceNumber,jdbcType=INTEGER},
+      face_path = #{record.facePath,jdbcType=VARCHAR},
+      face_time = #{record.faceTime,jdbcType=TIMESTAMP},
+      face_location = #{record.faceLocation,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ShanghaiUniversity.pojo.Facepic" >
+    update facepic
+    <set >
+      <if test="faceNumber != null" >
+        face_number = #{faceNumber,jdbcType=INTEGER},
+      </if>
+      <if test="facePath != null" >
+        face_path = #{facePath,jdbcType=VARCHAR},
+      </if>
+      <if test="faceTime != null" >
+        face_time = #{faceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="faceLocation != null" >
+        face_location = #{faceLocation,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ShanghaiUniversity.pojo.Facepic" >
+    update facepic
+    set face_number = #{faceNumber,jdbcType=INTEGER},
+      face_path = #{facePath,jdbcType=VARCHAR},
+      face_time = #{faceTime,jdbcType=TIMESTAMP},
+      face_location = #{faceLocation,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -26,39 +26,44 @@
         <module>intelligencecity_order_interface</module>
         <module>intelligencecity_order_service</module>
         <module>intelligencecity_order_web</module>
+        <module>intelligencecity_portal_web</module>
+        <module>intelligencecity_mycat_web</module>
+        <module>intelligencecity_search_interface</module>
+        <module>intelligencecity_search_service</module>
+        <module>intelligencecity_search_web</module>
+        <module>generatorSqlmapCustomer</module>
+
     </modules>
 
     <!-- 集中定义依赖版本号 -->
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>4.11</junit.version>
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <junit.version>4.12</junit.version>
+        <spring.version>4.2.4.RELEASE</spring.version>
         <pagehelper.version>4.0.0</pagehelper.version>
         <servlet-api.version>2.5</servlet-api.version>
         <dubbo.version>2.8.4</dubbo.version>
-        <zookeeper.version>[3.4.14,)</zookeeper.version>
+        <zookeeper.version>3.4.7</zookeeper.version>
         <zkclient.version>0.1</zkclient.version>
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis.spring.version>1.2.2</mybatis.spring.version>
         <mybatis.paginator.version>1.2.15</mybatis.paginator.version>
         <mysql.version>5.1.32</mysql.version>
         <druid.version>1.0.9</druid.version>
-        <commons-fileupload.version>[1.3.3,)</commons-fileupload.version>
+        <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <freemarker.version>2.3.23</freemarker.version>
-        <activemq.version>[5.15.9,)</activemq.version>
+        <activemq.version>5.11.2</activemq.version>
         <security.version>3.2.3.RELEASE</security.version>
         <solrj.version>4.10.3</solrj.version>
         <ik.version>2012_u6</ik.version>
-        <lombok.version>1.18.10</lombok.version>
-        <junit.version>4.9</junit.version>
+        <junit.version>4.11</junit.version>
         <fastjson.version>1.2.28</fastjson.version>
         <javassist.version>3.11.0.GA</javassist.version>
-        <servlet-api.version>2.5</servlet-api.version>
         <commons-codec.version>1.10</commons-codec.version>
-        <fastdfs.version>1.2.28</fastdfs.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <fastdfs.version>1.2</fastdfs.version>
         <jedis.version>2.8.1</jedis.version>
-        <spring-data-redisversion>1.7.2.RELEASE</spring-data-redisversion>
-        <spring-security-web.version>4.1.0.RELEASE</spring-security-web.version>
+        <spring-data-redis.version>1.7.2.RELEASE</spring-data-redis.version>
+        <spring-security-web.versioon>4.1.0.RELEASE</spring-security-web.versioon>
         <spring-security-config.version>4.1.0.RELEASE</spring-security-config.version>
         <kaptcha.version>2.3.2</kaptcha.version>
         <spring-security-cas.version>4.1.0.RELEASE</spring-security-cas.version>
@@ -67,22 +72,10 @@
         <httpclient.version>4.5.3</httpclient.version>
         <dom4j.version>1.6.1</dom4j.version>
         <xml-apis.version>1.4.01</xml-apis.version>
-        <spring-data-solr.version>1.5.5.RELEASE</spring-data-solr.version>
     </properties>
-    <!--添加依赖-->
+    <!--添加的依赖-->
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-solr</artifactId>
-                <version>${spring-data-solr.version}</version>
-            </dependency>
-            <!--lombok-->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-            </dependency>
             <!-- Spring -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -140,31 +133,37 @@
                 <artifactId>zkclient</artifactId>
                 <version>${zkclient.version}</version>
             </dependency>
+            <!--测试架包-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
             </dependency>
+            <!--fastjson-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+            <!--javassist-->
             <dependency>
                 <groupId>javassist</groupId>
                 <artifactId>javassist</artifactId>
                 <version>${javassist.version}</version>
             </dependency>
+            <!--commons-codec-->
             <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
                 <version>${commons-codec.version}</version>
             </dependency>
+            <!--servlet-api-->
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>${servlet-api.version}</version>
             </dependency>
+            <!--pagehelper-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper</artifactId>
@@ -198,12 +197,13 @@
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
             </dependency>
+            <!-- fastdfs -->
             <dependency>
                 <groupId>org.csource.fastdfs</groupId>
                 <artifactId>fastdfs</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
-            <!-- 文件上传组件 -->
+            <!--文件上传组件-->
             <dependency>
                 <groupId>commons-fileupload</groupId>
                 <artifactId>commons-fileupload</artifactId>
@@ -213,18 +213,21 @@
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
-                <version>${jedis.version}</version>
+                <version>2.8.1</version>
             </dependency>
+            <!-- spring-data-redis -->
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-redis</artifactId>
-                <version>${spring-data-redisversion}</version>
+                <version>${spring-data-redis.version}</version>
             </dependency>
+            <!--freemarker-->
             <dependency>
                 <groupId>org.freemarker</groupId>
                 <artifactId>freemarker</artifactId>
                 <version>${freemarker.version}</version>
             </dependency>
+            <!--activemq-all-->
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-all</artifactId>
@@ -234,13 +237,15 @@
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-web</artifactId>
-                <version>${spring-security-web.version}</version>
+                <version>${spring-security-web.versioon}</version>
             </dependency>
+            <!--spring-security-config-->
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-config</artifactId>
-                <version>${spring-security-web.version}</version>
+                <version>${spring-security-config.version}</version>
             </dependency>
+            <!--kaptcha-->
             <dependency>
                 <groupId>com.github.penggle</groupId>
                 <artifactId>kaptcha</artifactId>
@@ -252,11 +257,13 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+            <!--spring-security-cas-->
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-cas</artifactId>
                 <version>${spring-security-cas.version}</version>
             </dependency>
+            <!--spring-security-cas-->
             <dependency>
                 <groupId>org.jasig.cas.client</groupId>
                 <artifactId>cas-client-core</artifactId>
@@ -275,26 +282,31 @@
                 <artifactId>solr-solrj</artifactId>
                 <version>${solrj.version}</version>
             </dependency>
+            <!-- ikanalyzer -->
             <dependency>
                 <groupId>com.janeluo</groupId>
                 <artifactId>ikanalyzer</artifactId>
                 <version>${ik.version}</version>
             </dependency>
+            <!-- httpcore -->
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpcore</artifactId>
                 <version>${httpcore.version}</version>
             </dependency>
+            <!--httpclient-->
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
-                <version>${httpclient.version}</version>
+                <version>${httpcore.version}</version>
             </dependency>
+            <!--dom4j-->
             <dependency>
                 <groupId>dom4j</groupId>
                 <artifactId>dom4j</artifactId>
                 <version>${dom4j.version}</version>
             </dependency>
+            <!--xml-apis-->
             <dependency>
                 <groupId>xml-apis</groupId>
                 <artifactId>xml-apis</artifactId>
@@ -302,5 +314,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>

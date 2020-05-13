@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Dashoon - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+        <!-- DataTables -->
+        <link href="../assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- App css -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="enlarged" data-keep-enlarged="true">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Topbar Start -->
+            <div class="navbar-custom">
+                <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                    <li class="dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="../assets/images/flags/us.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">English <i class="mdi mdi-chevron-down"></i> </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="../assets/images/flags/spain.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Spanish</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="../assets/images/flags/germany.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">German</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="../assets/images/flags/italy.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Italian</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="../assets/images/flags/russia.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Russian</span>
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="dripicons-inbox mail-icon"></i>
+                            <span class="badge badge-info noti-icon-badge">20</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                            <!-- item-->
+                            <div class="dropdown-item noti-title">
+                                <h5 class="m-0">
+                                    <span class="float-right">
+                                        <a href="" class="text-dark">
+                                            <small>Clear All</small>
+                                        </a>
+                                    </span>20 New Messages
+                                </h5>
+                            </div>
+
+                            <div class="slimscroll noti-scroll">
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                    <div class="notify-icon"><img src="../assets/images/users/avatar-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <p class="notify-details">Sandra Smith<small class="text-muted">Hey ! I'm working on your project</small></p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon"><img src="../assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /></div>
+                                    <p class="notify-details">Amily Lee<small class="text-muted">Hi, How are you? What about our next meeting?</small></p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon">
+                                        <img src="../assets/images/users/avatar-3.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <p class="notify-details">David Boos</p>
+                                    <p class="text-muted mb-0 user-msg">
+                                        <small>What about our next meeting</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon"><img src="../assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <p class="notify-details">Christopher Palmer<small class="text-muted">Waiting for your Response...</small></p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon">
+                                        <img src="../assets/images/users/avatar-5.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <p class="notify-details">Malika Roy</p>
+                                    <p class="text-muted mb-0 user-msg">
+                                        <small>Wow that's great</small>
+                                    </p>
+                                </a>
+                            </div>
+
+                            <!-- All-->
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                View all
+                                <i class="fi-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="dripicons-bell noti-icon"></i>
+                            <span class="badge badge-danger noti-icon-badge">35</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                            <!-- item-->
+                            <div class="dropdown-item noti-title">
+                                <h5 class="m-0">
+                                    <span class="float-right">
+                                        <a href="" class="text-dark">
+                                            <small>Clear All</small>
+                                        </a>
+                                    </span>Notification
+                                </h5>
+                            </div>
+
+                            <div class="slimscroll noti-scroll">
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-info"><i class="mdi mdi-cloud-upload-outline"></i></div>
+                                    <p class="notify-details">Your upload has been approved<small class="text-muted">5 hours ago</small></p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                    <div class="notify-icon bg-success"><i class="mdi mdi-map-marker-check"></i> </div>
+                                    <p class="notify-details">You added your Location<small class="text-muted">Just Now</small></p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-primary"><i class="mdi mdi-layers-remove"></i></div>
+                                    <p class="notify-details">Your item is shipped<small class="text-muted">It is a long established fact that a reader will</small></p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-purple"><i class="mdi mdi-check-bold"></i></div>
+                                    <p class="notify-details">Your order is placed<small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-warning">
+                                        <i class="mdi mdi-alert-outline"></i>
+                                    </div>
+                                    <p class="notify-details">Your Subscription Expired
+                                        <small class="text-muted">1 days ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-danger">
+                                        <i class="mdi mdi-settings"></i>
+                                    </div>
+                                    <p class="notify-details"><b>Devid</b>, You changed your Settings
+                                        <small class="text-muted">5 days ago</small>
+                                    </p>
+                                </a>
+                            </div>
+
+                            <!-- All-->
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                View all
+                                <i class="fi-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="../assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                            <span class="pro-user-name ml-1">
+                                Devid <i class="mdi mdi-chevron-down"></i> 
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                            <!-- item-->
+                            <div class="dropdown-item noti-title">
+                                <h6 class="m-0">
+                                    Hello, Devid !
+                                </h6>
+                            </div>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="dripicons-user"></i>
+                                <span>My Profile</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="dripicons-card"></i>
+                                <span>My Wallet</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="dripicons-gear"></i>
+                                <span>Settings</span>
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="dripicons-power"></i>
+                                <span>Logout</span>
+                            </a>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="list-unstyled menu-left mb-0">
+                    <li class="float-left">
+                        <a href="index.html" class="logo">
+                            <span class="logo-lg">
+                                <img src="../assets/images/logo.png" alt="" height="25">
+                            </span>
+                            <span class="logo-sm">
+                                <img src="../assets/images/logo-sm.png" alt="" height="24">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="float-left">
+                        <a class="button-menu-mobile navbar-toggle">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="app-search d-none d-md-block">
+                        <form class="form-inline"> 
+                            <input type="text" class="form-control" placeholder="Search…"> 
+                            <button class="btn btn-primary-color" type="submit"><i class="fa fa-search"></i></button> 
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <!-- end Topbar -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left-side-menu">
+
+                <div class="slimscroll-menu">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+
+                        <ul class="metismenu" id="side-menu">
+
+
+                            <div class="left-user">
+                                <div class="user-box">
+                                    <div class="user-img">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
+                                        <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
+                                    </div>
+                        
+                                    <h5><a href="javascript: void(0);">Devid Stanberry</a> </h5>
+                                    <p class="text-muted mb-0"><small>Main Admin</small></p>
+                                </div>
+                            </div>
+
+                            <li>
+                                <a href="index.html">
+                                    <i class="dripicons-device-desktop"></i>
+                                    <span> Dashboard </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-view-apps"></i>
+                                    <span> Layouts </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="layouts-dark-header.html">Dark Header</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts-sidebar-collapsed.html">Sidebar Collapsed</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts-dark-sidebar.html">Dark Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts-small-sidebar.html">Small Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts-boxed.html">Boxed Layout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                
+                            <li>
+                                <a href="calendar.html">
+                                    <i class="dripicons-calendar"></i> <span> Calendar </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-inbox"></i>
+                                    <span> Email </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="email-inbox.html">Inbox</a>
+                                    </li>
+                                    <li>
+                                        <a href="email-read.html">Read Email</a>
+                                    </li>
+                                    <li>
+                                        <a href="email-compose.html">Compose Email</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-briefcase"></i>
+                                    <span> UI Elements </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="ui-typography.html">Typography</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-buttons.html">Buttons</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-notifications.html">Notifications</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-cards.html">Cards</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-modals.html">Modals</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-grid.html">Grid</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-checkbox-radio.html">Checkbox & Radio</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-general.html">General</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-progress.html">Progress</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-tabs.html">Tabs & Accordions</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-sweetalerts.html">Sweet Alerts</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-ribbons.html">Ribbons</a>
+                                    </li> 
+                                    <li>
+                                        <a href="ui-range-slider.html">Range Slider</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-graph-pie"></i>
+                                    <span> Charts </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="chart-chartjs.html">Chartjs Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="chart-flot.html">Flot Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="chart-chartist.html">Chartist Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="chart-knob.html">Jquery Knob</a>
+                                    </li>
+                                    <li>
+                                        <a href="chart-sparkline.html">Sparkline Charts</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-document"></i>
+                                    <span> Forms </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="form-elements.html">Form Elements</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-advanced.html">Form Advanced</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-validation.html">Form Validation</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-wizard.html">Form Wizard</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-upload.html">Form Upload</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-summernote.html">Summernote</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-view-list"></i>
+                                    <span> Tables </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="tables-basic.html">Basic Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="tables-datatable.html">Data Tables</a>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-map"></i>
+                                    <span> Maps </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="maps-google.html">Google Maps</a>
+                                    </li>
+                                    <li>
+                                        <a href="maps-vector.html">Vector Maps</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-star"></i>
+                                    <span> Icons </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="icons-simpleline.html">Simple Line</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-dripicons.html">Dripicons</a>
+                                    </li> 
+                                    <li>
+                                        <a href="icons-materialdesign.html">Material Design</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-user"></i>
+                                    <span> Authentication </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="../auth-login.html">Log In</a></li>
+                                    <li><a href="../auth-register.html">Register</a></li>
+                                    <li><a href="auth-recoverpassword.html">Recover Password</a></li>
+                                    <li><a href="auth-lock-screen.html">Lock Screen</a></li>
+                                    <li><a href="auth-404.html">Error 404</a></li>
+                                    <li><a href="auth-500.html">Error 500</a></li>  
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-duplicate"></i>
+                                    <span> Extra Pages </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="pages-pricing.html">Pricing</a></li>
+                                    <li><a href="pages-starter.html">Starter</a></li>
+                                    <li><a href="pages-invoice.html">Invoice</a></li>
+                                    <li><a href="pages-timeline.html">Timeline</a></li>
+                                    <li><a href="pages-faq.html">FAQs</a></li>  
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="dripicons-network-3"></i>
+                                    <span> Multi Level </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level nav" aria-expanded="false">
+                                    <li>
+                                        <a href="javascript: void(0);">Menu 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0);" aria-expanded="false">Menu 2
+                                            <span class="menu-arrow"></span>
+                                        </a>
+                                        <ul class="nav-third-level nav" aria-expanded="false">
+                                            <li>
+                                                <a href="javascript: void(0);">Menu 2.1</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);">Menu 2.2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashoon</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Layouts</a></li>
+                                            <li class="breadcrumb-item active">Collapsed Sidebar</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Collapsed Sidebar</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+                        <div class="row">
+                            <div class="col-xl-12 stretch-card">
+                                <div class="card-box card-gradient">
+                                    <div class="row">
+                                        <div class="col-xl-4 p-20"> 
+                                            <div class="row">
+                                                <div class="col-6"> 
+                                                    <h4 class="header-title">Total Earning</h4>
+                                                    <h1>$5685K</h1>
+                                                </div>
+                                                <div class="col-6"> 
+                                                    <div class="float-right">
+                                                        <h4 class="header-title">Total Member</h4>
+                                                        <h1>78445K</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-process">
+                                                <p>Work in Process 100%</p>
+                                                <div class="progress mb-7" style="height: 3px;">
+                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6"> 
+                                                    <h4 class="header-title">Available Space</h4>
+                                                    <h1>4456TB</h1>
+                                                </div>
+                                                <div class="col-6"> 
+                                                    <div class="float-right">
+                                                        <h4 class="header-title">Used Space</h4>
+                                                        <h1>2248TB</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 p-20">    
+                                            <div class="dropdown float-right">
+                                                <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false"> 2019 <i class="mdi mdi-chevron-down"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">2018</a>
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">2017</a>
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">2016</a>
+                                                </div>
+                                            </div>
+                                            <h4 class="header-title mb-3">Upload/Download Chart</h4>
+                                            <div class="chartjs-chart product-chart">
+                                                <canvas id="product-chart"></canvas>
+                                            </div> 
+                                        </div>
+                                        <div class="col-xl-4 p-20"> 
+                                            <div class="dropdown float-right">
+                                                <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false"> 2019 <i class="mdi mdi-chevron-down"></i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">2018</a>
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">2017</a>
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">2016</a>
+                                                </div>
+                                            </div>
+                                            <h4 class="header-title mb-3">Upload/Download Percent</h4>
+                                            
+                                            <div class="dudash chartjs-chart dash-doughnut">
+                                                <canvas id="doughnut"></canvas>
+                                            </div>
+    
+                                            <div class="doughnut-footer">
+                                                <i class="mdi mdi-stop-circle-outline text-pink"></i> Download 60% <span class="float-right"><i class="mdi mdi-stop-circle-outline text-info"></i> Upload 40%</span>
+                                            </div>
+                                        </div>
+                                    </div>           
+                                </div> <!-- end card-box-->
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-8 stretch-card">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">omething else here</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="header-title mb-4">Transaction History</h4>
+        
+                                    <div class="table-responsive">
+                                        <table class="table table-centered table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="border-top-0">User Name</th>
+                                                    <th class="border-top-0">Payment Method</th>
+                                                    <th class="border-top-0">Date</th>
+                                                    <th class="border-top-0">Amount</th>
+                                                    <th class="border-top-0">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-6.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2"> Grant S. Gooch</span>
+                                                    </td>
+                                                    <td>Cash on delivery</td>
+                                                    <td>27.03.2018</td>
+                                                    <td>$34050.98</td>
+                                                    <td><span class="badge badge-pill badge-success">Approved</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-2.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2"> Christopher Keel</span>
+                                                    </td>
+                                                    <td>Master Card</td>
+                                                    <td>28.03.2018</td>
+                                                    <td>$11254.25</td>
+                                                    <td><span class="badge badge-pill badge-danger">Pending</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-3.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2">Leo R. Berry</span>
+                                                    </td>
+                                                    <td>Internet banking</td>
+                                                    <td>28.03.2018</td>
+                                                    <td>$14544.57</td>
+                                                    <td><span class="badge badge-pill badge-success">Approved</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-4.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2">Thomas Arnold</span>
+                                                    </td>
+                                                    <td>Credit Card</td>
+                                                    <td>29.03.2018</td>
+                                                    <td>$23005.89</td>
+                                                    <td><span class="badge badge-pill badge-danger">Pending</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-5.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2">William Weidner</span>
+                                                    </td>
+                                                    <td>Cash on delivery</td>
+                                                    <td>27.03.2018</td>
+                                                    <td>$34545.98</td>
+                                                    <td><span class="badge badge-pill badge-success">Approved</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+        
+                                </div> <!-- end card-box-->
+                            </div> <!-- end col-->
+
+                            <div class="col-xl-4 stretch-card">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">omething else here</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="header-title mb-3">Statistics</h4>
+                                    <div class="row text-center">
+                                        <div class="col-sm-4 mb-3">
+                                            <h3 class="font-weight-light">19,785</h3>
+                                            <p class="text-muted text-overflow">Add Views</p>
+                                        </div>
+                                        <div class="col-sm-4 mb-3">
+                                            <h3 class="font-weight-light">$3,787</h3>
+                                            <p class="text-muted text-overflow">Est. Earning</p>
+                                        </div>
+                                        <div class="col-sm-4 mb-3">
+                                            <h3 class="font-weight-light">$4,548</h3>
+                                            <p class="text-muted text-overflow">Total Cost</p>
+                                        </div>
+                                    </div>
+                                    <div class="chartjs-chart line-chart-static">
+                                        <canvas id="line-chart-static"></canvas>    
+                                    </div>  
+                                </div> <!-- end card-box -->
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-4 stretch-card">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">omething else here</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="header-title mb-3">Activity Log</h4>
+                                    <div class="vertical-timeline-wrapper">
+                                        <div class="timeline-vertical dashboard-timeline">
+                                            <div class="activity-log">
+                                                <p class="log-name">Donald D. Kane</p>
+                                                <div class="log-details">We got monthy payment from Exclucive clients. Via Paypal, Skrill, MasterCard.
+                                                </div>
+                                                <small class="log-time">Just Now</small>
+                                            </div>
+                                            <div class="activity-log">
+                                                <p class="log-name">Courtney S. Parker</p>
+                                                <div class="log-details">We are start working not only USA Project & working on all other country
+                                                    <div class="grouped-images mt-2">
+                                                        <img class="img-sm" src="../assets/images/users/avatar-5.jpg" alt="Profile Image" data-toggle="tooltip" title="" data-original-title="William Weidner">
+                                                        <img class="img-sm" src="../assets/images/users/avatar-4.jpg" alt="Profile Image" data-toggle="tooltip" title="" data-original-title="Grant S. Gooch">
+                                                        <img class="img-sm" src="../assets/images/users/avatar-3.jpg" alt="Profile Image" data-toggle="tooltip" title="" data-original-title="Leo R. Berry">
+                                                        <img class="img-sm" src="../assets/images/users/avatar-2.jpg" alt="Profile Image" data-toggle="tooltip" title="" data-original-title="Thomas Arnold">
+                                                        <img class="img-sm" src="../assets/images/users/avatar-1.jpg" alt="Profile Image" data-toggle="tooltip" title="" data-original-title="William Weidner">
+                                                        <span class="plus-text img-sm">+12</span>
+                                                    </div>
+                                                </div>
+                                                <small class="log-time">5 mins Ago</small>
+                                            </div>
+                                            <div class="activity-log">
+                                                <p class="log-name">Daniel C. Stewart</p>
+                                                <div class="log-details">Report has been updated. Approved your request.
+                                                    <div class="wrapper mt-2">
+                                                        <button type="button" class="btn btn-xs btn-primary">Approve</button>
+                                                        <button type="button" class="btn btn-xs btn-danger">Reject</button>
+                                                    </div>
+                                                </div>
+                                                <small class="log-time">3 Hours Ago</small>
+                                            </div>
+                                            <div class="activity-log">
+                                                <p class="log-name">William A. Weidner</p>
+                                                <div class="log-details">We are done process of submitted project</div>
+                                                <small class="log-time">7 Hours Ago</small>
+                                            </div>
+                                            <div class="activity-log">
+                                                <p class="log-name">Franklin I. Hall</p>
+                                                <div class="log-details">We are completed a theme development.</div>
+                                                <small class="log-time">8 Hours Ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="border-top activity py-2 d-block text-gray" href="#">
+                                        <small class="font-weight-medium"><i class="mdi mdi-chevron-down mr-2"></i> View All</small>
+                                    </a> 
+                                </div> <!-- end card-box-->
+                            </div> <!-- end col -->
+
+                            <div class="col-xl-4 stretch-card">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">omething else here</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="header-title mb-3">Earning Goal</h4>
+                                    <div class="row deposit-balance-card">
+                                        <div class="col-md-12 mt-2 text-center m-value">
+                                            <input data-plugin="knob" data-width="150" data-height="150" data-linecap=round data-fgColor="#FF679B" value="70" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".1" />
+                                        </div>
+                                        <div class="col-md-12 text-center mt-2">
+                                            <h3 class="font-weight-medium">$70,125</h3></div>
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-sm btn-block mt-2 btn-primary">View Transactions</button>
+                                        </div>
+                                        <div class="deposit-balance-card-footer">
+                                            <div class="footer-col col"><small>Goal: $100k</small>
+                                                <div class="progress progress-slim mt-2">
+                                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="footer-col col"><small>Duration: 30 Days</small>
+                                                <div class="progress progress-slim mt-2">
+                                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>      
+                                </div> <!-- end card-box-->
+                            </div> <!-- end col -->
+
+                            <div class="col-xl-4 stretch-card">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">omething else here</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="header-title mb-3">Calendar</h4>
+                                    <div class="calendar2">
+                                        <div id="inline-datepicker-example" class="datepicker"></div>
+                                    </div>     
+                                </div> <!-- end card-box-->
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-12 stretch-card">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">omething else here</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="header-title mb-4">Latest Tickets</h4>
+        
+                                    <div class="table-responsive">
+                                        <table class="table table-centered table-hover mb-0" id="datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th class="border-top-0">User Name</th>
+                                                    <th class="border-top-0">Ticket ID</th>
+                                                    <th class="border-top-0">Subject</th>
+                                                    <th class="border-top-0">Mobile No.</th>
+                                                    <th class="border-top-0">Date</th>
+                                                    <th class="border-top-0">Deadline</th>
+                                                    <th class="border-top-0">Priority</th>
+                                                    <th class="border-top-0 text-center">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-6.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2">William Weidner</span>
+                                                    </td>
+                                                    <td>#58454587</td>
+                                                    <td>Office Manager</td>
+                                                    <td>+123456789</td>
+                                                    <td>27.03.2018</td>
+                                                    <td>27.03.2018</td>
+                                                    <td>
+                                                        <div class="progress progress-md">
+                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="" class="badge-info btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-square-edit-outline"></i></a>
+                                                        <a href="" class="badge-danger btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-5.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2">Grant S. Gooch</span>
+                                                    </td>
+                                                    <td>#58584587</td>
+                                                    <td>Support Lead</td>
+                                                    <td>+123456789</td>
+                                                    <td>28.03.2018</td>
+                                                    <td>28.03.2018</td>
+                                                    <td>
+                                                        <div class="progress progress-md">
+                                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="" class="badge-info btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-square-edit-outline"></i></a>
+                                                        <a href="" class="badge-danger btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-4.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2">Leo R. Berry</span>
+                                                    </td>
+                                                    <td>#58447587</td>
+                                                    <td>Sales Assistant</td>
+                                                    <td>+123456789</td>
+                                                    <td>28.03.2018</td>
+                                                    <td>28.03.2018</td>
+                                                    <td>
+                                                        <div class="progress progress-md">
+                                                            <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="" class="badge-info btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-square-edit-outline"></i></a>
+                                                        <a href="" class="badge-danger btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-3.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2">Thomas Arnold</span>
+                                                    </td>
+                                                    <td>#54784587</td>
+                                                    <td>Account Manager</td>
+                                                    <td>+123456789</td>
+                                                    <td>29.03.2018</td>
+                                                    <td>29.03.2018</td>
+                                                    <td>
+                                                        <div class="progress progress-md">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="" class="badge-info btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-square-edit-outline"></i></a>
+                                                        <a href="" class="badge-danger btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/users/avatar-2.jpg" alt="user-pic" class="rounded-circle avatar-sm bx-shadow-lg" />
+                                                        <span class="ml-2">Christopher Keel</span>
+                                                    </td>
+                                                    <td>#58854587</td>
+                                                    <td>System Architect</td>
+                                                    <td>+123456789</td>
+                                                    <td>31.03.2018</td>
+                                                    <td>31.03.2018</td>
+                                                    <td>
+                                                        <div class="progress progress-md">
+                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="" class="badge-info btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-square-edit-outline"></i></a>
+                                                        <a href="" class="badge-danger btn-sm mg-y-5" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+        
+                                </div> <!-- end card-box-->
+                            </div> <!-- end col-->
+                        </div> <!-- end row-->
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                2019 © Dashboard Theme By <a href="#">Dashoon</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Vendor js -->
+        <script src="../assets/js/vendor.min.js"></script>
+
+        <!-- KNOB JS -->
+        <script src="../assets/libs/jquery-knob/jquery.knob.min.js"></script>
+        <!-- Chart JS -->
+        <script src="../assets/libs/chart-js/Chart.bundle.min.js"></script>
+        <!-- DatePicker JS -->
+        <script src="../assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+        
+        <!-- Datatable js -->
+        <script src="../assets/libs/datatables/jquery.dataTables.min.js"></script>
+        <script src="../assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+        <script src="../assets/libs/datatables/dataTables.responsive.min.js"></script>
+        <script src="../assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+        
+        <!-- Dashboard Init JS -->
+        <script src="../assets/js/pages/dashboard.init.js"></script>
+        
+        <!-- App js -->
+        <script src="../assets/js/app.min.js"></script>
+
+    </body>
+</html>
