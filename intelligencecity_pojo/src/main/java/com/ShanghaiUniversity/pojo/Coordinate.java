@@ -13,6 +13,17 @@ public class Coordinate implements Serializable {
 
     private String other;
 
+    @Override
+    public String toString() {
+        return "Coordinate{" +
+                "id=" + id +
+                ", longitude=" + longitude +
+                ", latitude=" + latitude +
+                ", picture='" + picture + '\'' +
+                ", other='" + other + '\'' +
+                '}';
+    }
+
     public Integer getId() {
         return id;
     }
@@ -51,16 +62,5 @@ public class Coordinate implements Serializable {
 
     public void setOther(String other) {
         this.other = other == null ? null : other.trim();
-    }
-
-    @Override
-    public String toString() {
-        return "Coordinate{" +
-                "id=" + id +
-                ", longitude=" + longitude +
-                ", latitude=" + latitude +
-                ", picture='" + picture + '\'' +
-                ", other='" + other + '\'' +
-                '}';
     }
 }

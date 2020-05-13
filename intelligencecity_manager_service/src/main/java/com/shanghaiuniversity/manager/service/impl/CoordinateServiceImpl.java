@@ -28,7 +28,7 @@ public class CoordinateServiceImpl implements CoordinateService {
      */
     @Override
     public List<Coordinate> findAll() {
-        System.out.println("hahahhahahhahahah");
+        System.out.println("###################################");
         return coordinateMapper.selectByExample(null);
     }
 
