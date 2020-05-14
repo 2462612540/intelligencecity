@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <script src="/assets/js/angularjs/angular.min.js"></script>
     <style type="text/css">
         body, html, #allmap {
             width: 100%;
@@ -17,6 +18,8 @@
 </head>
 <body>
 <div id="allmap"></div>
+<!--加载所有地图节点的异步请求驱动-->
+<div data-ng-app="notesApp" ng-controller="MainCtrl"></div>
 </body>
 </html>
 <script type="text/javascript">
@@ -45,15 +48,15 @@
     }
 
     // 随机向地图添加10个标注
-    var bounds = map.getBounds();
-    var sw = bounds.getSouthWest();
-    var ne = bounds.getNorthEast();
-    var lngSpan = Math.abs(sw.lng - ne.lng);
-    var latSpan = Math.abs(ne.lat - sw.lat);
-    for (var i = 0; i < 10; i++) {
-        var point = new BMap.Point(sw.lng + lngSpan * (Math.random() * 0.7), ne.lat - latSpan * (Math.random() * 0.7));
-        addMarker(point);
-    }
+    // var bounds = map.getBounds();
+    // var sw = bounds.getSouthWest();
+    // var ne = bounds.getNorthEast();
+    // var lngSpan = Math.abs(sw.lng - ne.lng);
+    // var latSpan = Math.abs(ne.lat - sw.lat);
+    // for (var i = 0; i < 10; i++) {
+    //     var point = new BMap.Point(sw.lng + lngSpan * (Math.random() * 0.7), ne.lat - latSpan * (Math.random() * 0.7));
+    //     addMarker(point);
+    // }
 
     //加载城市控件
     var size = new BMap.Size(10, 50);
@@ -61,4 +64,18 @@
         anchor: BMAP_ANCHOR_TOP_LEFT,
         offset: size,
     }));
+
+    //加载所有地图节点，并且标注
+    angular.module('notesApp',[])
+        .controller('MainCtrl',['$http',function($http){
+            var url="/coordinate/findAll.do";
+            $http.get(url).then(function(response){
+                angular.forEach(response.data, function (item) {
+                    var point = new BMap.Point(item.longitude, item.latitude);
+                    addMarker(point);
+                });
+            },function(errResponse){
+                alert('error'+errResponse);
+            });
+        }]);
 </script>

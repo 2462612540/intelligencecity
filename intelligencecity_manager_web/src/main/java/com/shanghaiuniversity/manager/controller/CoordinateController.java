@@ -28,7 +28,7 @@ public class CoordinateController {
      *
      * @return
      */
-    @RequestMapping("/findAll")
+    @RequestMapping("/findAll.do")
     public List<Coordinate> findAll() {
 
         return coordinateService.findAll();
