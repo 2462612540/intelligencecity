@@ -11,12 +11,12 @@
 	<http pattern="/*.html" security="none"></http>
 	<http pattern="/assets/**" security="none"></http>
 	<http pattern="/views/**" security="none"></http>
-	<http pattern="/commonuser/add.do" security="none"></http>
+	<http pattern="/user/add.do" security="none"></http>
 
 	<!-- 页面的拦截规则    use-expressions:是否启动SPEL表达式 默认是true -->
 	<http use-expressions="false">
 		<!-- 当前用户必须有ROLE_USER的角色 才可以访问根目录及所属子目录的资源 -->
-		<intercept-url pattern="/**" access="ROLE_SELLER"/>
+		<intercept-url pattern="/**" access="ROLE_CommonUser"/>
 		<!-- 开启表单登陆功能 -->
 		<form-login  login-page="/auth-login.html" default-target-url="/views/index.html" authentication-failure-url="/auth-login.html" always-use-default-target="true"/>
 		<csrf disabled="true"/>

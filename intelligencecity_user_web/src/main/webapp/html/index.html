@@ -21,27 +21,6 @@
     <!--引入angular.js的组件-->
     <script type="text/javascript" src="../assets/js/plugins/angularjs/angular.min.js"></script>
 
-    <script type="text/javascript">
-        var app=angular.module('smartcity',[]);
-        app.controller('userController',function ($scope,$http) {
-            // // 回调函数用法
-            // $http.get("../user/findAll.do").success(function(response) {
-            //     $scope.list = response;
-            // });
-
-            $scope.findAll=function () {
-                $http.get("../user/findAll.do").success(function(response) {
-                    $scope.list = response;
-                });
-
-                $http.get("../deliver/findAll.do").success(function(response) {
-                    $scope.list1 = response;
-                });
-            }
-
-        });
-
-    </script>
 
 </head>
 
