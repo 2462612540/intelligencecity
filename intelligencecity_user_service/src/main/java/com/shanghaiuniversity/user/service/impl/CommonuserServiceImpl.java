@@ -99,7 +99,6 @@ public class CommonuserServiceImpl implements CommonuserService {
                 criteria.andOtherMessageLike("%" + commonuser.getOtherMessage() + "%");
             }
         }
-
         Page<Commonuser> page = (Page<Commonuser>) commonuserMapper.selectByExample(example);
         return new PageResult(page.getTotal(), page.getResult());
     }

@@ -14,6 +14,7 @@ app.service('commonuserService',function($http){
 	}
 	//增加 
 	this.add=function(entity){
+		alert("已经到了servicec层的代码")
 		return  $http.post('../commonuser/add.do',entity );
 	}
 	//修改 

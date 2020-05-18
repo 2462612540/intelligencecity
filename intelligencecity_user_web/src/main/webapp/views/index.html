@@ -15,10 +15,20 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+
+    <!--引入angular js-->
+    <script type="text/javascript" src="../assets/js/angularjs/angular.min.js"></script>
+    <!--引入base js-->
+    <script type="text/javascript" src="../assets/js/base.js"></script>
+    <!--引入service js-->
+    <script type="text/javascript" src="../assets/js/service/loginService.js"></script>
+    <!--引入controller js-->
+    <script type="text/javascript" src="../assets/js/controller/indexController.js"></script>
+
 </head>
 <body>
 <!-- Begin page -->
-<div id="wrapper">
+<div id="wrapper" ng-app="intelligencecity" ng-controller="indexController" ng-init="showLoginName()">
     <!-- Topbar Start-->
     <div class="navbar-custom">
         <ul class="list-unstyled topnav-menu float-right mb-0">
@@ -106,7 +116,6 @@
                     </a>
                 </div>
             </li>
-
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"
                    role="button" aria-haspopup="false" aria-expanded="false">
@@ -141,20 +150,18 @@
                     </div>
                 </div>
             </li>
-
-            <li class="dropdown notification-list">
+            <li class="dropdown notification-list" >
                 <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
                    href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <img src="../assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
-                    <span class="pro-user-name ml-1">
-                                庄小焱 <i class="mdi mdi-chevron-down"></i>
+                    <span class="pro-user-name ml-1">{{loginName}} <i class="mdi mdi-chevron-down"></i>
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                     <!-- item-->
                     <div class="dropdown-item noti-title">
                         <h6 class="m-0">
-                            你好, 庄小焱 !
+                            你好:{{loginName}}!
                         </h6>
                     </div>
                     <!-- item-->
@@ -169,14 +176,13 @@
                     </a>
                     <div class="dropdown-divider"></div>
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <a href="../logout" class="dropdown-item notify-item">
                         <i class="dripicons-power"></i>
                         <span>退出</span>
                     </a>
                 </div>
             </li>
         </ul>
-
         <ul class="list-unstyled menu-left mb-0">
             <li class="float-left">
                 <a href="index.html" class="logo">
@@ -213,19 +219,6 @@
             <!--- Sidemenu -->
             <div id="sidebar-menu">
                 <ul class="metismenu" id="side-menu">
-                    <div class="left-user">
-                        <div class="user-box">
-                            <div class="user-img">
-                                <img src="../assets/images/users/avatar-1.jpg" alt="user-img" title="Mat Helme"
-                                     class="rounded-circle img-fluid">
-                                <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
-                            </div>
-                            <h5><a href="javascript: void(0);">庄小焱</a></h5>
-                            <p class="text-muted mb-0">
-                                <small>智慧城市系统主菜单</small>
-                            </p>
-                        </div>
-                    </div>
                     <!--系统主页-->
                     <li>
                         <a href="javascript: void(0);">
