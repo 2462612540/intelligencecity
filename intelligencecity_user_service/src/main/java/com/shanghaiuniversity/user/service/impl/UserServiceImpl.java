@@ -101,9 +101,7 @@ public class UserServiceImpl implements UserService {
             if (user.getUserName() != null && user.getUserName().length() > 0) {
                 criteria.andUserNameLike("%" + user.getUserName() + "%");
             }
-
         }
-
         Page<User> page = (Page<User>) userMapper.selectByExample(example);
         return new PageResult(page.getTotal(), page.getResult());
     }

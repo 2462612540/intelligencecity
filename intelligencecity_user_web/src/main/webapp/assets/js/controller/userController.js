@@ -57,7 +57,7 @@ app.controller('userController' ,function($scope,$controller,userService){
 			function (response) {
 				if(response.success){
 					alert("注册成功")
-					location.href="auth-login.html";
+					location.href="../auth-login.html";
 				}else {
 					alert("失败失败")
 					alert(response.measure);
