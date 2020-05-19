@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans:beans xmlns="http://www.springframework.org/schema/security"
-	xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
 						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
-   
-	<!-- 设置页面不登陆也可以访问 -->
-	<http pattern="/*.html" security="none"></http>
-	<http pattern="/assets/**" security="none"></http>
-	<http pattern="/views/**" security="none"></http>
-	<http pattern="/user/add.do" security="none"></http>
 
-	<!-- 页面的拦截规则    use-expressions:是否启动SPEL表达式 默认是true -->
-	<http use-expressions="false">
-		<!-- 当前用户必须有ROLE_USER的角色 才可以访问根目录及所属子目录的资源 -->
-		<intercept-url pattern="/**" access="ROLE_CommonUser"/>
-		<!-- 开启表单登陆功能 -->
-		<form-login  login-page="/auth-login.html" default-target-url="/views/index.html" authentication-failure-url="/auth-login.html" always-use-default-target="true"/>
-		<csrf disabled="true"/>
-		<headers>
-			<frame-options policy="SAMEORIGIN"/>
-		</headers>
-		<logout/>
-	</http>
+    <!-- 设置页面不登陆也可以访问 -->
+    <http pattern="/*.html" security="none"></http>
+    <http pattern="/assets/**" security="none"></http>
+    <http pattern="/views/**" security="none"></http>
+    <http pattern="/user/add.do" security="none"></http>
 
-	<!--认证管理器-->
-	<authentication-manager>
-		<authentication-provider>
-			<user-service>
-				<user name="admin" password="123456" authorities="ROLE_USER"/>
-			</user-service>
-		</authentication-provider>
-	</authentication-manager>
+    <!-- 页面的拦截规则    use-expressions:是否启动SPEL表达式 默认是true -->
+    <http use-expressions="false">
+        <!-- 当前用户必须有ROLE_USER的角色 才可以访问根目录及所属子目录的资源 -->
+        <intercept-url pattern="/**" access="ROLE_USER"/>
+        <!-- 开启表单登陆功能 -->
+        <form-login login-page="/auth-login.html" default-target-url="/views/index.html"
+                    authentication-failure-url="/auth-login.html" always-use-default-target="true"/>
+        <csrf disabled="true"/>
+        <headers>
+            <frame-options policy="SAMEORIGIN"/>
+        </headers>
+        <logout/>
+    </http>
+
+    <!-- 认证管理器 -->
+    <authentication-manager>
+        <authentication-provider user-service-ref="userDetailService">
+            <password-encoder ref="bcryptEncoder"></password-encoder>
+        </authentication-provider>
+    </authentication-manager>
+
+    <!-- 认证类 -->
+    <beans:bean id="userDetailService" class="com.shanghaiuniversity.user.service.UserDetailsServiceImpl">
+        <beans:property name="userService" ref="userService"></beans:property>
+    </beans:bean>
+
+    <!-- 引用dubbo中的服务 -->
+    <dubbo:application name="intelligencecity_user_web"/>
+    <dubbo:registry address="zookeeper://47.98.187.29:2181" timeout="30000"/>
+    <dubbo:reference id="userService" interface="com.shanghaiuniversity.user.service.UserService"></dubbo:reference>
+    <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></beans:bean>
 
 </beans:beans>
