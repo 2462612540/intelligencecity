@@ -72,10 +72,33 @@
             $http.get(url).then(function(response){
                 angular.forEach(response.data, function (item) {
                     var point = new BMap.Point(item.longitude, item.latitude);
-                    addMarker(point);
+                    var marker = new BMap.Marker(point);
+                    map.addOverlay(marker);
+                    // addMarker(point);
+                    //绑定事件
+                    addClickHandler("picture:"+item.picture+"other:"+item.other,marker);
                 });
             },function(errResponse){
                 alert('error'+errResponse);
             });
         }]);
+    //信息窗口设置
+    var opts = {
+        width : 250,     // 信息窗口宽度
+        height: 80,     // 信息窗口高度
+        title : "信息窗口" , // 信息窗口标题
+        enableMessage:true//设置允许信息窗发送短息
+    };
+    //绑定弹出事件
+    function addClickHandler(content,marker){
+        marker.addEventListener("click",function(e){
+            openInfo(content,e)}
+        );
+    }
+    function openInfo(content,e){
+        var p = e.target;
+        var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+        var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象
+        map.openInfoWindow(infoWindow,point); //开启信息窗口
+    }
 </script>
