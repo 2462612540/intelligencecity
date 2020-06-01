@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>智慧城市登录首页</title>
+    <meta charset="utf-8"/>
+    <title>智慧城市管理系统注册</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     <!-- App css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+
+    <!--引入AngularJS-->
+    <script type="text/javascript" src="assets/js/plugins/angularjs/angular.min.js"></script>
+
+    <!--引入AngularJS的三层的协议-->
+    <script type="text/javascript" src="assets/js/base.js"></script>
+    <script type="text/javascript" src="assets/js/service/userService.js"></script>
+    <script type="text/javascript" src="assets/js/controller/baseController.js"></script>
+    <script type="text/javascript" src="assets/js/controller/userController.js"></script>
 </head>
 
-<body class="authentication-bg authentication-bg-pattern d-flex align-items-center">
+<body class="authentication-bg authentication-bg-pattern d-flex align-items-center" >
 
-<div class="home-btn d-none d-sm-block">
-    <a href="html/index.html"><i class="fas fa-home h2 text-white"></i></a>
-</div>
-<div class="account-pages w-100 mt-5 mb-5">
+<div class="account-pages w-100 mt-5 mb-5" ng-app="intelligencecity" ng-controller="userController">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6 col-xl-5">
                 <div class="card">
-
                     <div class="card-body p-4">
-
                         <div class="text-center mb-4">
-                            <a href="html/index.html">
                                 <span><img src="assets/images/logo.png" alt="" height="28"></span>
-                            </a>
                         </div>
-
-                        <form action="/html/index.html" class="pt-2" method="get">
-
+                        <form action="#" class="pt-2" >
                             <div class="form-group mb-3">
-                                <label for="emailaddress">邮箱</label>
-                                <input class="form-control" type="email" id="emailaddress" required="" placeholder="邮箱">
+                                <label >用户名</label>
+                                <input class="form-control" type="text"  ng-model="entity.userAccount" placeholder="输入手机号">
                             </div>
-
                             <div class="form-group mb-3">
-                                <a href="auth-recoverpassword.html" class="text-muted float-right"><small>忘记密码?</small></a>
-                                <label for="password">密码</label>
-                                <input class="form-control" type="password" required="" id="password" placeholder="输入密码">
+                                <label >密码</label>
+                                <input class="form-control" type="password"  ng-model="entity.userPassword"  placeholder="输入密码">
                             </div>
-
                             <div class="custom-control custom-checkbox mb-3">
-                                <input type="checkbox" class="custom-control-input" id="checkbox-signin" checked>
-                                <label class="custom-control-label" for="checkbox-signin">记住密码</label>
+                                <input type="checkbox" class="custom-control-input" id="checkbox-signup">
+                                <label class="custom-control-label" for="checkbox-signup">接受 <a href="javascript: void(0);" class="text-dark">所有条款</a></label>
                             </div>
-
                             <div class="form-group mb-0 text-center">
-                                <button class="btn btn-info btn-block" type="submit">登录</button>
+                                <button class="btn btn-info btn-block" type="submit" ng-click="add()"> 注册</button>
                             </div>
-
                         </form>
 
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <p class="text-muted mb-0">请使用账号登录，没有请注册账号 <a href="./auth-register.html" class="text-dark ml-1"><b>注册</b></a></p>
+                                <p class="text-muted mb-0">已经有账号? <a href="auth-login.html" class="text-dark ml-1"><b>登录</b></a></p>
                             </div> <!-- end col -->
                         </div>
                         <!-- end row -->
@@ -79,7 +74,6 @@
 
 <!-- Vendor js -->
 <script src="assets/js/vendor.min.js"></script>
-
 <!-- App js -->
 <script src="assets/js/app.min.js"></script>
 
