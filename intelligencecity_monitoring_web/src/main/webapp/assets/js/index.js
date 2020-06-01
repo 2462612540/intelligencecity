@@ -3,7 +3,6 @@ $(function () {
     char2();
     char3();
     char4();
-
 });
 
 //统计分析图

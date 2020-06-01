@@ -1,64 +1,340 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
-    <style type="text/css">
-        body, html, #allmap {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            margin: 0;
-            font-family: "微软雅黑";
-        }
-    </style>
-    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=VD8EnZlFAdBMNb7vQxCdZPHSvQGHaQ7t"></script>
-    <title>地图实时监控</title>
+    <meta charset="utf-8"/>
+    <title>监控系统中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!-- jvectormap -->
+    <link href="../assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet"/>
+
+    <!-- App css -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+    <!--引入地图的css-->
+    <link rel="stylesheet" href="../assets/js/map/map.css" type="text/css"/>
 </head>
+
 <body>
-<div id="allmap"></div>
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    <!-- Topbar Start-->
+    <div class="navbar-custom">
+        <ul class="list-unstyled topnav-menu float-right mb-0">
+
+            <li class="dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="false" aria-expanded="false">
+                    <img src="../assets/images/flags/China.jpg" alt="user-image" class="mr-1" height="12"> <span
+                        class="align-middle">中文(简体) </i> </span>
+                </a>
+            </li>
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="dripicons-inbox mail-icon"></i>
+                    <span class="badge badge-info noti-icon-badge">0</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h5 class="m-0">
+                                    <span class="float-right">
+                                        <a href="" class="text-dark">
+                                            <small>清空消息</small>
+                                        </a>
+                                    </span>20条新消息
+                        </h5>
+                    </div>
+                    <div class="slimscroll noti-scroll">
+                    </div>
+                    <!-- All-->
+                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                        查看所有消息
+                        <i class="fi-arrow-right"></i>
+                    </a>
+                </div>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="dripicons-bell noti-icon"></i>
+                    <span class="badge badge-danger noti-icon-badge">35</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h5 class="m-0">
+                                    <span class="float-right">
+                                        <a href="" class="text-dark">
+                                            <small>清空所有消息</small>
+                                        </a>
+                                    </span>消息通知
+                        </h5>
+                    </div>
+
+                    <div class="slimscroll noti-scroll">
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-info"><i class="mdi mdi-cloud-upload-outline"></i></div>
+                            <p class="notify-details">您已经使用该系统
+                                <small class="text-muted">5 hours ago</small>
+                            </p>
+                        </a>
+                        <!-- All-->
+                        <a href="javascript:void(0);"
+                           class="dropdown-item text-center text-primary notify-item notify-all">
+                            查看全部消息
+                            <i class="fi-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
+                   href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <img src="../assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                    <span class="pro-user-name ml-1">
+                                庄小焱 <i class="mdi mdi-chevron-down"></i>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-user"></i>
+                        <span>我的账户</span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-gear"></i>
+                        <span>设置</span>
+                    </a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-power"></i>
+                        <span>退出</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="list-unstyled menu-left mb-0">
+            <li class="float-left">
+                <a href="index.html" class="logo">
+                            <span class="logo-lg">
+                                <img src="../assets/images/logo.png" alt="" height="25">
+                            </span>
+                    <span class="logo-sm">
+                                <img src="../assets/images/logo-sm.png" alt="" height="24">
+                            </span>
+                </a>
+            </li>
+            <li class="float-left">
+                <a class="button-menu-mobile navbar-toggle">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </li>
+            <li class="app-search d-none d-md-block">
+                <form class="form-inline">
+                    <input type="text" class="form-control" placeholder="Search…">
+                    <button class="btn btn-primary-color" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <!-- end Topbar -->
+
+    <!-- Start Left Sidebar -->
+    <div class="left-side-menu">
+        <div class="slimscroll-menu">
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <ul class="metismenu" id="side-menu">
+                    <!--系统主页-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-device-desktop"></i>
+                            <span> 系统中心</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="index.html">系统数据展示</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--数据统计页面-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-graph-pie"></i>
+                            <span> 数据统计</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="user-message.html">用户管理数据</a>
+                            </li>
+                            <li>
+                                <a href="device-message.html">设备管理数据</a>
+                            </li>
+                            <li>
+                                <a href="chart-data.html">图表统计数据</a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">深度学习数据</a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">集群管理数据</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--订单数据-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-document"></i>
+                            <span> 订单数据</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="order-apply.html">订单申请</a>
+                            </li>
+                            <li>
+                                <a href="order-total.html">全部订单</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--账户中心页面-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-user"></i>
+                            <span> 账户中心 </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="auth-data.html">基本信息</a></li>
+                            <li><a href="password-update.html">密码修改</a></li>
+                        </ul>
+                    </li>
+                    <!--监控中心-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-briefcase"></i>
+                            <span>监控系统</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="monitoring.html">监控中心</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--系统信息页面-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-briefcase"></i>
+                            <span> 系统信息</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="system-message.html">系统通知</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Sidebar -->
+            <div class="clearfix"></div>
+        </div>
+        <!-- Sidebar -left -->
+    </div>
+    <!-- End Left Sidebar  -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+            <!-- Start Content-->
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0"></ol>
+                            </div>
+                            <h4 class="page-title">实时地图数据</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box">
+                            <div id="map_div" style="height: 600px"></div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div> <!-- container-fluid -->
+        </div> <!-- content -->
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        2019 © 智慧城市系统 （江苏集萃）<a href="javascript: void(0);">上海大学智能视觉中心设计</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+</div>
+<!-- END wrapper -->
+
+<!-- Vendor js -->
+<script src="../assets/js/vendor.min.js"></script>
+
+<!-- Jq vector map -->
+<script src="../assets/libs/jqvmap/jquery.vmap.min.js"></script>
+<script src="../assets/libs/jqvmap/jquery.vmap.world.js"></script>
+<script src="../assets/libs/jqvmap/jquery.vmap.usa.js"></script>
+<script src="../assets/libs/jqvmap/jquery.vmap.iran.js"></script>
+<script src="../assets/libs/jqvmap/jquery.vmap.canada.js"></script>
+<script src="../assets/libs/jqvmap/jquery.vmap.germany.js"></script>
+
+<!-- Init js-->
+<script src="../assets/js/pages/jqvector-maps.init.js"></script>
+
+<!-- App js -->
+<script src="../assets/js/app.min.js"></script>
+<script src="../assets/js/jquery/jQuery-2.2.0.min.js"></script>
+<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=VD8EnZlFAdBMNb7vQxCdZPHSvQGHaQ7t"></script>
+<script src="../assets/js/map/indexmap.js"></script>
 </body>
 </html>
-<script type="text/javascript">
-    // 百度地图API功能
-    var map = new BMap.Map("allmap");    // 创建Map实例
-    map.centerAndZoom(new BMap.Point(120.49102, 31.452469), 15);  // 初始化地图,设置中心点坐标和地图级别
-    //添加地图类型控件
-    map.addControl(new BMap.MapTypeControl({
-        mapTypes: [
-            BMAP_NORMAL_MAP,
-            BMAP_HYBRID_MAP
-        ]
-    }));
-    map.setCurrentCity("无锡");          // 设置地图显示的城市 此项是必须设置的
-    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-    //设备地图颜色
-    var mapStyle = {
-        style: "lightbeige"
-    };
-    map.setMapStyle(mapStyle);
-
-    // 编写自定义函数,创建标注
-    function addMarker(point) {
-        var marker = new BMap.Marker(point);
-        map.addOverlay(marker);
-    }
-
-    // 随机向地图添加10个标注
-    var bounds = map.getBounds();
-    var sw = bounds.getSouthWest();
-    var ne = bounds.getNorthEast();
-    var lngSpan = Math.abs(sw.lng - ne.lng);
-    var latSpan = Math.abs(ne.lat - sw.lat);
-    for (var i = 0; i < 10; i++) {
-        var point = new BMap.Point(sw.lng + lngSpan * (Math.random() * 0.7), ne.lat - latSpan * (Math.random() * 0.7));
-        addMarker(point);
-    }
-
-    //加载城市控件
-    var size = new BMap.Size(10, 50);
-    map.addControl(new BMap.CityListControl({
-        anchor: BMAP_ANCHOR_TOP_LEFT,
-        offset: size,
-    }));
-</script>
