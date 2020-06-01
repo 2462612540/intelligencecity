@@ -32,9 +32,7 @@
         <module>intelligencecity_search_service</module>
         <module>intelligencecity_search_web</module>
         <module>generatorSqlmapCustomer</module>
-
     </modules>
-
     <!-- 集中定义依赖版本号 -->
     <properties>
         <junit.version>4.12</junit.version>
