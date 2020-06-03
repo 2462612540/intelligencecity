@@ -407,7 +407,7 @@
                             </div>
                             <h4 class="header-title mb-4">普通用户基本数据信息</h4>
                             <div class="table-responsive" ng-controller="commonuserController" ng-init="findAll()">
-                                <table class="table table-centered table-hover mb-0">
+                                <table class="table table-centered table-hover mb-0" id="datatable0">
                                     <thead>
                                     <tr>
                                         <th class="border-top-0">用户ID</th>
@@ -419,14 +419,14 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="entity in list">
-                                        <td>{{entity.id}}</td>
-                                        <td>{{entity.userName}}</td>
-                                        <td>{{entity.userPhone}}</td>
-                                        <td>{{entity.createTime}}</td>
-                                        <td>{{entity.score}}</td>
-                                        <td><span class="badge badge-pill badge-success">正常</span></td>
-                                    </tr>
+                                    <!--<tr ng-repeat="entity in list">-->
+                                        <!--<td>{{entity.id}}</td>-->
+                                        <!--<td>{{entity.userName}}</td>-->
+                                        <!--<td>{{entity.userPhone}}</td>-->
+                                        <!--<td>{{entity.createTime}}</td>-->
+                                        <!--<td>{{entity.score}}</td>-->
+                                        <!--<td><span class="badge badge-pill badge-success">正常</span></td>-->
+                                    <!--</tr>-->
                                     </tbody>
                                 </table>
                             </div>
@@ -482,7 +482,7 @@
                                     <i class="mdi mdi-dots-horizontal"></i>
                                 </a>
                             </div>
-                            <h4 class="header-title mb-4">智能设别基本数据</h4>
+                            <h4 class="header-title mb-4">智能设备基本数据</h4>
                             <div class="table-responsive" ng-controller="deviceController" ng-init="findAll()">
                                 <table class="table table-centered table-hover mb-0" id="datatable1">
                                     <thead>
@@ -495,13 +495,13 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="entity in list">
-                                        <td>{{entity.id}}</td>
-                                        <td>{{entity.deviceNumber}}</td>
-                                        <td>{{entity.deviceCompany}}</td>
-                                        <td>{{entity.deviceIp}}</td>
-                                        <td>{{entity.deviceLocation}}</td>
-                                    </tr>
+                                    <!--<tr ng-repeat="entity in list">-->
+                                        <!--<td>{{entity.id}}</td>-->
+                                        <!--<td>{{entity.deviceNumber}}</td>-->
+                                        <!--<td>{{entity.deviceCompany}}</td>-->
+                                        <!--<td>{{entity.deviceIp}}</td>-->
+                                        <!--<td>{{entity.deviceLocation}}</td>-->
+                                    <!--</tr>-->
                                     </tbody>
                                 </table>
                             </div>
@@ -521,7 +521,7 @@
                             </div>
                             <h4 class="header-title mb-4">垃圾桶数据信息</h4>
                             <div class="table-responsive" ng-controller="barrelController" ng-init="findAll()">
-                                <table class="table table-centered table-hover mb-0" id="datatable3">
+                                <table class="table table-centered table-hover mb-0" id="datatable2">
                                     <thead>
                                     <tr>
                                         <th class="border-top-0">垃圾桶ID</th>
@@ -534,16 +534,16 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="entity in list">
-                                        <td>{{entity.id}}</td>
-                                        <td>{{entity.barrelNumber}}</td>
-                                        <td>{{entity.totalWeight}}/ML</td>
-                                        <td>{{entity.currentWeight}}/KG</td>
-                                        <td>{{entity.purity}}%</td>
-                                        <td>{{entity.restCapacity}}/ML</td>
-                                        <td>{{entity.location}}</td>
+                                    <!--<tr ng-repeat="entity in list">-->
+                                        <!--<td>{{entity.id}}</td>-->
+                                        <!--<td>{{entity.barrelNumber}}</td>-->
+                                        <!--<td>{{entity.totalWeight}}/ML</td>-->
+                                        <!--<td>{{entity.currentWeight}}/KG</td>-->
+                                        <!--<td>{{entity.purity}}%</td>-->
+                                        <!--<td>{{entity.restCapacity}}/ML</td>-->
+                                        <!--<td>{{entity.location}}</td>-->
 
-                                    </tr>
+                                    <!--</tr>-->
                                     </tbody>
                                 </table>
                             </div>
@@ -563,7 +563,7 @@
                             </div>
                             <h4 class="header-title mb-4">设备管理员数据</h4>
                             <div class="table-responsive" ng-controller="deviceuserController" ng-init="findAll()">
-                                <table class="table table-centered table-hover mb-0" id="datatable2">
+                                <table class="table table-centered table-hover mb-0" id="datatable3">
                                     <thead>
                                     <tr>
                                         <th class="border-top-0">管理员ID</th>
@@ -574,13 +574,13 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="entity in list">
-                                        <td>{{entity.id}}</td>
-                                        <td>{{entity.userName}}</td>
-                                        <td>{{entity.userPhone}}</td>
-                                        <td>{{entity.createTime}}</td>
-                                        <td>{{entity.otherMessage}}</td>
-                                    </tr>
+                                    <!--<tr ng-repeat="entity in list">-->
+                                        <!--<td>{{entity.id}}</td>-->
+                                        <!--<td>{{entity.userName}}</td>-->
+                                        <!--<td>{{entity.userPhone}}</td>-->
+                                        <!--<td>{{entity.createTime}}</td>-->
+                                        <!--<td>{{entity.otherMessage}}</td>-->
+                                    <!--</tr>-->
                                     </tbody>
                                 </table>
                             </div>
@@ -626,5 +626,10 @@
 <script src="../assets/js/pages/dashboard.init.js"></script>
 <!-- App js -->
 <script src="../assets/js/app.min.js"></script>
+<!-- Table js -->
+<script src="../assets/js/table/commonuserTable.js"></script>
+<script src="../assets/js/table/deviceTable.js"></script>
+<script src="../assets/js/table/deviceuserTable.js"></script>
+<script src="../assets/js/table/barrelTable.js"></script>
 </body>
 </html>
