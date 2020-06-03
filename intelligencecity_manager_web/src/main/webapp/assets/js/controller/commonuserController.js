@@ -50,8 +50,21 @@ app.controller('commonuserController' ,function($scope,$controller   ,commonuser
 			}		
 		);				
 	}
-	
-	 
+
+	//新增
+	$scope.add=function(){
+		commonuserService.add($scope.entity).success(
+			function (response) {
+				if(response.success){
+					alert("注册成功！");
+					location.href="index.html";
+				}else {
+					alert(response.measure);
+				}
+			}
+		);
+	};
+
 	//批量删除 
 	$scope.dele=function(){			
 		//获取选中的复选框			

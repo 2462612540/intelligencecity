@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>图表信息数据</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+<!-- Begin page -->
+<div id="wrapper">
+    <!-- Topbar Start-->
+    <div class="navbar-custom">
+        <ul class="list-unstyled topnav-menu float-right mb-0">
+
+            <li class="dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="false" aria-expanded="false">
+                    <img src="../assets/images/flags/China.jpg" alt="user-image" class="mr-1" height="12"> <span
+                        class="align-middle">中文(简体) </i> </span>
+                </a>
+            </li>
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="dripicons-inbox mail-icon"></i>
+                    <span class="badge badge-info noti-icon-badge">0</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h5 class="m-0">
+                                    <span class="float-right">
+                                        <a href="" class="text-dark">
+                                            <small>清空消息</small>
+                                        </a>
+                                    </span>20条新消息
+                        </h5>
+                    </div>
+                    <div class="slimscroll noti-scroll">
+                    </div>
+                    <!-- All-->
+                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                        查看所有消息
+                        <i class="fi-arrow-right"></i>
+                    </a>
+                </div>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="dripicons-bell noti-icon"></i>
+                    <span class="badge badge-danger noti-icon-badge">35</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h5 class="m-0">
+                                    <span class="float-right">
+                                        <a href="" class="text-dark">
+                                            <small>清空所有消息</small>
+                                        </a>
+                                    </span>消息通知
+                        </h5>
+                    </div>
+
+                    <div class="slimscroll noti-scroll">
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-info"><i class="mdi mdi-cloud-upload-outline"></i></div>
+                            <p class="notify-details">您已经使用该系统
+                                <small class="text-muted">5 hours ago</small>
+                            </p>
+                        </a>
+                        <!-- All-->
+                        <a href="javascript:void(0);"
+                           class="dropdown-item text-center text-primary notify-item notify-all">
+                            查看全部消息
+                            <i class="fi-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
+                   href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <img src="../assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                    <span class="pro-user-name ml-1">
+                                庄小焱 <i class="mdi mdi-chevron-down"></i>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-user"></i>
+                        <span>我的账户</span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-gear"></i>
+                        <span>设置</span>
+                    </a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="dripicons-power"></i>
+                        <span>退出</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="list-unstyled menu-left mb-0">
+            <li class="float-left">
+                <a href="index.html" class="logo">
+                            <span class="logo-lg">
+                                <img src="../assets/images/logo.png" alt="" height="25">
+                            </span>
+                    <span class="logo-sm">
+                                <img src="../assets/images/logo-sm.png" alt="" height="24">
+                            </span>
+                </a>
+            </li>
+            <li class="float-left">
+                <a class="button-menu-mobile navbar-toggle">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </li>
+            <li class="app-search d-none d-md-block">
+                <form class="form-inline">
+                    <input type="text" class="form-control" placeholder="Search…">
+                    <button class="btn btn-primary-color" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <!-- end Topbar -->
+    <!-- Start Left Sidebar -->
+    <div class="left-side-menu">
+        <div class="slimscroll-menu">
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <ul class="metismenu" id="side-menu">
+                    <!--系统主页-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-device-desktop"></i>
+                            <span> 系统中心</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="index.html">系统数据展示</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--数据统计页面-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-graph-pie"></i>
+                            <span> 数据统计</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="user-message.html">用户管理数据</a>
+                            </li>
+                            <li>
+                                <a href="device-message.html">设备管理数据</a>
+                            </li>
+                            <li>
+                                <a href="chart-data.html">图表统计数据</a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">深度学习数据</a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">集群管理数据</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--订单数据-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-document"></i>
+                            <span> 订单数据</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="order-apply.html">订单申请</a>
+                            </li>
+                            <li>
+                                <a href="order-total.html">全部订单</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--账户中心页面-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-user"></i>
+                            <span> 账户中心 </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="auth-data.html">基本信息</a></li>
+                            <li><a href="password-update.html">密码修改</a></li>
+                        </ul>
+                    </li>
+                    <!--监控中心-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-briefcase"></i>
+                            <span>监控系统</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="monitoring.html">监控中心</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--系统信息页面-->
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="dripicons-briefcase"></i>
+                            <span> 系统信息</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="system-message.html">系统通知</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Sidebar -->
+            <div class="clearfix"></div>
+        </div>
+        <!-- Sidebar -left -->
+    </div>
+    <!-- End Left Sidebar  -->
+    <!-- Start Page Content here -->
+    <div class="content-page">
+        <div class="content">
+            <!-- Start Content-->
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <h4 class="page-title">系统图标统计信息</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">垃圾重量</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">总的重量</p>
+                                    <h3 class="font-weight-light">200/KG</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">干垃圾</p>
+                                    <h3 class="font-weight-light">35/KG</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">湿垃圾</p>
+                                    <h3 class="font-weight-light">165/KG</h3>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="bar-chart-example"></canvas>
+                            </div>
+                        </div>
+                        <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">积分数据</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                    <h3 class="font-weight-light">1,845</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                    <h3 class="font-weight-light">8,458</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="filled-line-chart"></canvas>
+                            </div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">用户状态</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                    <h3 class="font-weight-light">1,845</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                    <h3 class="font-weight-light">8,458</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="line-chart-example"></canvas>
+                            </div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">其他数据</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                    <h3 class="font-weight-light">1,845</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                    <h3 class="font-weight-light">8,458</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="area-chart-example"></canvas>
+                            </div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">垃圾投递数据</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">1,845</h3>
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">8,458</h3>
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="doughnut"></canvas>
+                            </div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">行为数据</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">1,845</h3>
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">8,458</h3>
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="radar-chart-example"></canvas>
+                            </div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div> <!-- container-fluid -->
+        </div> <!-- content -->
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        2019 © 智慧城市系统 （江苏集萃） <a href="#">上海大学智能视觉中心设计</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+    </div>
+    <!-- End Page content -->
+</div>
+<!-- END wrapper -->
+
+<!-- Vendor js -->
+<script src="../assets/js/vendor.min.js"></script>
+
+<!-- Chart JS -->
+<script src="../assets/libs/chart-js/Chart.bundle.min.js"></script>
+
+<!-- Init js -->
+<script src="../assets/js/pages/chartjs.init.js"></script>
+
+<!-- App js -->
+<script src="../assets/js/app.min.js"></script>
+
+</body>
+</html>

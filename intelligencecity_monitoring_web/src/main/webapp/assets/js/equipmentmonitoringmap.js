@@ -12,7 +12,6 @@ function getHt() {
     var div_height = all_height - 84;
     $("#car_control").css("height", div_height + "px");
 
-
 }
 
 //加载地图

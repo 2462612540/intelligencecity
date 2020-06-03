@@ -38,7 +38,7 @@ app.controller('commonuserController' ,function($scope,$controller   ,commonuser
 		if($scope.entity.id!=null){//如果有ID
 			serviceObject=commonuserService.update( $scope.entity ); //修改  
 		}else{
-			serviceObject=commonuserService.add( $scope.entity  );//增加 
+			serviceObject=commonuserService.add( $scope.entity );//增加
 		}				
 		serviceObject.success(
 			function(response){
@@ -56,10 +56,11 @@ app.controller('commonuserController' ,function($scope,$controller   ,commonuser
 	$scope.add=function(){
 		commonuserService.add($scope.entity).success(
 			function (response) {
-				if(response.success){
-					alert("注册成功！");
-					location.href="../../../auth-login.html";
+					if(response.success){
+						alert("注册成功")
+					location.href="auth-login.html";
 				}else {
+						alert("失败失败")
 					alert(response.measure);
 				}
 			}

@@ -21,31 +21,9 @@
     <!--引入angular.js的组件-->
     <script type="text/javascript" src="../assets/js/plugins/angularjs/angular.min.js"></script>
 
-    <script type="text/javascript">
-        var app=angular.module('smartcity',[]);
-        app.controller('userController',function ($scope,$http) {
-            // // 回调函数用法
-            // $http.get("../user/findAll.do").success(function(response) {
-            //     $scope.list = response;
-            // });
-
-            $scope.findAll=function () {
-                $http.get("../user/findAll.do").success(function(response) {
-                    $scope.list = response;
-                });
-
-                $http.get("../deliver/findAll.do").success(function(response) {
-                    $scope.list1 = response;
-                });
-            }
-
-        });
-
-    </script>
-
 </head>
 
-<body class="left-side-menu-dark" ng-app="smartcity" ng-controller="userController" >
+<body class="left-side-menu-dark" ng-app="smartcity" ng-controller="userController">
 
 <!-- Begin page -->
 <div id="wrapper">
@@ -371,7 +349,7 @@
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li>
-                                <a href="chart-chartjs.html">数据统计图表信息</a>
+                                <a href="../views/chart-data.html">数据统计图表信息</a>
                             </li>
                             <li>
                                 <a href="chart-flot.html">Flot Charts</a>
@@ -498,29 +476,29 @@
                         </ul>
                     </li>
                     <!--<li>-->
-                        <!--<a href="javascript: void(0);">-->
-                            <!--<i class="dripicons-network-3"></i>-->
-                            <!--<span>补充页面</span>-->
-                            <!--<span class="menu-arrow"></span>-->
-                        <!--</a>-->
-                        <!--<ul class="nav-second-level nav" aria-expanded="false">-->
-                            <!--<li>-->
-                                <!--<a href="javascript: void(0);">Menu 1</a>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<a href="javascript: void(0);" aria-expanded="false">Menu 2-->
-                                    <!--<span class="menu-arrow"></span>-->
-                                <!--</a>-->
-                                <!--<ul class="nav-third-level nav" aria-expanded="false">-->
-                                    <!--<li>-->
-                                        <!--<a href="javascript: void(0);">Menu 2.1</a>-->
-                                    <!--</li>-->
-                                    <!--<li>-->
-                                        <!--<a href="javascript: void(0);">Menu 2.2</a>-->
-                                    <!--</li>-->
-                                <!--</ul>-->
-                            <!--</li>-->
-                        <!--</ul>-->
+                    <!--<a href="javascript: void(0);">-->
+                    <!--<i class="dripicons-network-3"></i>-->
+                    <!--<span>补充页面</span>-->
+                    <!--<span class="menu-arrow"></span>-->
+                    <!--</a>-->
+                    <!--<ul class="nav-second-level nav" aria-expanded="false">-->
+                    <!--<li>-->
+                    <!--<a href="javascript: void(0);">Menu 1</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a href="javascript: void(0);" aria-expanded="false">Menu 2-->
+                    <!--<span class="menu-arrow"></span>-->
+                    <!--</a>-->
+                    <!--<ul class="nav-third-level nav" aria-expanded="false">-->
+                    <!--<li>-->
+                    <!--<a href="javascript: void(0);">Menu 2.1</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a href="javascript: void(0);">Menu 2.2</a>-->
+                    <!--</li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                    <!--</ul>-->
                     <!--</li>-->
                 </ul>
 

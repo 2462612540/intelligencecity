@@ -11,8 +11,6 @@ function getHt(){
    var all_height=$(window).height();
    var div_height=all_height-80;
     $("#car_control").css("height",div_height+"px");
-
-
 }
 //表格部分
 function table(){
