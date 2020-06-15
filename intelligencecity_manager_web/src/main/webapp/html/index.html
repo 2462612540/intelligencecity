@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>智慧城市管理系统</title>
+    <title>智慧城市管理系统首页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -20,24 +20,6 @@
     <script type="text/javascript" src="../assets/js/angularjs/angular.min.js"></script>
     <script type="text/javascript" src="../assets/js/base.js"></script>
 
-    <!--引入controller js-->
-    <script type="text/javascript" src="../assets/js/controller/administratoruserController.js"></script>
-    <script type="text/javascript" src="../assets/js/controller/barrelController.js"></script>
-    <script type="text/javascript" src="../assets/js/controller/baseController.js"></script>
-    <script type="text/javascript" src="../assets/js/controller/commonuserController.js"></script>
-    <script type="text/javascript" src="../assets/js/controller/deviceController.js"></script>
-    <script type="text/javascript" src="../assets/js/controller/deviceuserController.js"></script>
-    <script type="text/javascript" src="../assets/js/controller/facepicController.js"></script>
-    <script type="text/javascript" src="../assets/js/controller/rubbishpicController.js"></script>
-    <!--引入service js-->
-    <script type="text/javascript" src="../assets/js/service/administratoruserService.js"></script>
-    <script type="text/javascript" src="../assets/js/service/barrelService.js"></script>
-    <script type="text/javascript" src="../assets/js/service/commonuserService.js"></script>
-    <script type="text/javascript" src="../assets/js/service/deviceService.js"></script>
-    <script type="text/javascript" src="../assets/js/service/deviceuserService.js"></script>
-    <script type="text/javascript" src="../assets/js/service/facepicService.js"></script>
-    <script type="text/javascript" src="../assets/js/service/rubbishpicService.js"></script>
-
 </head>
 <body ng-app="intelligencecity" >
 <!-- Begin page -->
@@ -45,7 +27,6 @@
     <!-- Topbar Start-->
     <div class="navbar-custom">
         <ul class="list-unstyled topnav-menu float-right mb-0">
-
             <li class="dropdown d-none d-lg-block">
                 <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
                    role="button" aria-haspopup="false" aria-expanded="false">
@@ -216,7 +197,7 @@
                                 <a href="chart-data.html">图表统计数据</a>
                             </li>
                             <li>
-                                <a href="javascript: void(0);">深度学习数据</a>
+                                <a href="picture_data.html">深度学习数据</a>
                             </li>
                             <li>
                                 <a href="javascript: void(0);">集群管理数据</a>
@@ -380,7 +361,7 @@
                                     <h4 class="header-title mb-3">模型训练情况</h4>
 
                                     <div class="dudash chartjs-chart dash-doughnut">
-                                        <canvas id="doughnut"></canvas>
+                                        <!--<canvas id="doughnut"></canvas>-->
                                     </div>
 
                                     <div class="doughnut-footer">
@@ -392,202 +373,220 @@
                         </div> <!-- end card-box-->
                     </div> <!-- end col -->
                 </div>
-                <!-- end row -->
 
-                <div class="row" >
-                    <div class="col-xl-8 stretch-card">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6">
                         <div class="card-box">
-                            <div class="dropdown float-right">
-                                <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown"
-                                   aria-expanded="false">
-                                    <i class="mdi mdi-dots-horizontal"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                </div>
-                            </div>
-                            <h4 class="header-title mb-4">普通用户基本数据信息</h4>
-                            <div class="table-responsive" ng-controller="commonuserController" ng-init="findAll()">
-                                <table class="table table-centered table-hover mb-0">
-                                    <thead>
-                                    <tr>
-                                        <th class="border-top-0">用户ID</th>
-                                        <th class="border-top-0">用户姓名</th>
-                                        <th class="border-top-0">用户电话</th>
-                                        <th class="border-top-0">投递时间</th>
-                                        <th class="border-top-0">用户积分</th>
-                                        <th class="border-top-0">其他状态</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="entity in list">
-                                        <td>{{entity.id}}</td>
-                                        <td>{{entity.userName}}</td>
-                                        <td>{{entity.userPhone}}</td>
-                                        <td>{{entity.createTime}}</td>
-                                        <td>{{entity.score}}</td>
-                                        <td><span class="badge badge-pill badge-success">正常</span></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div> <!-- end card-box-->
-                    </div> <!-- end col-->
-
-                    <div class="col-xl-4 stretch-card">
-                        <div class="card-box">
-                            <div class="dropdown float-right">
-                                <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown"
-                                   aria-expanded="false">
-                                    <i class="mdi mdi-dots-horizontal"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item">Another action</a>
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item">omething else here</a>
-                                </div>
-                            </div>
-
-                            <h4 class="header-title mb-3">实时评分数据</h4>
+                            <h4 class="header-title mb-3">垃圾重量</h4>
                             <div class="row text-center">
                                 <div class="col-sm-4 mb-3">
-                                    <h3 class="font-weight-light">19,785</h3>
-                                    <p class="text-muted text-overflow">Add Views</p>
+                                    <p class="text-muted text-overflow">总的重量</p>
+                                    <h3 class="font-weight-light">200/KG</h3>
                                 </div>
                                 <div class="col-sm-4 mb-3">
-                                    <h3 class="font-weight-light">$3,787</h3>
-                                    <p class="text-muted text-overflow">Est. Earning</p>
+                                    <p class="text-muted text-overflow">干垃圾</p>
+                                    <h3 class="font-weight-light">35/KG</h3>
                                 </div>
                                 <div class="col-sm-4 mb-3">
-                                    <h3 class="font-weight-light">$4,548</h3>
-                                    <p class="text-muted text-overflow">Total Cost</p>
+                                    <p class="text-muted text-overflow">湿垃圾</p>
+                                    <h3 class="font-weight-light">165/KG</h3>
                                 </div>
                             </div>
-                            <div class="chartjs-chart line-chart-static">
-                                <canvas id="line-chart-static"></canvas>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="bar-chart-example"></canvas>
+                            </div>
+                        </div>
+                        <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">积分数据</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                    <h3 class="font-weight-light">1,845</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                    <h3 class="font-weight-light">8,458</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="filled-line-chart"></canvas>
+                            </div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">用户状态</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                    <h3 class="font-weight-light">1,845</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                    <h3 class="font-weight-light">8,458</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="line-chart-example"></canvas>
+                            </div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">其他数据</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                    <h3 class="font-weight-light">1,845</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                    <h3 class="font-weight-light">8,458</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="area-chart-example"></canvas>
+                            </div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">垃圾投递数据</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">1,845</h3>
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">8,458</h3>
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="doughnut"></canvas>
+                            </div>
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title mb-3">行为数据</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">1,845</h3>
+                                    <p class="text-muted text-overflow">Total Adds</p>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">8,458</h3>
+                                    <p class="text-muted text-overflow">Daily Count</p>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                    <p class="text-muted text-overflow">Total Earn</p>
+                                </div>
+                            </div>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="radar-chart-example"></canvas>
                             </div>
                         </div> <!-- end card-box -->
                     </div> <!-- end col -->
                 </div>
                 <!-- end row -->
-
                 <div class="row">
-                    <div class="col-xl-12 stretch-card">
+                    <div class="col-xl-4 col-lg-6">
                         <div class="card-box">
-                            <div class="dropdown float-right">
-                                <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown"
-                                   aria-expanded="false">
-                                    <i class="mdi mdi-dots-horizontal"></i>
-                                </a>
+                            <h4 class="header-title mb-3">深度学习系统状态</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">总的数据量</p>
+                                    <h3 class="font-weight-light">200张</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">已经训练</p>
+                                    <h3 class="font-weight-light">350</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">待训练的</p>
+                                    <h3 class="font-weight-light">165</h3>
+                                </div>
                             </div>
-                            <h4 class="header-title mb-4">智能设别基本数据</h4>
-                            <div class="table-responsive" ng-controller="deviceController" ng-init="findAll()">
-                                <table class="table table-centered table-hover mb-0" id="datatable1">
-                                    <thead>
-                                    <tr>
-                                        <th class="border-top-0">设备ID</th>
-                                        <th class="border-top-0">设备编号</th>
-                                        <th class="border-top-0">设备单位</th>
-                                        <th class="border-top-0">设备的IP地址</th>
-                                        <th class="border-top-0">设备物理位置</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="entity in list">
-                                        <td>{{entity.id}}</td>
-                                        <td>{{entity.deviceNumber}}</td>
-                                        <td>{{entity.deviceCompany}}</td>
-                                        <td>{{entity.deviceIp}}</td>
-                                        <td>{{entity.deviceLocation}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="bar-chart-example1"></canvas>
                             </div>
-                        </div> <!-- end card-box-->
-                    </div> <!-- end col-->
-                </div>
-                <!-- end row -->
+                        </div>
+                        <!-- end card-box -->
+                    </div> <!-- end col -->
 
-                <div class="row">
-                    <div class="col-xl-12 stretch-card">
+                    <div class="col-xl-4 col-lg-6">
                         <div class="card-box">
-                            <div class="dropdown float-right">
-                                <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown"
-                                   aria-expanded="false">
-                                    <i class="mdi mdi-dots-horizontal"></i>
-                                </a>
+                            <h4 class="header-title mb-3">监控系统状态</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">内存容量</p>
+                                    <h3 class="font-weight-light">1,845</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">网络状态</p>
+                                    <h3 class="font-weight-light">8,458</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">评价得分</p>
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                </div>
                             </div>
-                            <h4 class="header-title mb-4">垃圾桶数据信息</h4>
-                            <div class="table-responsive" ng-controller="barrelController" ng-init="findAll()">
-                                <table class="table table-centered table-hover mb-0" id="datatable3">
-                                    <thead>
-                                    <tr>
-                                        <th class="border-top-0">垃圾桶ID</th>
-                                        <th class="border-top-0">垃圾桶编号</th>
-                                        <th class="border-top-0">垃圾桶总容量</th>
-                                        <th class="border-top-0">当前垃圾重量</th>
-                                        <th class="border-top-0">垃圾纯度</th>
-                                        <th class="border-top-0">垃圾桶剩余容量</th>
-                                        <th class="border-top-0">垃圾桶位置</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="entity in list">
-                                        <td>{{entity.id}}</td>
-                                        <td>{{entity.barrelNumber}}</td>
-                                        <td>{{entity.totalWeight}}/ML</td>
-                                        <td>{{entity.currentWeight}}/KG</td>
-                                        <td>{{entity.purity}}%</td>
-                                        <td>{{entity.restCapacity}}/ML</td>
-                                        <td>{{entity.location}}</td>
-
-                                    </tr>
-                                    </tbody>
-                                </table>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="filled-line-chart1"></canvas>
                             </div>
-                        </div> <!-- end card-box-->
-                    </div> <!-- end col-->
-                </div>
-                <!-- end row -->
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
 
-                <div class="row">
-                    <div class="col-xl-12 stretch-card">
+                    <div class="col-xl-4 col-lg-6">
                         <div class="card-box">
-                            <div class="dropdown float-right">
-                                <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown"
-                                   aria-expanded="false">
-                                    <i class="mdi mdi-dots-horizontal"></i>
-                                </a>
+                            <h4 class="header-title mb-3">用户系统状态</h4>
+                            <div class="row text-center">
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">用户量</p>
+                                    <h3 class="font-weight-light">1,845</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">内存容量</p>
+                                    <h3 class="font-weight-light">8,458</h3>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <p class="text-muted text-overflow">网络状态</p>
+                                    <h3 class="font-weight-light">$3,458</h3>
+                                </div>
                             </div>
-                            <h4 class="header-title mb-4">设备管理员数据</h4>
-                            <div class="table-responsive" ng-controller="deviceuserController" ng-init="findAll()">
-                                <table class="table table-centered table-hover mb-0" id="datatable2">
-                                    <thead>
-                                    <tr>
-                                        <th class="border-top-0">管理员ID</th>
-                                        <th class="border-top-0">管理员姓名</th>
-                                        <th class="border-top-0">管理员电话</th>
-                                        <th class="border-top-0">管理时间</th>
-                                        <th class="border-top-0">其他信息</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="entity in list">
-                                        <td>{{entity.id}}</td>
-                                        <td>{{entity.userName}}</td>
-                                        <td>{{entity.userPhone}}</td>
-                                        <td>{{entity.createTime}}</td>
-                                        <td>{{entity.otherMessage}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                            <div class="chartjs-chart-example chartjs-chart">
+                                <canvas id="line-chart-example1"></canvas>
                             </div>
-                        </div> <!-- end card-box-->
-                    </div> <!-- end col-->
+                        </div> <!-- end card-box -->
+                    </div> <!-- end col -->
+
                 </div>
-                <!-- end row -->
 
             </div>
             <!-- container -->
@@ -626,5 +625,9 @@
 <script src="../assets/js/pages/dashboard.init.js"></script>
 <!-- App js -->
 <script src="../assets/js/app.min.js"></script>
+<!-- Chart JS -->
+<script src="../assets/libs/chart-js/Chart.bundle.min.js"></script>
+<!-- Init js -->
+<script src="../assets/js/pages/chartjs.init.js"></script>
 </body>
 </html>

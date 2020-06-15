@@ -25,7 +25,6 @@
         <module>intelligencecity_version_web</module>
         <module>intelligencecity_order_interface</module>
         <module>intelligencecity_order_service</module>
-        <module>intelligencecity_order_web</module>
         <module>intelligencecity_portal_web</module>
         <module>intelligencecity_mycat_web</module>
         <module>intelligencecity_search_interface</module>
