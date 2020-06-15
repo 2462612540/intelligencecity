@@ -1,4 +1,3 @@
-import com.ShanghaiUniversity.pojo.Barrel;
 import com.shanghaiuniversity.manager.service.BarrelService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ShanghaiUniversity.mapper.TbBarrelMapper" >
+  <resultMap id="BaseResultMap" type="com.ShanghaiUniversity.pojo.TbBarrel" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="totalweight" property="totalweight" jdbcType="DOUBLE" />
+    <result column="purity" property="purity" jdbcType="INTEGER" />
+    <result column="restweight" property="restweight" jdbcType="DOUBLE" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="company" property="company" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="other" property="other" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, totalweight, purity, restweight, address, company, status, other
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ShanghaiUniversity.pojo.TbBarrelExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tb_barrel
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_barrel
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_barrel
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ShanghaiUniversity.pojo.TbBarrelExample" >
+    delete from tb_barrel
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ShanghaiUniversity.pojo.TbBarrel" >
+    insert into tb_barrel (id, totalweight, purity, 
+      restweight, address, company, 
+      status, other)
+    values (#{id,jdbcType=BIGINT}, #{totalweight,jdbcType=DOUBLE}, #{purity,jdbcType=INTEGER}, 
+      #{restweight,jdbcType=DOUBLE}, #{address,jdbcType=VARCHAR}, #{company,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{other,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ShanghaiUniversity.pojo.TbBarrel" >
+    insert into tb_barrel
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="totalweight != null" >
+        totalweight,
+      </if>
+      <if test="purity != null" >
+        purity,
+      </if>
+      <if test="restweight != null" >
+        restweight,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="company != null" >
+        company,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="other != null" >
+        other,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="totalweight != null" >
+        #{totalweight,jdbcType=DOUBLE},
+      </if>
+      <if test="purity != null" >
+        #{purity,jdbcType=INTEGER},
+      </if>
+      <if test="restweight != null" >
+        #{restweight,jdbcType=DOUBLE},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="other != null" >
+        #{other,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ShanghaiUniversity.pojo.TbBarrelExample" resultType="java.lang.Integer" >
+    select count(*) from tb_barrel
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update tb_barrel
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.totalweight != null" >
+        totalweight = #{record.totalweight,jdbcType=DOUBLE},
+      </if>
+      <if test="record.purity != null" >
+        purity = #{record.purity,jdbcType=INTEGER},
+      </if>
+      <if test="record.restweight != null" >
+        restweight = #{record.restweight,jdbcType=DOUBLE},
+      </if>
+      <if test="record.address != null" >
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.company != null" >
+        company = #{record.company,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.other != null" >
+        other = #{record.other,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update tb_barrel
+    set id = #{record.id,jdbcType=BIGINT},
+      totalweight = #{record.totalweight,jdbcType=DOUBLE},
+      purity = #{record.purity,jdbcType=INTEGER},
+      restweight = #{record.restweight,jdbcType=DOUBLE},
+      address = #{record.address,jdbcType=VARCHAR},
+      company = #{record.company,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=VARCHAR},
+      other = #{record.other,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ShanghaiUniversity.pojo.TbBarrel" >
+    update tb_barrel
+    <set >
+      <if test="totalweight != null" >
+        totalweight = #{totalweight,jdbcType=DOUBLE},
+      </if>
+      <if test="purity != null" >
+        purity = #{purity,jdbcType=INTEGER},
+      </if>
+      <if test="restweight != null" >
+        restweight = #{restweight,jdbcType=DOUBLE},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        company = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="other != null" >
+        other = #{other,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ShanghaiUniversity.pojo.TbBarrel" >
+    update tb_barrel
+    set totalweight = #{totalweight,jdbcType=DOUBLE},
+      purity = #{purity,jdbcType=INTEGER},
+      restweight = #{restweight,jdbcType=DOUBLE},
+      address = #{address,jdbcType=VARCHAR},
+      company = #{company,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      other = #{other,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,7 +1,6 @@
 package com.shanghaiuniversity.user.service;
 
 import com.ShanghaiUniversity.entity.PageResult;
-import com.ShanghaiUniversity.pojo.Commonuser;
 
 import java.util.List;
 

@@ -2,7 +2,6 @@ package com.shanghaiuniversity.manager.controller;
 
 import com.ShanghaiUniversity.entity.PageResult;
 import com.ShanghaiUniversity.entity.Result;
-import com.ShanghaiUniversity.pojo.Administratoruser;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.shanghaiuniversity.manager.service.AdministratoruserService;
 import org.springframework.web.bind.annotation.RequestBody;

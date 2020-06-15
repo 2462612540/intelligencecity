@@ -1,7 +1,6 @@
 package com.shanghaiuniversity.manager.service;
 
 import com.ShanghaiUniversity.entity.PageResult;
-import com.ShanghaiUniversity.pojo.Rubbishpic;
 
 import java.util.List;
 

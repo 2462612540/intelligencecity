@@ -1,9 +1,6 @@
 package com.shanghaiuniversity.user.service.impl;
 
 import com.ShanghaiUniversity.entity.PageResult;
-import com.ShanghaiUniversity.mapper.UserMapper;
-import com.ShanghaiUniversity.pojo.User;
-import com.ShanghaiUniversity.pojo.UserExample;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;

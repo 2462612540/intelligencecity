@@ -2,7 +2,6 @@ package com.shanghaiuniversity.user.controller;
 
 import com.ShanghaiUniversity.entity.PageResult;
 import com.ShanghaiUniversity.entity.Result;
-import com.ShanghaiUniversity.pojo.Commonuser;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.shanghaiuniversity.user.service.CommonuserService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
