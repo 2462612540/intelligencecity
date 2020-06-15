@@ -1,8 +1,9 @@
 package com.ShanghaiUniversity.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbOrder {
+public class TbOrder implements Serializable {
     private Long id;
 
     private String status;

@@ -2,6 +2,7 @@ package com.shanghaiuniversity.manager.controller;
 
 import com.ShanghaiUniversity.entity.PageResult;
 import com.ShanghaiUniversity.entity.Result;
+import com.ShanghaiUniversity.pojo.TbDevice;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.shanghaiuniversity.manager.service.DeviceService;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,7 +29,7 @@ public class DeviceController {
      * @return
      */
     @RequestMapping("/findAll")
-    public List<Device> findAll() {
+    public List<TbDevice> findAll() {
         return deviceService.findAll();
     }
 
@@ -49,7 +50,7 @@ public class DeviceController {
      * @return
      */
     @RequestMapping("/add")
-    public Result add(@RequestBody Device device) {
+    public Result add(@RequestBody TbDevice device) {
         try {
             deviceService.add(device);
             return new Result(true, "增加成功");
@@ -66,7 +67,7 @@ public class DeviceController {
      * @return
      */
     @RequestMapping("/update")
-    public Result update(@RequestBody Device device) {
+    public Result update(@RequestBody TbDevice device) {
         try {
             deviceService.update(device);
             return new Result(true, "修改成功");
@@ -83,7 +84,7 @@ public class DeviceController {
      * @return
      */
     @RequestMapping("/findOne")
-    public Device findOne(int id) {
+    public TbDevice findOne(Long id) {
         return deviceService.findOne(id);
     }
 
@@ -94,7 +95,7 @@ public class DeviceController {
      * @return
      */
     @RequestMapping("/delete")
-    public Result delete(int[] ids) {
+    public Result delete(Long[] ids) {
         try {
             deviceService.delete(ids);
             return new Result(true, "删除成功");
@@ -113,7 +114,7 @@ public class DeviceController {
      * @return
      */
     @RequestMapping("/search")
-    public PageResult search(@RequestBody Device device, int page, int rows) {
+    public PageResult search(@RequestBody TbDevice device, int page, int rows) {
         return deviceService.findPage(device, page, rows);
     }
 

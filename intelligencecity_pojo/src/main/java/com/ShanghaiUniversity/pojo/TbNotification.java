@@ -1,8 +1,9 @@
 package com.ShanghaiUniversity.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbNotification {
+public class TbNotification implements Serializable {
     private Long id;
 
     private String content;

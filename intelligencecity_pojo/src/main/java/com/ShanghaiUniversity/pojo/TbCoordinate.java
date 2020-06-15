@@ -1,6 +1,8 @@
 package com.ShanghaiUniversity.pojo;
 
-public class TbCoordinate {
+import java.io.Serializable;
+
+public class TbCoordinate implements Serializable {
     private Long id;
 
     private Double longitude;

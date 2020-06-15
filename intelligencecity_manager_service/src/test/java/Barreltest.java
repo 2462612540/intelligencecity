@@ -1,3 +1,4 @@
+import com.ShanghaiUniversity.pojo.TbBarrel;
 import com.shanghaiuniversity.manager.service.BarrelService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,8 +22,8 @@ public class Barreltest {
 
     @Test
     public void test() {
-        List<Barrel> all = barrelService.findAll();
-        for (Barrel b : all) {
+        List<TbBarrel> all = barrelService.findAll();
+        for (TbBarrel b : all) {
             System.out.println(b.getId());
         }
 

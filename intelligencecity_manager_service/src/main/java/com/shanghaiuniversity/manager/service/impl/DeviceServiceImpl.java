@@ -1,6 +1,9 @@
 package com.shanghaiuniversity.manager.service.impl;
 
 import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.mapper.TbDeviceMapper;
+import com.ShanghaiUniversity.pojo.TbDevice;
+import com.ShanghaiUniversity.pojo.TbDeviceExample;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -18,13 +21,13 @@ import java.util.List;
 public class DeviceServiceImpl implements DeviceService {
 
     @Autowired
-    private DeviceMapper deviceMapper;
+    private TbDeviceMapper deviceMapper;
 
     /**
      * 查询全部
      */
     @Override
-    public List<Device> findAll() {
+    public List<TbDevice> findAll() {
         return deviceMapper.selectByExample(null);
     }
 
@@ -34,7 +37,7 @@ public class DeviceServiceImpl implements DeviceService {
     @Override
     public PageResult findPage(int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-        Page<Device> page = (Page<Device>) deviceMapper.selectByExample(null);
+        Page<TbDevice> page = (Page<TbDevice>) deviceMapper.selectByExample(null);
         return new PageResult(page.getTotal(), page.getResult());
     }
 
@@ -42,7 +45,7 @@ public class DeviceServiceImpl implements DeviceService {
      * 增加
      */
     @Override
-    public void add(Device device) {
+    public void add(TbDevice device) {
         deviceMapper.insert(device);
     }
 
@@ -50,7 +53,7 @@ public class DeviceServiceImpl implements DeviceService {
      * 修改
      */
     @Override
-    public void update(Device device) {
+    public void update(TbDevice device) {
         deviceMapper.updateByPrimaryKey(device);
     }
 
@@ -61,7 +64,7 @@ public class DeviceServiceImpl implements DeviceService {
      * @return
      */
     @Override
-    public Device findOne(int id) {
+    public TbDevice findOne(Long id) {
         return deviceMapper.selectByPrimaryKey(id);
     }
 
@@ -69,33 +72,36 @@ public class DeviceServiceImpl implements DeviceService {
      * 批量删除
      */
     @Override
-    public void delete(int[] ids) {
-        for (int id : ids) {
+    public void delete(Long[] ids) {
+        for (Long id : ids) {
             deviceMapper.deleteByPrimaryKey(id);
         }
     }
 
     @Override
-    public PageResult findPage(Device device, int pageNum, int pageSize) {
+    public PageResult findPage(TbDevice device, int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
 
-        DeviceExample example = new DeviceExample();
-        DeviceExample.Criteria criteria = example.createCriteria();
+        TbDeviceExample example = new TbDeviceExample();
+        TbDeviceExample.Criteria criteria = example.createCriteria();
 
         if (device != null) {
-            if (device.getDeviceLocation() != null && device.getDeviceLocation().length() > 0) {
-                criteria.andDeviceLocationLike("%" + device.getDeviceLocation() + "%");
+            if (device.getAddress() != null && device.getAddress().length() > 0) {
+                criteria.andAddressLike("%" + device.getAddress() + "%");
             }
-            if (device.getDeviceCompany() != null && device.getDeviceCompany().length() > 0) {
-                criteria.andDeviceCompanyLike("%" + device.getDeviceCompany() + "%");
+            if (device.getCompany() != null && device.getCompany().length() > 0) {
+                criteria.andCompanyLike("%" + device.getCompany() + "%");
             }
-            if (device.getDeviceIp() != null && device.getDeviceIp().length() > 0) {
-                criteria.andDeviceIpLike("%" + device.getDeviceIp() + "%");
+            if (device.getStatus() != null && device.getStatus().length() > 0) {
+                criteria.andStatusLike("%" + device.getStatus() + "%");
+            }
+            if (device.getOther() != null && device.getOther().length() > 0) {
+                criteria.andOtherLike("%" + device.getOther() + "%");
             }
 
         }
 
-        Page<Device> page = (Page<Device>) deviceMapper.selectByExample(example);
+        Page<TbDevice> page = (Page<TbDevice>) deviceMapper.selectByExample(example);
         return new PageResult(page.getTotal(), page.getResult());
     }
 

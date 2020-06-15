@@ -1,6 +1,8 @@
 package com.ShanghaiUniversity.pojo;
 
-public class TbDevice {
+import java.io.Serializable;
+
+public class TbDevice implements Serializable {
     private Long id;
 
     private Double longitude;

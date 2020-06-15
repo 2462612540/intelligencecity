@@ -1,6 +1,9 @@
 package com.shanghaiuniversity.manager.service.impl;
 
 import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.mapper.TbBarrelMapper;
+import com.ShanghaiUniversity.pojo.TbBarrel;
+import com.ShanghaiUniversity.pojo.TbBarrelExample;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -13,19 +16,18 @@ import java.util.List;
  * 服务实现层
  *
  * @author Administrator
- * 切记一定是调用的是阿里巴巴的这个service的包 import com.alibaba.dubbo.properties.annotation.Service; 不能是spring的包，否这是不能实现分布式的调用的
  */
 @Service
 public class BarrelServiceImpl implements BarrelService {
 
     @Autowired
-    private BarrelMapper barrelMapper;
+    private TbBarrelMapper barrelMapper;
 
     /**
      * 查询全部
      */
     @Override
-    public List<Barrel> findAll() {
+    public List<TbBarrel> findAll() {
         return barrelMapper.selectByExample(null);
     }
 
@@ -35,7 +37,7 @@ public class BarrelServiceImpl implements BarrelService {
     @Override
     public PageResult findPage(int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-        Page<Barrel> page = (Page<Barrel>) barrelMapper.selectByExample(null);
+        Page<TbBarrel> page = (Page<TbBarrel>) barrelMapper.selectByExample(null);
         return new PageResult(page.getTotal(), page.getResult());
     }
 
@@ -43,7 +45,7 @@ public class BarrelServiceImpl implements BarrelService {
      * 增加
      */
     @Override
-    public void add(Barrel barrel) {
+    public void add(TbBarrel barrel) {
         barrelMapper.insert(barrel);
     }
 
@@ -51,7 +53,7 @@ public class BarrelServiceImpl implements BarrelService {
      * 修改
      */
     @Override
-    public void update(Barrel barrel) {
+    public void update(TbBarrel barrel) {
         barrelMapper.updateByPrimaryKey(barrel);
     }
 
@@ -62,7 +64,7 @@ public class BarrelServiceImpl implements BarrelService {
      * @return
      */
     @Override
-    public Barrel findOne(int id) {
+    public TbBarrel findOne(Long id) {
         return barrelMapper.selectByPrimaryKey(id);
     }
 
@@ -70,27 +72,35 @@ public class BarrelServiceImpl implements BarrelService {
      * 批量删除
      */
     @Override
-    public void delete(int[] ids) {
-        for (int id : ids) {
+    public void delete(Long[] ids) {
+        for (Long id : ids) {
             barrelMapper.deleteByPrimaryKey(id);
         }
     }
 
     @Override
-    public PageResult findPage(Barrel barrel, int pageNum, int pageSize) {
+    public PageResult findPage(TbBarrel barrel, int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
 
-        BarrelExample example = new BarrelExample();
-        BarrelExample.Criteria criteria = example.createCriteria();
+        TbBarrelExample example = new TbBarrelExample();
+        TbBarrelExample.Criteria criteria = example.createCriteria();
 
         if (barrel != null) {
-            if (barrel.getLocation() != null && barrel.getLocation().length() > 0) {
-                criteria.andLocationLike("%" + barrel.getLocation() + "%");
+            if (barrel.getAddress() != null && barrel.getAddress().length() > 0) {
+                criteria.andAddressLike("%" + barrel.getAddress() + "%");
             }
-
+            if (barrel.getCompany() != null && barrel.getCompany().length() > 0) {
+                criteria.andCompanyLike("%" + barrel.getCompany() + "%");
+            }
+            if (barrel.getStatus() != null && barrel.getStatus().length() > 0) {
+                criteria.andStatusLike("%" + barrel.getStatus() + "%");
+            }
+            if (barrel.getOther() != null && barrel.getOther().length() > 0) {
+                criteria.andOtherLike("%" + barrel.getOther() + "%");
+            }
         }
 
-        Page<Barrel> page = (Page<Barrel>) barrelMapper.selectByExample(example);
+        Page<TbBarrel> page = (Page<TbBarrel>) barrelMapper.selectByExample(example);
         return new PageResult(page.getTotal(), page.getResult());
     }
 

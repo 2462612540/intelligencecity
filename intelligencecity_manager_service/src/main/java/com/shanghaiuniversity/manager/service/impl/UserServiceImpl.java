@@ -1,6 +1,9 @@
 package com.shanghaiuniversity.manager.service.impl;
 
 import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.mapper.TbUserMapper;
+import com.ShanghaiUniversity.pojo.TbUser;
+import com.ShanghaiUniversity.pojo.TbUserExample;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -18,13 +21,13 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserMapper userMapper;
+    private TbUserMapper userMapper;
 
     /**
      * 查询全部
      */
     @Override
-    public List<User> findAll() {
+    public List<TbUser> findAll() {
         return userMapper.selectByExample(null);
     }
 
@@ -34,7 +37,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public PageResult findPage(int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-        Page<User> page = (Page<User>) userMapper.selectByExample(null);
+        Page<TbUser> page = (Page<TbUser>) userMapper.selectByExample(null);
         return new PageResult(page.getTotal(), page.getResult());
     }
 
@@ -42,7 +45,7 @@ public class UserServiceImpl implements UserService {
      * 增加
      */
     @Override
-    public void add(User user) {
+    public void add(TbUser user) {
         userMapper.insert(user);
     }
 
@@ -50,7 +53,7 @@ public class UserServiceImpl implements UserService {
      * 修改
      */
     @Override
-    public void update(User user) {
+    public void update(TbUser user) {
         userMapper.updateByPrimaryKey(user);
     }
 
@@ -61,7 +64,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public User findOne(String id) {
+    public TbUser findOne(Long id) {
         return userMapper.selectByPrimaryKey(id);
     }
 
@@ -69,39 +72,54 @@ public class UserServiceImpl implements UserService {
      * 批量删除
      */
     @Override
-    public void delete(String[] ids) {
-        for (String id : ids) {
+    public void delete(Long[] ids) {
+        for (Long id : ids) {
             userMapper.deleteByPrimaryKey(id);
         }
     }
 
     @Override
-    public PageResult findPage(User user, int pageNum, int pageSize) {
+    public PageResult findPage(TbUser user, int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
 
-        UserExample example = new UserExample();
-        UserExample.Criteria criteria = example.createCriteria();
+        TbUserExample example = new TbUserExample();
+        TbUserExample.Criteria criteria = example.createCriteria();
 
         if (user != null) {
-            if (user.getUserAccount() != null && user.getUserAccount().length() > 0) {
-                criteria.andUserAccountLike("%" + user.getUserAccount() + "%");
+            if (user.getAccount() != null && user.getAccount().length() > 0) {
+                criteria.andAccountLike("%" + user.getAccount() + "%");
             }
-            if (user.getUserPassword() != null && user.getUserPassword().length() > 0) {
-                criteria.andUserPasswordLike("%" + user.getUserPassword() + "%");
+            if (user.getUsername() != null && user.getUsername().length() > 0) {
+                criteria.andUsernameLike("%" + user.getUsername() + "%");
             }
-            if (user.getUserPhone() != null && user.getUserPhone().length() > 0) {
-                criteria.andUserPhoneLike("%" + user.getUserPhone() + "%");
+            if (user.getPassword() != null && user.getPassword().length() > 0) {
+                criteria.andPasswordLike("%" + user.getPassword() + "%");
             }
-            if (user.getUserMessage() != null && user.getUserMessage().length() > 0) {
-                criteria.andUserMessageLike("%" + user.getUserMessage() + "%");
+            if (user.getPhone() != null && user.getPhone().length() > 0) {
+                criteria.andPhoneLike("%" + user.getPhone() + "%");
             }
-            if (user.getUserName() != null && user.getUserName().length() > 0) {
-                criteria.andUserNameLike("%" + user.getUserName() + "%");
+            if (user.getEmail() != null && user.getEmail().length() > 0) {
+                criteria.andEmailLike("%" + user.getEmail() + "%");
+            }
+            if (user.getStatus() != null && user.getStatus().length() > 0) {
+                criteria.andStatusLike("%" + user.getStatus() + "%");
+            }
+            if (user.getSex() != null && user.getSex().length() > 0) {
+                criteria.andSexLike("%" + user.getSex() + "%");
+            }
+            if (user.getAddress() != null && user.getAddress().length() > 0) {
+                criteria.andAddressLike("%" + user.getAddress() + "%");
+            }
+            if (user.getOther() != null && user.getOther().length() > 0) {
+                criteria.andOtherLike("%" + user.getOther() + "%");
+            }
+            if (user.getScore() != null && user.getScore().length() > 0) {
+                criteria.andScoreLike("%" + user.getScore() + "%");
             }
 
         }
 
-        Page<User> page = (Page<User>) userMapper.selectByExample(example);
+        Page<TbUser> page = (Page<TbUser>) userMapper.selectByExample(example);
         return new PageResult(page.getTotal(), page.getResult());
     }
 

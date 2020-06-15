@@ -102,6 +102,12 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
         </dependency>
+        <dependency>
+            <groupId>com.ShangaiUniversity</groupId>
+            <artifactId>generatorSqlmapCustomer</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <build>
         <!--在本地所使用的端口是8081-->

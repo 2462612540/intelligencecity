@@ -1,6 +1,8 @@
 package com.ShanghaiUniversity.pojo;
 
-public class TbBarrel {
+import java.io.Serializable;
+
+public class TbBarrel implements Serializable {
     private Long id;
 
     private Double totalweight;

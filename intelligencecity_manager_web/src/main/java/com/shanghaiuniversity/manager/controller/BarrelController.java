@@ -2,6 +2,7 @@ package com.shanghaiuniversity.manager.controller;
 
 import com.ShanghaiUniversity.entity.PageResult;
 import com.ShanghaiUniversity.entity.Result;
+import com.ShanghaiUniversity.pojo.TbBarrel;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.shanghaiuniversity.manager.service.BarrelService;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,7 +29,7 @@ public class BarrelController {
      * @return
      */
     @RequestMapping("/findAll")
-    public List<Barrel> findAll() {
+    public List<TbBarrel> findAll() {
         return barrelService.findAll();
     }
 
@@ -49,7 +50,7 @@ public class BarrelController {
      * @return
      */
     @RequestMapping("/add")
-    public Result add(@RequestBody Barrel barrel) {
+    public Result add(@RequestBody TbBarrel barrel) {
         try {
             barrelService.add(barrel);
             return new Result(true, "增加成功");
@@ -66,7 +67,7 @@ public class BarrelController {
      * @return
      */
     @RequestMapping("/update")
-    public Result update(@RequestBody Barrel barrel) {
+    public Result update(@RequestBody TbBarrel barrel) {
         try {
             barrelService.update(barrel);
             return new Result(true, "修改成功");
@@ -83,7 +84,7 @@ public class BarrelController {
      * @return
      */
     @RequestMapping("/findOne")
-    public Barrel findOne(int id) {
+    public TbBarrel findOne(Long id) {
         return barrelService.findOne(id);
     }
 
@@ -94,7 +95,7 @@ public class BarrelController {
      * @return
      */
     @RequestMapping("/delete")
-    public Result delete(int[] ids) {
+    public Result delete(Long[] ids) {
         try {
             barrelService.delete(ids);
             return new Result(true, "删除成功");
@@ -113,7 +114,7 @@ public class BarrelController {
      * @return
      */
     @RequestMapping("/search")
-    public PageResult search(@RequestBody Barrel barrel, int page, int rows) {
+    public PageResult search(@RequestBody TbBarrel barrel, int page, int rows) {
         return barrelService.findPage(barrel, page, rows);
     }
 

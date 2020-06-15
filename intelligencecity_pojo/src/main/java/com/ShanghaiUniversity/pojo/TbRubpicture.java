@@ -1,8 +1,9 @@
 package com.ShanghaiUniversity.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbRubpicture {
+public class TbRubpicture implements Serializable {
     private Long id;
 
     private Date created;

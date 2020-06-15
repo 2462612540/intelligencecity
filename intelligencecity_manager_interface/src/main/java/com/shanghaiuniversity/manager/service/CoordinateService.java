@@ -1,6 +1,7 @@
 package com.shanghaiuniversity.manager.service;
 
 import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.pojo.TbCoordinate;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public interface CoordinateService {
      *
      * @return
      */
-    public List<Coordinate> findAll();
+    public List<TbCoordinate> findAll();
 
     /**
      * 返回分页列表
@@ -28,12 +29,12 @@ public interface CoordinateService {
     /**
      * 增加
      */
-    public void add(Coordinate coordinate);
+    public void add(TbCoordinate coordinate);
 
     /**
      * 修改
      */
-    public void update(Coordinate coordinate);
+    public void update(TbCoordinate coordinate);
 
     /**
      * 根据ID获取实体
@@ -41,14 +42,14 @@ public interface CoordinateService {
      * @param id
      * @return
      */
-    public Coordinate findOne(int id);
+    public TbCoordinate findOne(Long id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(int[] ids);
+    public void delete(Long[] ids);
 
     /**
      * 分页
@@ -57,6 +58,6 @@ public interface CoordinateService {
      * @param pageSize 每页记录数
      * @return
      */
-    public PageResult findPage(Coordinate coordinate, int pageNum, int pageSize);
+    public PageResult findPage(TbCoordinate coordinate, int pageNum, int pageSize);
 
 }

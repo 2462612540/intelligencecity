@@ -1,6 +1,7 @@
 package com.shanghaiuniversity.manager.service;
 
 import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.pojo.TbUser;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public interface UserService {
      *
      * @return
      */
-    public List<User> findAll();
+    public List<TbUser> findAll();
 
     /**
      * 返回分页列表
@@ -28,12 +29,12 @@ public interface UserService {
     /**
      * 增加
      */
-    public void add(User user);
+    public void add(TbUser user);
 
     /**
      * 修改
      */
-    public void update(User user);
+    public void update(TbUser user);
 
     /**
      * 根据ID获取实体
@@ -41,14 +42,14 @@ public interface UserService {
      * @param id
      * @return
      */
-    public User findOne(String id);
+    public TbUser findOne(Long id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(String[] ids);
+    public void delete(Long[] ids);
 
     /**
      * 分页
@@ -57,6 +58,6 @@ public interface UserService {
      * @param pageSize 每页记录数
      * @return
      */
-    public PageResult findPage(User user, int pageNum, int pageSize);
+    public PageResult findPage(TbUser user, int pageNum, int pageSize);
 
 }

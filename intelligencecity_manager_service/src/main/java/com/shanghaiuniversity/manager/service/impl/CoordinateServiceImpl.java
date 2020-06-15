@@ -1,6 +1,9 @@
 package com.shanghaiuniversity.manager.service.impl;
 
 import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.mapper.TbCoordinateMapper;
+import com.ShanghaiUniversity.pojo.TbCoordinate;
+import com.ShanghaiUniversity.pojo.TbCoordinateExample;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -18,13 +21,13 @@ import java.util.List;
 public class CoordinateServiceImpl implements CoordinateService {
 
     @Autowired
-    private CoordinateMapper coordinateMapper;
+    private TbCoordinateMapper coordinateMapper;
 
     /**
      * 查询全部
      */
     @Override
-    public List<Coordinate> findAll() {
+    public List<TbCoordinate> findAll() {
         return coordinateMapper.selectByExample(null);
     }
 
@@ -34,7 +37,7 @@ public class CoordinateServiceImpl implements CoordinateService {
     @Override
     public PageResult findPage(int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-        Page<Coordinate> page = (Page<Coordinate>) coordinateMapper.selectByExample(null);
+        Page<TbCoordinate> page = (Page<TbCoordinate>) coordinateMapper.selectByExample(null);
         return new PageResult(page.getTotal(), page.getResult());
     }
 
@@ -42,7 +45,7 @@ public class CoordinateServiceImpl implements CoordinateService {
      * 增加
      */
     @Override
-    public void add(Coordinate coordinate) {
+    public void add(TbCoordinate coordinate) {
         coordinateMapper.insert(coordinate);
     }
 
@@ -50,7 +53,7 @@ public class CoordinateServiceImpl implements CoordinateService {
      * 修改
      */
     @Override
-    public void update(Coordinate coordinate) {
+    public void update(TbCoordinate coordinate) {
         coordinateMapper.updateByPrimaryKey(coordinate);
     }
 
@@ -61,7 +64,7 @@ public class CoordinateServiceImpl implements CoordinateService {
      * @return
      */
     @Override
-    public Coordinate findOne(int id) {
+    public TbCoordinate findOne(Long id) {
         return coordinateMapper.selectByPrimaryKey(id);
     }
 
@@ -69,30 +72,33 @@ public class CoordinateServiceImpl implements CoordinateService {
      * 批量删除
      */
     @Override
-    public void delete(int[] ids) {
-        for (int id : ids) {
+    public void delete(Long[] ids) {
+        for (Long id : ids) {
             coordinateMapper.deleteByPrimaryKey(id);
         }
     }
 
     @Override
-    public PageResult findPage(Coordinate coordinate, int pageNum, int pageSize) {
+    public PageResult findPage(TbCoordinate coordinate, int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
 
-        CoordinateExample example = new CoordinateExample();
-        CoordinateExample.Criteria criteria = example.createCriteria();
+        TbCoordinateExample example = new TbCoordinateExample();
+        TbCoordinateExample.Criteria criteria = example.createCriteria();
 
         if (coordinate != null) {
+            if (coordinate.getAddress() != null && coordinate.getAddress().length() > 0) {
+                criteria.andAddressLike("%" + coordinate.getAddress() + "%");
+            }
             if (coordinate.getPicture() != null && coordinate.getPicture().length() > 0) {
                 criteria.andPictureLike("%" + coordinate.getPicture() + "%");
             }
-            if (coordinate.getOther() != null && coordinate.getOther().length() > 0) {
-                criteria.andOtherLike("%" + coordinate.getOther() + "%");
+            if (coordinate.getOthher() != null && coordinate.getOthher().length() > 0) {
+                criteria.andOthherLike("%" + coordinate.getOthher() + "%");
             }
 
         }
 
-        Page<Coordinate> page = (Page<Coordinate>) coordinateMapper.selectByExample(example);
+        Page<TbCoordinate> page = (Page<TbCoordinate>) coordinateMapper.selectByExample(example);
         return new PageResult(page.getTotal(), page.getResult());
     }
 

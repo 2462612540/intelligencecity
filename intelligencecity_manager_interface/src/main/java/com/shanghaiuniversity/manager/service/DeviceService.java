@@ -1,6 +1,7 @@
 package com.shanghaiuniversity.manager.service;
 
 import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.pojo.TbDevice;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public interface DeviceService {
      *
      * @return
      */
-    public List<Device> findAll();
+    public List<TbDevice> findAll();
 
     /**
      * 返回分页列表
@@ -28,12 +29,12 @@ public interface DeviceService {
     /**
      * 增加
      */
-    public void add(Device device);
+    public void add(TbDevice device);
 
     /**
      * 修改
      */
-    public void update(Device device);
+    public void update(TbDevice device);
 
     /**
      * 根据ID获取实体
@@ -41,22 +42,22 @@ public interface DeviceService {
      * @param id
      * @return
      */
-    public Device findOne(int id);
+    public TbDevice findOne(Long id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(int[] ids);
+    public void delete(Long[] ids);
 
     /**
      * 分页
      *
-     * @param pageNum  当前页码
+     * @param pageNum  当前页 码
      * @param pageSize 每页记录数
      * @return
      */
-    public PageResult findPage(Device device, int pageNum, int pageSize);
+    public PageResult findPage(TbDevice device, int pageNum, int pageSize);
 
 }

@@ -1,8 +1,9 @@
 package com.ShanghaiUniversity.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbAdminister {
+public class TbAdminister implements Serializable {
     private Long id;
 
     private String account;

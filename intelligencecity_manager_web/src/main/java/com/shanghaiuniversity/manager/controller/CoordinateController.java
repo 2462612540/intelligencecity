@@ -2,6 +2,7 @@ package com.shanghaiuniversity.manager.controller;
 
 import com.ShanghaiUniversity.entity.PageResult;
 import com.ShanghaiUniversity.entity.Result;
+import com.ShanghaiUniversity.pojo.TbCoordinate;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.shanghaiuniversity.manager.service.CoordinateService;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,8 +29,7 @@ public class CoordinateController {
      * @return
      */
     @RequestMapping("/findAll")
-    public List<Coordinate> findAll() {
-
+    public List<TbCoordinate> findAll() {
         return coordinateService.findAll();
     }
 
@@ -50,7 +50,7 @@ public class CoordinateController {
      * @return
      */
     @RequestMapping("/add")
-    public Result add(@RequestBody Coordinate coordinate) {
+    public Result add(@RequestBody TbCoordinate coordinate) {
         try {
             coordinateService.add(coordinate);
             return new Result(true, "增加成功");
@@ -67,7 +67,7 @@ public class CoordinateController {
      * @return
      */
     @RequestMapping("/update")
-    public Result update(@RequestBody Coordinate coordinate) {
+    public Result update(@RequestBody TbCoordinate coordinate) {
         try {
             coordinateService.update(coordinate);
             return new Result(true, "修改成功");
@@ -84,7 +84,7 @@ public class CoordinateController {
      * @return
      */
     @RequestMapping("/findOne")
-    public Coordinate findOne(int id) {
+    public TbCoordinate findOne(Long id) {
         return coordinateService.findOne(id);
     }
 
@@ -95,7 +95,7 @@ public class CoordinateController {
      * @return
      */
     @RequestMapping("/delete")
-    public Result delete(int[] ids) {
+    public Result delete(Long[] ids) {
         try {
             coordinateService.delete(ids);
             return new Result(true, "删除成功");
@@ -106,13 +106,15 @@ public class CoordinateController {
     }
 
     /**
+     * 查询+分页
+     *
      * @param coordinate
      * @param page
      * @param rows
      * @return
      */
     @RequestMapping("/search")
-    public PageResult search(@RequestBody Coordinate coordinate, int page, int rows) {
+    public PageResult search(@RequestBody TbCoordinate coordinate, int page, int rows) {
         return coordinateService.findPage(coordinate, page, rows);
     }
 

@@ -2,6 +2,7 @@ package com.shanghaiuniversity.manager.controller;
 
 import com.ShanghaiUniversity.entity.PageResult;
 import com.ShanghaiUniversity.entity.Result;
+import com.ShanghaiUniversity.pojo.TbUser;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.shanghaiuniversity.manager.service.UserService;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,7 +29,7 @@ public class UserController {
      * @return
      */
     @RequestMapping("/findAll")
-    public List<User> findAll() {
+    public List<TbUser> findAll() {
         return userService.findAll();
     }
 
@@ -49,7 +50,7 @@ public class UserController {
      * @return
      */
     @RequestMapping("/add")
-    public Result add(@RequestBody User user) {
+    public Result add(@RequestBody TbUser user) {
         try {
             userService.add(user);
             return new Result(true, "增加成功");
@@ -66,7 +67,7 @@ public class UserController {
      * @return
      */
     @RequestMapping("/update")
-    public Result update(@RequestBody User user) {
+    public Result update(@RequestBody TbUser user) {
         try {
             userService.update(user);
             return new Result(true, "修改成功");
@@ -83,7 +84,7 @@ public class UserController {
      * @return
      */
     @RequestMapping("/findOne")
-    public User findOne(String id) {
+    public TbUser findOne(Long id) {
         return userService.findOne(id);
     }
 
@@ -94,7 +95,7 @@ public class UserController {
      * @return
      */
     @RequestMapping("/delete")
-    public Result delete(String[] ids) {
+    public Result delete(Long[] ids) {
         try {
             userService.delete(ids);
             return new Result(true, "删除成功");
@@ -107,13 +108,14 @@ public class UserController {
     /**
      * 查询+分页
      *
-     * @param user
+     * @param brand
      * @param page
      * @param rows
      * @return
      */
     @RequestMapping("/search")
-    public PageResult search(@RequestBody User user, int page, int rows) {
+    public PageResult search(@RequestBody TbUser user, int page, int rows) {
         return userService.findPage(user, page, rows);
     }
+
 }

@@ -1,13 +1,14 @@
 package com.shanghaiuniversity.manager.service;
 
 import com.ShanghaiUniversity.entity.PageResult;
+import com.ShanghaiUniversity.pojo.TbBarrel;
 
 import java.util.List;
 
 /**
  * 服务层接口
  *
- * @author xjl
+ * @author Administrator
  */
 public interface BarrelService {
 
@@ -16,7 +17,7 @@ public interface BarrelService {
      *
      * @return
      */
-    public List<Barrel> findAll();
+    public List<TbBarrel> findAll();
 
     /**
      * 返回分页列表
@@ -28,12 +29,12 @@ public interface BarrelService {
     /**
      * 增加
      */
-    public void add(Barrel barrel);
+    public void add(TbBarrel barrel);
 
     /**
      * 修改
      */
-    public void update(Barrel barrel);
+    public void update(TbBarrel barrel);
 
     /**
      * 根据ID获取实体
@@ -41,14 +42,14 @@ public interface BarrelService {
      * @param id
      * @return
      */
-    public Barrel findOne(int id);
+    public TbBarrel findOne(Long id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(int[] ids);
+    public void delete(Long[] ids);
 
     /**
      * 分页
@@ -57,6 +58,6 @@ public interface BarrelService {
      * @param pageSize 每页记录数
      * @return
      */
-    public PageResult findPage(Barrel barrel, int pageNum, int pageSize);
+    public PageResult findPage(TbBarrel barrel, int pageNum, int pageSize);
 
 }
