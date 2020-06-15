@@ -4,6 +4,7 @@
   <resultMap id="BaseResultMap" type="com.ShanghaiUniversity.pojo.TbUser" >
     <id column="account" property="account" jdbcType="VARCHAR" />
     <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="score" property="score" jdbcType="INTEGER" />
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="phone" property="phone" jdbcType="VARCHAR" />
@@ -74,7 +75,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    account, id, username, password, phone, email, createtime, status, sex, birtyday, 
+    account, id, score, username, password, phone, email, createtime, status, sex, birtyday, 
     address, other
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ShanghaiUniversity.pojo.TbUserExample" >
@@ -108,16 +109,16 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.ShanghaiUniversity.pojo.TbUser" >
-    insert into tb_user (account, id, username, 
-      password, phone, email, 
-      createtime, status, sex, 
-      birtyday, address, other
-      )
-    values (#{account,jdbcType=VARCHAR}, #{id,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
-      #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
-      #{createtime,jdbcType=TIMESTAMP}, #{status,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
-      #{birtyday,jdbcType=TIMESTAMP}, #{address,jdbcType=VARCHAR}, #{other,jdbcType=VARCHAR}
-      )
+    insert into tb_user (account, id, score, 
+      username, password, phone, 
+      email, createtime, status, 
+      sex, birtyday, address, 
+      other)
+    values (#{account,jdbcType=VARCHAR}, #{id,jdbcType=VARCHAR}, #{score,jdbcType=INTEGER}, 
+      #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{status,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=VARCHAR}, #{birtyday,jdbcType=TIMESTAMP}, #{address,jdbcType=VARCHAR}, 
+      #{other,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.ShanghaiUniversity.pojo.TbUser" >
     insert into tb_user
@@ -127,6 +128,9 @@
       </if>
       <if test="id != null" >
         id,
+      </if>
+      <if test="score != null" >
+        score,
       </if>
       <if test="username != null" >
         username,
@@ -165,6 +169,9 @@
       </if>
       <if test="id != null" >
         #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=INTEGER},
       </if>
       <if test="username != null" >
         #{username,jdbcType=VARCHAR},
@@ -213,6 +220,9 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=VARCHAR},
       </if>
+      <if test="record.score != null" >
+        score = #{record.score,jdbcType=INTEGER},
+      </if>
       <if test="record.username != null" >
         username = #{record.username,jdbcType=VARCHAR},
       </if>
@@ -252,6 +262,7 @@
     update tb_user
     set account = #{record.account,jdbcType=VARCHAR},
       id = #{record.id,jdbcType=VARCHAR},
+      score = #{record.score,jdbcType=INTEGER},
       username = #{record.username,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
       phone = #{record.phone,jdbcType=VARCHAR},
@@ -271,6 +282,9 @@
     <set >
       <if test="id != null" >
         id = #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        score = #{score,jdbcType=INTEGER},
       </if>
       <if test="username != null" >
         username = #{username,jdbcType=VARCHAR},
@@ -308,6 +322,7 @@
   <update id="updateByPrimaryKey" parameterType="com.ShanghaiUniversity.pojo.TbUser" >
     update tb_user
     set id = #{id,jdbcType=VARCHAR},
+      score = #{score,jdbcType=INTEGER},
       username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       phone = #{phone,jdbcType=VARCHAR},

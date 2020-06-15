@@ -99,7 +99,6 @@ public class BarrelServiceImpl implements BarrelService {
                 criteria.andOtherLike("%" + barrel.getOther() + "%");
             }
         }
-
         Page<TbBarrel> page = (Page<TbBarrel>) barrelMapper.selectByExample(example);
         return new PageResult(page.getTotal(), page.getResult());
     }

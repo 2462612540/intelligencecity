@@ -84,7 +84,7 @@ public class UserController {
      * @return
      */
     @RequestMapping("/findOne")
-    public TbUser findOne(Long id) {
+    public TbUser findOne(String id) {
         return userService.findOne(id);
     }
 
@@ -95,7 +95,7 @@ public class UserController {
      * @return
      */
     @RequestMapping("/delete")
-    public Result delete(Long[] ids) {
+    public Result delete(String[] ids) {
         try {
             userService.delete(ids);
             return new Result(true, "删除成功");
@@ -108,7 +108,7 @@ public class UserController {
     /**
      * 查询+分页
      *
-     * @param brand
+     * @param user
      * @param page
      * @param rows
      * @return

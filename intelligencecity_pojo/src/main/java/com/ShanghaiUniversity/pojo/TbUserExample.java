@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class TbUserExample implements Serializable {
+public class TbUserExample  implements Serializable {
     protected String orderByClause;
 
     protected boolean distinct;
@@ -243,6 +243,66 @@ public class TbUserExample implements Serializable {
 
         public Criteria andIdNotBetween(String value1, String value2) {
             addCriterion("id not between", value1, value2, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreIsNull() {
+            addCriterion("score is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreIsNotNull() {
+            addCriterion("score is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreEqualTo(Integer value) {
+            addCriterion("score =", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotEqualTo(Integer value) {
+            addCriterion("score <>", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreGreaterThan(Integer value) {
+            addCriterion("score >", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreGreaterThanOrEqualTo(Integer value) {
+            addCriterion("score >=", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreLessThan(Integer value) {
+            addCriterion("score <", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreLessThanOrEqualTo(Integer value) {
+            addCriterion("score <=", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreIn(List<Integer> values) {
+            addCriterion("score in", values, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotIn(List<Integer> values) {
+            addCriterion("score not in", values, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreBetween(Integer value1, Integer value2) {
+            addCriterion("score between", value1, value2, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotBetween(Integer value1, Integer value2) {
+            addCriterion("score not between", value1, value2, "score");
             return (Criteria) this;
         }
 

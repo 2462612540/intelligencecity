@@ -42,14 +42,14 @@ public interface AdministerService {
      * @param id
      * @return
      */
-    public TbAdminister findOne(Long id);
+    public TbAdminister findOne(String id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(Long[] ids);
+    public void delete(String[] ids);
 
     /**
      * 分页

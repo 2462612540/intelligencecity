@@ -108,7 +108,7 @@ public class NotificationController {
     /**
      * 查询+分页
      *
-     * @param notification
+     * @param brand
      * @param page
      * @param rows
      * @return

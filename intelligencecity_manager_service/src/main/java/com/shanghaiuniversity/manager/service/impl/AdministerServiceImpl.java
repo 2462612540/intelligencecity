@@ -8,8 +8,10 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.shanghaiuniversity.manager.service.AdministerService;
+import com.shanghaiuniversity.manager.service.impl.util.IdWorker;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -46,6 +48,14 @@ public class AdministerServiceImpl implements AdministerService {
      */
     @Override
     public void add(TbAdminister administer) {
+        //设置用户的id
+        administer.setId(String.valueOf(new IdWorker().nextId()));
+        //设置用户的创建时间
+        administer.setCreatetime(new Date());
+        //设置用户状态
+        administer.setStatus("超级管理员");
+        //还需要经过密码的加密处理
+
         administerMapper.insert(administer);
     }
 
@@ -64,7 +74,7 @@ public class AdministerServiceImpl implements AdministerService {
      * @return
      */
     @Override
-    public TbAdminister findOne(Long id) {
+    public TbAdminister findOne(String id) {
         return administerMapper.selectByPrimaryKey(id);
     }
 
@@ -72,8 +82,8 @@ public class AdministerServiceImpl implements AdministerService {
      * 批量删除
      */
     @Override
-    public void delete(Long[] ids) {
-        for (Long id : ids) {
+    public void delete(String[] ids) {
+        for (String id : ids) {
             administerMapper.deleteByPrimaryKey(id);
         }
     }
@@ -81,9 +91,14 @@ public class AdministerServiceImpl implements AdministerService {
     @Override
     public PageResult findPage(TbAdminister administer, int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
+
         TbAdministerExample example = new TbAdministerExample();
         TbAdministerExample.Criteria criteria = example.createCriteria();
+
         if (administer != null) {
+            if (administer.getId() != null && administer.getId().length() > 0) {
+                criteria.andIdLike("%" + administer.getId() + "%");
+            }
             if (administer.getAccount() != null && administer.getAccount().length() > 0) {
                 criteria.andAccountLike("%" + administer.getAccount() + "%");
             }

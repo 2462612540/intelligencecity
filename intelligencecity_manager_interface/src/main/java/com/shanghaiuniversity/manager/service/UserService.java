@@ -42,14 +42,14 @@ public interface UserService {
      * @param id
      * @return
      */
-    public TbUser findOne(Long id);
+    public TbUser findOne(String id);
 
     /**
      * 批量删除
      *
      * @param ids
      */
-    public void delete(Long[] ids);
+    public void delete(String[] ids);
 
     /**
      * 分页

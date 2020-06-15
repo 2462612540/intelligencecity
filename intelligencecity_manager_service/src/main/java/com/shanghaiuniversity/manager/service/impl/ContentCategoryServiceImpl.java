@@ -89,7 +89,9 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
             if (contentCategory.getName() != null && contentCategory.getName().length() > 0) {
                 criteria.andNameLike("%" + contentCategory.getName() + "%");
             }
+
         }
+
         Page<TbContentCategory> page = (Page<TbContentCategory>) contentCategoryMapper.selectByExample(example);
         return new PageResult(page.getTotal(), page.getResult());
     }

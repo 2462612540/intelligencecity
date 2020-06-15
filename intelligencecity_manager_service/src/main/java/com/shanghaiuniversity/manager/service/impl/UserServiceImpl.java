@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public TbUser findOne(Long id) {
+    public TbUser findOne(String id) {
         return userMapper.selectByPrimaryKey(id);
     }
 
@@ -72,8 +72,8 @@ public class UserServiceImpl implements UserService {
      * 批量删除
      */
     @Override
-    public void delete(Long[] ids) {
-        for (Long id : ids) {
+    public void delete(String[] ids) {
+        for (String id : ids) {
             userMapper.deleteByPrimaryKey(id);
         }
     }
@@ -86,6 +86,9 @@ public class UserServiceImpl implements UserService {
         TbUserExample.Criteria criteria = example.createCriteria();
 
         if (user != null) {
+            if (user.getId() != null && user.getId().length() > 0) {
+                criteria.andIdLike("%" + user.getId() + "%");
+            }
             if (user.getAccount() != null && user.getAccount().length() > 0) {
                 criteria.andAccountLike("%" + user.getAccount() + "%");
             }
@@ -112,9 +115,6 @@ public class UserServiceImpl implements UserService {
             }
             if (user.getOther() != null && user.getOther().length() > 0) {
                 criteria.andOtherLike("%" + user.getOther() + "%");
-            }
-            if (user.getScore() != null && user.getScore().length() > 0) {
-                criteria.andScoreLike("%" + user.getScore() + "%");
             }
 
         }

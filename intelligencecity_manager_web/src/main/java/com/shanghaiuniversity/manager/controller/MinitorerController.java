@@ -84,7 +84,7 @@ public class MinitorerController {
      * @return
      */
     @RequestMapping("/findOne")
-    public TbMinitorer findOne(Long id) {
+    public TbMinitorer findOne(String id) {
         return minitorerService.findOne(id);
     }
 
@@ -95,7 +95,7 @@ public class MinitorerController {
      * @return
      */
     @RequestMapping("/delete")
-    public Result delete(Long[] ids) {
+    public Result delete(String[] ids) {
         try {
             minitorerService.delete(ids);
             return new Result(true, "删除成功");
@@ -108,7 +108,7 @@ public class MinitorerController {
     /**
      * 查询+分页
      *
-     * @param brand
+     * @param minitorer
      * @param page
      * @param rows
      * @return

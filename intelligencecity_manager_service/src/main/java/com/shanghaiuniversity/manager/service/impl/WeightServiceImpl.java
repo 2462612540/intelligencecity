@@ -81,7 +81,6 @@ public class WeightServiceImpl implements WeightService {
     @Override
     public PageResult findPage(TbWeight weight, int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-
         TbWeightExample example = new TbWeightExample();
         TbWeightExample.Criteria criteria = example.createCriteria();
         if (weight != null) {

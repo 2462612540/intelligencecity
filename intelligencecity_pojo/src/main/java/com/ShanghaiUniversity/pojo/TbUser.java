@@ -8,6 +8,8 @@ public class TbUser implements Serializable {
 
     private String id;
 
+    private Integer score;
+
     private String username;
 
     private String password;
@@ -42,6 +44,14 @@ public class TbUser implements Serializable {
 
     public void setId(String id) {
         this.id = id == null ? null : id.trim();
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
     }
 
     public String getUsername() {

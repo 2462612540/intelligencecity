@@ -84,7 +84,7 @@ public class AdministerController {
      * @return
      */
     @RequestMapping("/findOne")
-    public TbAdminister findOne(Long id) {
+    public TbAdminister findOne(String id) {
         return administerService.findOne(id);
     }
 
@@ -95,7 +95,7 @@ public class AdministerController {
      * @return
      */
     @RequestMapping("/delete")
-    public Result delete(Long[] ids) {
+    public Result delete(String[] ids) {
         try {
             administerService.delete(ids);
             return new Result(true, "删除成功");

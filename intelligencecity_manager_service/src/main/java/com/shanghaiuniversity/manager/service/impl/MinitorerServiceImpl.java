@@ -64,7 +64,7 @@ public class MinitorerServiceImpl implements MinitorerService {
      * @return
      */
     @Override
-    public TbMinitorer findOne(Long id) {
+    public TbMinitorer findOne(String id) {
         return minitorerMapper.selectByPrimaryKey(id);
     }
 
@@ -72,8 +72,8 @@ public class MinitorerServiceImpl implements MinitorerService {
      * 批量删除
      */
     @Override
-    public void delete(Long[] ids) {
-        for (Long id : ids) {
+    public void delete(String[] ids) {
+        for (String id : ids) {
             minitorerMapper.deleteByPrimaryKey(id);
         }
     }
@@ -86,6 +86,9 @@ public class MinitorerServiceImpl implements MinitorerService {
         TbMinitorerExample.Criteria criteria = example.createCriteria();
 
         if (minitorer != null) {
+            if (minitorer.getId() != null && minitorer.getId().length() > 0) {
+                criteria.andIdLike("%" + minitorer.getId() + "%");
+            }
             if (minitorer.getAccount() != null && minitorer.getAccount().length() > 0) {
                 criteria.andAccountLike("%" + minitorer.getAccount() + "%");
             }
