@@ -11,7 +11,7 @@ public interface TbAdministerMapper {
 
     int deleteByExample(TbAdministerExample example);
 
-    int deleteByPrimaryKey(Long id);
+    int deleteByPrimaryKey(String account);
 
     int insert(TbAdminister record);
 
@@ -19,7 +19,7 @@ public interface TbAdministerMapper {
 
     List<TbAdminister> selectByExample(TbAdministerExample example);
 
-    TbAdminister selectByPrimaryKey(Long id);
+    TbAdminister selectByPrimaryKey(String account);
 
     int updateByExampleSelective(@Param("record") TbAdminister record, @Param("example") TbAdministerExample example);
 

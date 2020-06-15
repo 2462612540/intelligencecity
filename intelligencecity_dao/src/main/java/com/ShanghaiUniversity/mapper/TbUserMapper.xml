@@ -2,19 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ShanghaiUniversity.mapper.TbUserMapper" >
   <resultMap id="BaseResultMap" type="com.ShanghaiUniversity.pojo.TbUser" >
-    <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="account" property="account" jdbcType="VARCHAR" />
+    <id column="account" property="account" jdbcType="VARCHAR" />
+    <result column="id" property="id" jdbcType="VARCHAR" />
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="phone" property="phone" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
-    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
     <result column="status" property="status" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="VARCHAR" />
-    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="birtyday" property="birtyday" jdbcType="TIMESTAMP" />
     <result column="address" property="address" jdbcType="VARCHAR" />
     <result column="other" property="other" jdbcType="VARCHAR" />
-    <result column="score" property="score" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -75,8 +74,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, account, username, password, phone, email, created, status, sex, birthday, address, 
-    other, score
+    account, id, username, password, phone, email, createtime, status, sex, birtyday, 
+    address, other
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ShanghaiUniversity.pojo.TbUserExample" >
     select
@@ -92,15 +91,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from tb_user
-    where id = #{id,jdbcType=BIGINT}
+    where account = #{account,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from tb_user
-    where id = #{id,jdbcType=BIGINT}
+    where account = #{account,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="com.ShanghaiUniversity.pojo.TbUserExample" >
     delete from tb_user
@@ -109,25 +108,25 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.ShanghaiUniversity.pojo.TbUser" >
-    insert into tb_user (id, account, username, 
+    insert into tb_user (account, id, username, 
       password, phone, email, 
-      created, status, sex, 
-      birthday, address, other, 
-      score)
-    values (#{id,jdbcType=BIGINT}, #{account,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
+      createtime, status, sex, 
+      birtyday, address, other
+      )
+    values (#{account,jdbcType=VARCHAR}, #{id,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
       #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
-      #{created,jdbcType=TIMESTAMP}, #{status,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
-      #{birthday,jdbcType=TIMESTAMP}, #{address,jdbcType=VARCHAR}, #{other,jdbcType=VARCHAR}, 
-      #{score,jdbcType=VARCHAR})
+      #{createtime,jdbcType=TIMESTAMP}, #{status,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
+      #{birtyday,jdbcType=TIMESTAMP}, #{address,jdbcType=VARCHAR}, #{other,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.ShanghaiUniversity.pojo.TbUser" >
     insert into tb_user
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
       <if test="account != null" >
         account,
+      </if>
+      <if test="id != null" >
+        id,
       </if>
       <if test="username != null" >
         username,
@@ -141,8 +140,8 @@
       <if test="email != null" >
         email,
       </if>
-      <if test="created != null" >
-        created,
+      <if test="createtime != null" >
+        createtime,
       </if>
       <if test="status != null" >
         status,
@@ -150,8 +149,8 @@
       <if test="sex != null" >
         sex,
       </if>
-      <if test="birthday != null" >
-        birthday,
+      <if test="birtyday != null" >
+        birtyday,
       </if>
       <if test="address != null" >
         address,
@@ -159,16 +158,13 @@
       <if test="other != null" >
         other,
       </if>
-      <if test="score != null" >
-        score,
-      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=BIGINT},
-      </if>
       <if test="account != null" >
         #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
       </if>
       <if test="username != null" >
         #{username,jdbcType=VARCHAR},
@@ -182,8 +178,8 @@
       <if test="email != null" >
         #{email,jdbcType=VARCHAR},
       </if>
-      <if test="created != null" >
-        #{created,jdbcType=TIMESTAMP},
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
       </if>
       <if test="status != null" >
         #{status,jdbcType=VARCHAR},
@@ -191,17 +187,14 @@
       <if test="sex != null" >
         #{sex,jdbcType=VARCHAR},
       </if>
-      <if test="birthday != null" >
-        #{birthday,jdbcType=TIMESTAMP},
+      <if test="birtyday != null" >
+        #{birtyday,jdbcType=TIMESTAMP},
       </if>
       <if test="address != null" >
         #{address,jdbcType=VARCHAR},
       </if>
       <if test="other != null" >
         #{other,jdbcType=VARCHAR},
-      </if>
-      <if test="score != null" >
-        #{score,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -214,11 +207,11 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update tb_user
     <set >
-      <if test="record.id != null" >
-        id = #{record.id,jdbcType=BIGINT},
-      </if>
       <if test="record.account != null" >
         account = #{record.account,jdbcType=VARCHAR},
+      </if>
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=VARCHAR},
       </if>
       <if test="record.username != null" >
         username = #{record.username,jdbcType=VARCHAR},
@@ -232,8 +225,8 @@
       <if test="record.email != null" >
         email = #{record.email,jdbcType=VARCHAR},
       </if>
-      <if test="record.created != null" >
-        created = #{record.created,jdbcType=TIMESTAMP},
+      <if test="record.createtime != null" >
+        createtime = #{record.createtime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.status != null" >
         status = #{record.status,jdbcType=VARCHAR},
@@ -241,17 +234,14 @@
       <if test="record.sex != null" >
         sex = #{record.sex,jdbcType=VARCHAR},
       </if>
-      <if test="record.birthday != null" >
-        birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      <if test="record.birtyday != null" >
+        birtyday = #{record.birtyday,jdbcType=TIMESTAMP},
       </if>
       <if test="record.address != null" >
         address = #{record.address,jdbcType=VARCHAR},
       </if>
       <if test="record.other != null" >
         other = #{record.other,jdbcType=VARCHAR},
-      </if>
-      <if test="record.score != null" >
-        score = #{record.score,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -260,19 +250,18 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update tb_user
-    set id = #{record.id,jdbcType=BIGINT},
-      account = #{record.account,jdbcType=VARCHAR},
+    set account = #{record.account,jdbcType=VARCHAR},
+      id = #{record.id,jdbcType=VARCHAR},
       username = #{record.username,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
       phone = #{record.phone,jdbcType=VARCHAR},
       email = #{record.email,jdbcType=VARCHAR},
-      created = #{record.created,jdbcType=TIMESTAMP},
+      createtime = #{record.createtime,jdbcType=TIMESTAMP},
       status = #{record.status,jdbcType=VARCHAR},
       sex = #{record.sex,jdbcType=VARCHAR},
-      birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      birtyday = #{record.birtyday,jdbcType=TIMESTAMP},
       address = #{record.address,jdbcType=VARCHAR},
-      other = #{record.other,jdbcType=VARCHAR},
-      score = #{record.score,jdbcType=VARCHAR}
+      other = #{record.other,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -280,8 +269,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.ShanghaiUniversity.pojo.TbUser" >
     update tb_user
     <set >
-      <if test="account != null" >
-        account = #{account,jdbcType=VARCHAR},
+      <if test="id != null" >
+        id = #{id,jdbcType=VARCHAR},
       </if>
       <if test="username != null" >
         username = #{username,jdbcType=VARCHAR},
@@ -295,8 +284,8 @@
       <if test="email != null" >
         email = #{email,jdbcType=VARCHAR},
       </if>
-      <if test="created != null" >
-        created = #{created,jdbcType=TIMESTAMP},
+      <if test="createtime != null" >
+        createtime = #{createtime,jdbcType=TIMESTAMP},
       </if>
       <if test="status != null" >
         status = #{status,jdbcType=VARCHAR},
@@ -304,8 +293,8 @@
       <if test="sex != null" >
         sex = #{sex,jdbcType=VARCHAR},
       </if>
-      <if test="birthday != null" >
-        birthday = #{birthday,jdbcType=TIMESTAMP},
+      <if test="birtyday != null" >
+        birtyday = #{birtyday,jdbcType=TIMESTAMP},
       </if>
       <if test="address != null" >
         address = #{address,jdbcType=VARCHAR},
@@ -313,26 +302,22 @@
       <if test="other != null" >
         other = #{other,jdbcType=VARCHAR},
       </if>
-      <if test="score != null" >
-        score = #{score,jdbcType=VARCHAR},
-      </if>
     </set>
-    where id = #{id,jdbcType=BIGINT}
+    where account = #{account,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.ShanghaiUniversity.pojo.TbUser" >
     update tb_user
-    set account = #{account,jdbcType=VARCHAR},
+    set id = #{id,jdbcType=VARCHAR},
       username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       phone = #{phone,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
-      created = #{created,jdbcType=TIMESTAMP},
+      createtime = #{createtime,jdbcType=TIMESTAMP},
       status = #{status,jdbcType=VARCHAR},
       sex = #{sex,jdbcType=VARCHAR},
-      birthday = #{birthday,jdbcType=TIMESTAMP},
+      birtyday = #{birtyday,jdbcType=TIMESTAMP},
       address = #{address,jdbcType=VARCHAR},
-      other = #{other,jdbcType=VARCHAR},
-      score = #{score,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
+      other = #{other,jdbcType=VARCHAR}
+    where account = #{account,jdbcType=VARCHAR}
   </update>
 </mapper>

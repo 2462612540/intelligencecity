@@ -1,11 +1,11 @@
  //控制层 
-app.controller('deviceuserController' ,function($scope,$controller   ,deviceuserService){	
+app.controller('minitorerController' ,function($scope,$controller   ,minitorerService){	
 	
 	$controller('baseController',{$scope:$scope});//继承
 	
     //读取列表数据绑定到表单中  
 	$scope.findAll=function(){
-		deviceuserService.findAll().success(
+		minitorerService.findAll().success(
 			function(response){
 				$scope.list=response;
 			}			
@@ -14,7 +14,7 @@ app.controller('deviceuserController' ,function($scope,$controller   ,deviceuser
 	
 	//分页
 	$scope.findPage=function(page,rows){			
-		deviceuserService.findPage(page,rows).success(
+		minitorerService.findPage(page,rows).success(
 			function(response){
 				$scope.list=response.rows;	
 				$scope.paginationConf.totalItems=response.total;//更新总记录数
@@ -24,7 +24,7 @@ app.controller('deviceuserController' ,function($scope,$controller   ,deviceuser
 	
 	//查询实体 
 	$scope.findOne=function(id){				
-		deviceuserService.findOne(id).success(
+		minitorerService.findOne(id).success(
 			function(response){
 				$scope.entity= response;					
 			}
@@ -35,9 +35,9 @@ app.controller('deviceuserController' ,function($scope,$controller   ,deviceuser
 	$scope.save=function(){				
 		var serviceObject;//服务层对象  				
 		if($scope.entity.id!=null){//如果有ID
-			serviceObject=deviceuserService.update( $scope.entity ); //修改  
+			serviceObject=minitorerService.update( $scope.entity ); //修改  
 		}else{
-			serviceObject=deviceuserService.add( $scope.entity  );//增加 
+			serviceObject=minitorerService.add( $scope.entity  );//增加 
 		}				
 		serviceObject.success(
 			function(response){
@@ -55,7 +55,7 @@ app.controller('deviceuserController' ,function($scope,$controller   ,deviceuser
 	//批量删除 
 	$scope.dele=function(){			
 		//获取选中的复选框			
-		deviceuserService.dele( $scope.selectIds ).success(
+		minitorerService.dele( $scope.selectIds ).success(
 			function(response){
 				if(response.success){
 					$scope.reloadList();//刷新列表
@@ -69,7 +69,7 @@ app.controller('deviceuserController' ,function($scope,$controller   ,deviceuser
 	
 	//搜索
 	$scope.search=function(page,rows){			
-		deviceuserService.search(page,rows,$scope.searchEntity).success(
+		minitorerService.search(page,rows,$scope.searchEntity).success(
 			function(response){
 				$scope.list=response.rows;	
 				$scope.paginationConf.totalItems=response.total;//更新总记录数

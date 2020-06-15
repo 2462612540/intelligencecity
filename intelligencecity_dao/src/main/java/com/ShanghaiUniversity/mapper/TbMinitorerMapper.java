@@ -11,7 +11,7 @@ public interface TbMinitorerMapper {
 
     int deleteByExample(TbMinitorerExample example);
 
-    int deleteByPrimaryKey(Long id);
+    int deleteByPrimaryKey(String account);
 
     int insert(TbMinitorer record);
 
@@ -19,7 +19,7 @@ public interface TbMinitorerMapper {
 
     List<TbMinitorer> selectByExample(TbMinitorerExample example);
 
-    TbMinitorer selectByPrimaryKey(Long id);
+    TbMinitorer selectByPrimaryKey(String account);
 
     int updateByExampleSelective(@Param("record") TbMinitorer record, @Param("example") TbMinitorerExample example);
 

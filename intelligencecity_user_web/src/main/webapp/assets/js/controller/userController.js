@@ -53,6 +53,7 @@ app.controller('userController' ,function($scope,$controller,userService){
 
 	//新增
 	$scope.add=function(){
+		alert("hahah ")
 		userService.add($scope.entity).success(
 			function (response) {
 				if(response.success){

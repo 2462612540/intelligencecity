@@ -1,11 +1,11 @@
  //控制层 
-app.controller('administratoruserController' ,function($scope,$controller  ,administratoruserService){
+app.controller('contentCategoryController' ,function($scope,$controller   ,contentCategoryService){	
 	
 	$controller('baseController',{$scope:$scope});//继承
 	
     //读取列表数据绑定到表单中  
 	$scope.findAll=function(){
-		administratoruserService.findAll().success(
+		contentCategoryService.findAll().success(
 			function(response){
 				$scope.list=response;
 			}			
@@ -14,7 +14,7 @@ app.controller('administratoruserController' ,function($scope,$controller  ,admi
 	
 	//分页
 	$scope.findPage=function(page,rows){			
-		administratoruserService.findPage(page,rows).success(
+		contentCategoryService.findPage(page,rows).success(
 			function(response){
 				$scope.list=response.rows;	
 				$scope.paginationConf.totalItems=response.total;//更新总记录数
@@ -24,7 +24,7 @@ app.controller('administratoruserController' ,function($scope,$controller  ,admi
 	
 	//查询实体 
 	$scope.findOne=function(id){				
-		administratoruserService.findOne(id).success(
+		contentCategoryService.findOne(id).success(
 			function(response){
 				$scope.entity= response;					
 			}
@@ -35,9 +35,9 @@ app.controller('administratoruserController' ,function($scope,$controller  ,admi
 	$scope.save=function(){				
 		var serviceObject;//服务层对象  				
 		if($scope.entity.id!=null){//如果有ID
-			serviceObject=administratoruserService.update( $scope.entity ); //修改  
+			serviceObject=contentCategoryService.update( $scope.entity ); //修改  
 		}else{
-			serviceObject=administratoruserService.add( $scope.entity  );//增加 
+			serviceObject=contentCategoryService.add( $scope.entity  );//增加 
 		}				
 		serviceObject.success(
 			function(response){
@@ -55,7 +55,7 @@ app.controller('administratoruserController' ,function($scope,$controller  ,admi
 	//批量删除 
 	$scope.dele=function(){			
 		//获取选中的复选框			
-		administratoruserService.dele( $scope.selectIds ).success(
+		contentCategoryService.dele( $scope.selectIds ).success(
 			function(response){
 				if(response.success){
 					$scope.reloadList();//刷新列表
@@ -69,7 +69,7 @@ app.controller('administratoruserController' ,function($scope,$controller  ,admi
 	
 	//搜索
 	$scope.search=function(page,rows){			
-		administratoruserService.search(page,rows,$scope.searchEntity).success(
+		contentCategoryService.search(page,rows,$scope.searchEntity).success(
 			function(response){
 				$scope.list=response.rows;	
 				$scope.paginationConf.totalItems=response.total;//更新总记录数

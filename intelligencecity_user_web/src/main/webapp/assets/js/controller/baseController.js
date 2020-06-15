@@ -29,5 +29,4 @@ app.controller('baseController' ,function($scope){
             $scope.selectIds.splice(idx, 1);//删除 
 		}
 	}
-	
 });	

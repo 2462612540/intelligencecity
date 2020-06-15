@@ -106,66 +106,6 @@ public class TbUserExample implements Serializable {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andIdIsNull() {
-            addCriterion("id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdIsNotNull() {
-            addCriterion("id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdEqualTo(Long value) {
-            addCriterion("id =", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdNotEqualTo(Long value) {
-            addCriterion("id <>", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdGreaterThan(Long value) {
-            addCriterion("id >", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("id >=", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdLessThan(Long value) {
-            addCriterion("id <", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdLessThanOrEqualTo(Long value) {
-            addCriterion("id <=", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdIn(List<Long> values) {
-            addCriterion("id in", values, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdNotIn(List<Long> values) {
-            addCriterion("id not in", values, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdBetween(Long value1, Long value2) {
-            addCriterion("id between", value1, value2, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdNotBetween(Long value1, Long value2) {
-            addCriterion("id not between", value1, value2, "id");
-            return (Criteria) this;
-        }
-
         public Criteria andAccountIsNull() {
             addCriterion("account is null");
             return (Criteria) this;
@@ -233,6 +173,76 @@ public class TbUserExample implements Serializable {
 
         public Criteria andAccountNotBetween(String value1, String value2) {
             addCriterion("account not between", value1, value2, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdIsNull() {
+            addCriterion("id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdIsNotNull() {
+            addCriterion("id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdEqualTo(String value) {
+            addCriterion("id =", value, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdNotEqualTo(String value) {
+            addCriterion("id <>", value, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdGreaterThan(String value) {
+            addCriterion("id >", value, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdGreaterThanOrEqualTo(String value) {
+            addCriterion("id >=", value, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdLessThan(String value) {
+            addCriterion("id <", value, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdLessThanOrEqualTo(String value) {
+            addCriterion("id <=", value, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdLike(String value) {
+            addCriterion("id like", value, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdNotLike(String value) {
+            addCriterion("id not like", value, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdIn(List<String> values) {
+            addCriterion("id in", values, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdNotIn(List<String> values) {
+            addCriterion("id not in", values, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdBetween(String value1, String value2) {
+            addCriterion("id between", value1, value2, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andIdNotBetween(String value1, String value2) {
+            addCriterion("id not between", value1, value2, "id");
             return (Criteria) this;
         }
 
@@ -516,63 +526,63 @@ public class TbUserExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andCreatedIsNull() {
-            addCriterion("created is null");
+        public Criteria andCreatetimeIsNull() {
+            addCriterion("createtime is null");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedIsNotNull() {
-            addCriterion("created is not null");
+        public Criteria andCreatetimeIsNotNull() {
+            addCriterion("createtime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedEqualTo(Date value) {
-            addCriterion("created =", value, "created");
+        public Criteria andCreatetimeEqualTo(Date value) {
+            addCriterion("createtime =", value, "createtime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedNotEqualTo(Date value) {
-            addCriterion("created <>", value, "created");
+        public Criteria andCreatetimeNotEqualTo(Date value) {
+            addCriterion("createtime <>", value, "createtime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedGreaterThan(Date value) {
-            addCriterion("created >", value, "created");
+        public Criteria andCreatetimeGreaterThan(Date value) {
+            addCriterion("createtime >", value, "createtime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedGreaterThanOrEqualTo(Date value) {
-            addCriterion("created >=", value, "created");
+        public Criteria andCreatetimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("createtime >=", value, "createtime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedLessThan(Date value) {
-            addCriterion("created <", value, "created");
+        public Criteria andCreatetimeLessThan(Date value) {
+            addCriterion("createtime <", value, "createtime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedLessThanOrEqualTo(Date value) {
-            addCriterion("created <=", value, "created");
+        public Criteria andCreatetimeLessThanOrEqualTo(Date value) {
+            addCriterion("createtime <=", value, "createtime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedIn(List<Date> values) {
-            addCriterion("created in", values, "created");
+        public Criteria andCreatetimeIn(List<Date> values) {
+            addCriterion("createtime in", values, "createtime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedNotIn(List<Date> values) {
-            addCriterion("created not in", values, "created");
+        public Criteria andCreatetimeNotIn(List<Date> values) {
+            addCriterion("createtime not in", values, "createtime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedBetween(Date value1, Date value2) {
-            addCriterion("created between", value1, value2, "created");
+        public Criteria andCreatetimeBetween(Date value1, Date value2) {
+            addCriterion("createtime between", value1, value2, "createtime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedNotBetween(Date value1, Date value2) {
-            addCriterion("created not between", value1, value2, "created");
+        public Criteria andCreatetimeNotBetween(Date value1, Date value2) {
+            addCriterion("createtime not between", value1, value2, "createtime");
             return (Criteria) this;
         }
 
@@ -716,63 +726,63 @@ public class TbUserExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayIsNull() {
-            addCriterion("birthday is null");
+        public Criteria andBirtydayIsNull() {
+            addCriterion("birtyday is null");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayIsNotNull() {
-            addCriterion("birthday is not null");
+        public Criteria andBirtydayIsNotNull() {
+            addCriterion("birtyday is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayEqualTo(Date value) {
-            addCriterion("birthday =", value, "birthday");
+        public Criteria andBirtydayEqualTo(Date value) {
+            addCriterion("birtyday =", value, "birtyday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayNotEqualTo(Date value) {
-            addCriterion("birthday <>", value, "birthday");
+        public Criteria andBirtydayNotEqualTo(Date value) {
+            addCriterion("birtyday <>", value, "birtyday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayGreaterThan(Date value) {
-            addCriterion("birthday >", value, "birthday");
+        public Criteria andBirtydayGreaterThan(Date value) {
+            addCriterion("birtyday >", value, "birtyday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayGreaterThanOrEqualTo(Date value) {
-            addCriterion("birthday >=", value, "birthday");
+        public Criteria andBirtydayGreaterThanOrEqualTo(Date value) {
+            addCriterion("birtyday >=", value, "birtyday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayLessThan(Date value) {
-            addCriterion("birthday <", value, "birthday");
+        public Criteria andBirtydayLessThan(Date value) {
+            addCriterion("birtyday <", value, "birtyday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayLessThanOrEqualTo(Date value) {
-            addCriterion("birthday <=", value, "birthday");
+        public Criteria andBirtydayLessThanOrEqualTo(Date value) {
+            addCriterion("birtyday <=", value, "birtyday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayIn(List<Date> values) {
-            addCriterion("birthday in", values, "birthday");
+        public Criteria andBirtydayIn(List<Date> values) {
+            addCriterion("birtyday in", values, "birtyday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayNotIn(List<Date> values) {
-            addCriterion("birthday not in", values, "birthday");
+        public Criteria andBirtydayNotIn(List<Date> values) {
+            addCriterion("birtyday not in", values, "birtyday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayBetween(Date value1, Date value2) {
-            addCriterion("birthday between", value1, value2, "birthday");
+        public Criteria andBirtydayBetween(Date value1, Date value2) {
+            addCriterion("birtyday between", value1, value2, "birtyday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayNotBetween(Date value1, Date value2) {
-            addCriterion("birthday not between", value1, value2, "birthday");
+        public Criteria andBirtydayNotBetween(Date value1, Date value2) {
+            addCriterion("birtyday not between", value1, value2, "birtyday");
             return (Criteria) this;
         }
 
@@ -913,76 +923,6 @@ public class TbUserExample implements Serializable {
 
         public Criteria andOtherNotBetween(String value1, String value2) {
             addCriterion("other not between", value1, value2, "other");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreIsNull() {
-            addCriterion("score is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreIsNotNull() {
-            addCriterion("score is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreEqualTo(String value) {
-            addCriterion("score =", value, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreNotEqualTo(String value) {
-            addCriterion("score <>", value, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreGreaterThan(String value) {
-            addCriterion("score >", value, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreGreaterThanOrEqualTo(String value) {
-            addCriterion("score >=", value, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreLessThan(String value) {
-            addCriterion("score <", value, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreLessThanOrEqualTo(String value) {
-            addCriterion("score <=", value, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreLike(String value) {
-            addCriterion("score like", value, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreNotLike(String value) {
-            addCriterion("score not like", value, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreIn(List<String> values) {
-            addCriterion("score in", values, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreNotIn(List<String> values) {
-            addCriterion("score not in", values, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreBetween(String value1, String value2) {
-            addCriterion("score between", value1, value2, "score");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreNotBetween(String value1, String value2) {
-            addCriterion("score not between", value1, value2, "score");
             return (Criteria) this;
         }
     }

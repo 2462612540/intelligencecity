@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class TbAdminister implements Serializable {
-    private Long id;
-
     private String account;
+
+    private String id;
 
     private String username;
 
@@ -16,25 +16,17 @@ public class TbAdminister implements Serializable {
 
     private String email;
 
-    private Date created;
+    private Date createtime;
 
     private String status;
 
     private String sex;
 
-    private Date birthday;
+    private Date birtyday;
 
     private String address;
 
     private String other;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getAccount() {
         return account;
@@ -42,6 +34,14 @@ public class TbAdminister implements Serializable {
 
     public void setAccount(String account) {
         this.account = account == null ? null : account.trim();
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
     }
 
     public String getUsername() {
@@ -76,12 +76,12 @@ public class TbAdminister implements Serializable {
         this.email = email == null ? null : email.trim();
     }
 
-    public Date getCreated() {
-        return created;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCreated(Date created) {
-        this.created = created;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
     public String getStatus() {
@@ -100,12 +100,12 @@ public class TbAdminister implements Serializable {
         this.sex = sex == null ? null : sex.trim();
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public Date getBirtyday() {
+        return birtyday;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setBirtyday(Date birtyday) {
+        this.birtyday = birtyday;
     }
 
     public String getAddress() {
