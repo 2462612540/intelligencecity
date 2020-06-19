@@ -15,6 +15,14 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+
+    <!--引入js-->
+    <script type="text/javascript" src="../assets/js/angularjs/angular.min.js"></script>
+    <!--引入服务的js-->
+    <script type="text/javascript" src="../assets/js/base.js"></script>
+    <script type="text/javascript" src="../assets/js/service/administerService.js"></script>
+    <script type="text/javascript" src="../assets/js/controller/administerController.js"></script>
+
 </head>
 <body>
 <!-- Begin page -->
@@ -22,7 +30,6 @@
     <!-- Topbar Start-->
     <div class="navbar-custom">
         <ul class="list-unstyled topnav-menu float-right mb-0">
-
             <li class="dropdown d-none d-lg-block">
                 <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
                    role="button" aria-haspopup="false" aria-expanded="false">
@@ -261,7 +268,7 @@
     <!-- End Left Sidebar  -->
 
     <!-- Start Page Content here -->
-    <div class="content-page">
+    <div class="content-page" ng-app="intelligencecity" ng-controller="administerController" ng-init="findOne()">
         <div class="content">
             <!-- Start Content-->
             <div class="container-fluid">

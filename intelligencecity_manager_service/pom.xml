@@ -17,6 +17,12 @@
     </properties>
 
     <dependencies>
+        <!--spring_security-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>4.1.0.RELEASE</version>
+        </dependency>
         <!--引入dao-->
         <dependency>
             <groupId>com.ShangaiUniversity</groupId>

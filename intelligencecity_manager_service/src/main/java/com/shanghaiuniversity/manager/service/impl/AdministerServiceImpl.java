@@ -10,6 +10,7 @@ import com.github.pagehelper.PageHelper;
 import com.shanghaiuniversity.manager.service.AdministerService;
 import com.shanghaiuniversity.manager.service.impl.util.IdWorker;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Date;
 import java.util.List;
@@ -55,8 +56,14 @@ public class AdministerServiceImpl implements AdministerService {
         //设置用户状态
         administer.setStatus("超级管理员");
         //还需要经过密码的加密处理
-
-        administerMapper.insert(administer);
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String password = passwordEncoder.encode(administer.getPassword());//加密
+        administer.setPassword(password);
+        try {
+            administerMapper.insert(administer);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**

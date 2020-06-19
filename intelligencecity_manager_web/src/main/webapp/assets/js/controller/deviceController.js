@@ -50,8 +50,7 @@ app.controller('deviceController' ,function($scope,$controller   ,deviceService)
 			}		
 		);				
 	}
-	
-	 
+
 	//批量删除 
 	$scope.dele=function(){			
 		//获取选中的复选框			

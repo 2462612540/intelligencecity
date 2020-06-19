@@ -15,6 +15,15 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+
+    <!--引入js-->
+    <script type="text/javascript" src="../assets/js/angularjs/angular.min.js"></script>
+    <!--引入服务的js-->
+    <script type="text/javascript" src="../assets/js/base.js"></script>
+    <script type="text/javascript" src="../assets/js/controller/baseController.js"></script>
+    <script type="text/javascript" src="../assets/js/service/orderService.js"></script>
+    <script type="text/javascript" src="../assets/js/controller/orderController.js"></script>
+
 </head>
 <body>
 <!-- Begin page -->
@@ -262,7 +271,7 @@
     <!-- End Left Sidebar  -->
 
     <!-- Start Page Content -->
-    <div class="content-page">
+    <div class="content-page" ng-app="intelligencecity" ng-controller="orderController" ng-init="findAll()">
         <div class="content">
             <!-- Start Content-->
             <div class="container-fluid">
@@ -274,21 +283,21 @@
                                 <thead>
                                 <tr>
                                     <th>订单编号</th>
+                                    <th>订单状态</th>
                                     <th>订单时间</th>
-                                    <th>订单信息</th>
-                                    <th>联系人电话</th>
-                                    <th>其他信息</th>
-                                    <th>备注</th>
+                                    <th>订单人姓名</th>
+                                    <th>订单内容</th>
+                                    <th>订单地址</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
+                                <tr ng-repeat="entity in list">
+                                    <td>{{entity.id}}</td>
+                                    <td>{{entity.status}}</td>
+                                    <td>{{entity.createTime}}</td>
+                                    <td>{{entity.username}}</td>
+                                    <td>{{entity.content}}</td>
+                                    <td>{{entity.address}}</td>
                                 </tr>
                                 </tbody>
                             </table>

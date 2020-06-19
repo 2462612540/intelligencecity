@@ -15,6 +15,15 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+
+    <!--引入js-->
+    <script type="text/javascript" src="../assets/js/angularjs/angular.min.js"></script>
+    <!--引入服务的js-->
+    <script type="text/javascript" src="../assets/js/base.js"></script>
+    <script type="text/javascript" src="../assets/js/controller/baseController.js"></script>
+    <script type="text/javascript" src="../assets/js/service/deviceService.js"></script>
+    <script type="text/javascript" src="../assets/js/controller/deviceController.js"></script>
+
 </head>
 <body>
 <!-- Begin page -->
@@ -262,7 +271,7 @@
     <!-- End Left Sidebar  -->
 
     <!-- Start Page Content -->
-    <div class="content-page">
+    <div class="content-page" ng-app="intelligencecity" ng-controller="deviceController" ng-init="findAll()">
         <div class="content">
             <!-- Start Content-->
             <div class="container-fluid">
@@ -277,18 +286,18 @@
                                     <th>设备地理地址</th>
                                     <th>设备所属单位</th>
                                     <th>位置坐标点</th>
-                                    <th>其他信息</th>
+                                    <th>设备状态</th>
                                     <th>备注信息</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>2613212323</td>
-                                    <td>上海市宝山区上大路</td>
-                                    <td>上海大学</td>
-                                    <td>120.322,31.365</td>
-                                    <td>2011/04/25</td>
-                                    <td>其他信息</td>
+                                <tr ng-repeat="entity in list">
+                                    <td>{{entity.id}}</td>
+                                    <td>{{entity.address}}</td>
+                                    <td>{{entity.company}}</td>
+                                    <td>{{entity.latitude}},{{entity.longitude}}</td>
+                                    <td>{{entity.status}}</td>
+                                    <td>{{entity.other}}</td>
                                 </tr>
                                 </tbody>
                             </table>
