@@ -19,6 +19,7 @@
     <!--引入angular js-->
     <script type="text/javascript" src="../assets/js/angularjs/angular.min.js"></script>
     <script type="text/javascript" src="../assets/js/base.js"></script>
+    <script type="text/javascript" src="../assets/js/controller/loginController.js"></script>
 
 </head>
 <body ng-app="intelligencecity" >
@@ -98,12 +99,11 @@
                 </div>
             </li>
 
-            <li class="dropdown notification-list">
+            <li class="dropdown notification-list" ng-init="showLoginName">
                 <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
                    href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <img src="../assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
-                    <span class="pro-user-name ml-1">
-                                庄小焱 <i class="mdi mdi-chevron-down"></i>
+                    <span class="pro-user-name ml-1">{{loginName}} <i class="mdi mdi-chevron-down"></i>
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -123,7 +123,7 @@
                     <div class="dropdown-divider"></div>
 
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <a href="/logout" class="dropdown-item notify-item">
                         <i class="dripicons-power"></i>
                         <span>退出</span>
                     </a>
