@@ -513,77 +513,82 @@
                 </div>
                 <!-- end row -->
                 <div class="row">
-                    <div class="col-xl-4 col-lg-6">
+                    <div class="col-lg-6">
                         <div class="card-box">
-                            <h4 class="header-title mb-3">深度学习系统状态</h4>
-                            <div class="row text-center">
-                                <div class="col-sm-4 mb-3">
-                                    <p class="text-muted text-overflow">总的数据量</p>
-                                    <h3 class="font-weight-light">200张</h3>
-                                </div>
-                                <div class="col-sm-4 mb-3">
-                                    <p class="text-muted text-overflow">已经训练</p>
-                                    <h3 class="font-weight-light">350</h3>
-                                </div>
-                                <div class="col-sm-4 mb-3">
-                                    <p class="text-muted text-overflow">待训练的</p>
-                                    <h3 class="font-weight-light">165</h3>
-                                </div>
-                            </div>
-                            <div class="chartjs-chart-example chartjs-chart">
-                                <canvas id="bar-chart-example1"></canvas>
-                            </div>
-                        </div>
-                        <!-- end card-box -->
+                            <h4 class="header-title">Multiple Statistics</h4>
+                            <div id="website-stats" style="height: 350px;" class="flot-chart mt-5"></div>
+                        </div> <!-- end card-box-->
                     </div> <!-- end col -->
-
-                    <div class="col-xl-4 col-lg-6">
+                    <div class="col-lg-6">
                         <div class="card-box">
-                            <h4 class="header-title mb-3">监控系统状态</h4>
-                            <div class="row text-center">
-                                <div class="col-sm-4 mb-3">
-                                    <p class="text-muted text-overflow">内存容量</p>
-                                    <h3 class="font-weight-light">1,845</h3>
-                                </div>
-                                <div class="col-sm-4 mb-3">
-                                    <p class="text-muted text-overflow">网络状态</p>
-                                    <h3 class="font-weight-light">8,458</h3>
-                                </div>
-                                <div class="col-sm-4 mb-3">
-                                    <p class="text-muted text-overflow">评价得分</p>
-                                    <h3 class="font-weight-light">$3,458</h3>
-                                </div>
-                            </div>
-                            <div class="chartjs-chart-example chartjs-chart">
-                                <canvas id="filled-line-chart1"></canvas>
-                            </div>
-                        </div> <!-- end card-box -->
+                            <h4 class="header-title">Line Chart</h4>
+                            <div id="website-stats1" style="height: 350px;" class="flot-chart mt-5"></div>
+                        </div> <!-- end card-box-->
                     </div> <!-- end col -->
-
-                    <div class="col-xl-4 col-lg-6">
-                        <div class="card-box">
-                            <h4 class="header-title mb-3">用户系统状态</h4>
-                            <div class="row text-center">
-                                <div class="col-sm-4 mb-3">
-                                    <p class="text-muted text-overflow">用户量</p>
-                                    <h3 class="font-weight-light">1,845</h3>
-                                </div>
-                                <div class="col-sm-4 mb-3">
-                                    <p class="text-muted text-overflow">内存容量</p>
-                                    <h3 class="font-weight-light">8,458</h3>
-                                </div>
-                                <div class="col-sm-4 mb-3">
-                                    <p class="text-muted text-overflow">网络状态</p>
-                                    <h3 class="font-weight-light">$3,458</h3>
-                                </div>
-                            </div>
-                            <div class="chartjs-chart-example chartjs-chart">
-                                <canvas id="line-chart-example1"></canvas>
-                            </div>
-                        </div> <!-- end card-box -->
-                    </div> <!-- end col -->
-
                 </div>
+
+                <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title">Donut Pie</h4>
+                            <div id="donut-chart">
+                                <div id="donut-chart-container" class="flot-chart mt-5" style="height: 350px;">
+                                </div>
+                            </div>
+                        </div> <!-- end card-box-->
+                    </div> <!-- end col -->
+                    <div class="col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title">Realtime Statistics</h4>
+
+                            <div id="flotRealTime" style="height: 350px;" class="flot-chart mt-5"></div>
+                        </div> <!-- end card-box-->
+                    </div> <!-- end col -->
+                </div>
+
+                <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title">Line Chart</h4>
+
+                            <div id="line-chart-alt" class="mt-5" style="height:350px;">
+                            </div>
+                        </div> <!-- end card-box-->
+                    </div> <!-- end col -->
+                    <div class="col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title">Combine Chart</h4>
+
+                            <div id="combine-chart">
+                                <div id="combine-chart-container" class="flot-chart mt-5" style="height: 350px;">
+                                </div>
+                            </div>
+                        </div> <!-- end card-box-->
+                    </div> <!-- end col -->
+                </div>
+
+                <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title">Stacked Bar chart</h4>
+
+                            <div id="ordered-bars-chart" style="height: 350px;" class="mt-5"></div>
+                        </div> <!-- end card-box-->
+                    </div> <!-- end col -->
+                    <div class="col-lg-6">
+                        <div class="card-box">
+                            <h4 class="header-title">Pie Chart</h4>
+                            <div id="pie-chart">
+                                <div id="pie-chart-container" class="flot-chart mt-5" style="height: 350px;">
+                                </div>
+                            </div>
+                        </div> <!-- end card-box-->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
 
             </div>
             <!-- container -->
@@ -626,5 +631,17 @@
 <script src="../assets/libs/chart-js/Chart.bundle.min.js"></script>
 <!-- Init js -->
 <script src="../assets/js/pages/chartjs.init.js"></script>
+<!-- flot chart -->
+<script src="../assets/libs/flot-charts/jquery.flot.js"></script>
+<script src="../assets/libs/flot-charts/jquery.flot.time.js"></script>
+<script src="../assets/libs/flot-charts/jquery.flot.tooltip.min.js"></script>
+<script src="../assets/libs/flot-charts/jquery.flot.resize.js"></script>
+<script src="../assets/libs/flot-charts/jquery.flot.pie.js"></script>
+<script src="../assets/libs/flot-charts/jquery.flot.selection.js"></script>
+<script src="../assets/libs/flot-charts/jquery.flot.stack.js"></script>
+<script src="../assets/libs/flot-charts/jquery.flot.orderBars.js"></script>
+<script src="../assets/libs/flot-charts/jquery.flot.crosshair.js"></script>
+<!-- init js -->
+<script src="../assets/js/pages/flot.init.js"></script>
 </body>
 </html>
