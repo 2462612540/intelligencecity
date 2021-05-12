@@ -58,7 +58,7 @@
         <fastdfs.version>1.2.28</fastdfs.version>
         <jedis.version>2.8.1</jedis.version>
         <spring-data-redisversion>1.7.2.RELEASE</spring-data-redisversion>
-        <spring-security-web.version>4.1.0.RELEASE</spring-security-web.version>
+        <spring-security-web.version>5.2.10.RELEASE</spring-security-web.version>
         <spring-security-config.version>4.1.0.RELEASE</spring-security-config.version>
         <kaptcha.version>2.3.2</kaptcha.version>
         <spring-security-cas.version>4.1.0.RELEASE</spring-security-cas.version>
