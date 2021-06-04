@@ -64,7 +64,7 @@
         <spring-security-cas.version>4.1.0.RELEASE</spring-security-cas.version>
         <cas-client-core.version>3.3.3</cas-client-core.version>
         <httpcore.version>4.4.4</httpcore.version>
-        <httpclient.version>4.5.3</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <dom4j.version>1.6.1</dom4j.version>
         <xml-apis.version>1.4.01</xml-apis.version>
         <spring-data-solr.version>1.5.5.RELEASE</spring-data-solr.version>
